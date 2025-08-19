@@ -19,6 +19,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    max-width: fit-content;
     
 }
 /* career page bg */
@@ -30,6 +31,7 @@
     background-attachment:scroll;
     background-size:auto;
     height: 100vmax;
+    max-width: 1200px;
     width:100% ;  
 }
 
@@ -102,13 +104,15 @@
 }
 /* carousel card */
 .flex-card{
-    width: 900px;
+    
+   max-width: 1200px;
+   width: 100%;
     height: 300px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 /* career page card */
 .careercard{
-        width: 450px;
+       max-width: 450px;
         height: 750px;
         border-radius: 20px;
         box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.3);
@@ -125,7 +129,7 @@
      max-width: 400px;
      height: 400px;
      text-align: center;
-     padding: 0px 0px 0px 100px;
+    padding: 0px 100px 0px ;
 }
 /* contact page card */
 .circle{
