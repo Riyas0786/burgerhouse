@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+/* home navbar bg*/
+.fixed-background{
+    background-image: url('../Assets/Home/Background_Img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* home footer bg */
+.fixed-background2{
+    background-image: url('../Assets/Home/Footer_BGImg.png ');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+/* career page bg */
+.fixedbackground3{
+    background-image: url('../Assets/CAREER/franchise\ img.png');
+    background-position:center;
+    margin-top: 10px;
+    background-repeat:repeat;
+    background-attachment:scroll;
+    background-size:auto;
+    height: 100vmax;
+    width:100% ;  
+}
+
+.navbar{
+    position: relative;
+    padding: 20px;
+}
+.navlinks{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navlinks li .link{
+    font-size: 20px;
+    text-decoration: none;
+    color: #6E260E;
+}
+.navlinks li .link:hover{
+    color: rgba(255, 255, 255, 0);
+}
+.iconlinks{
+    list-style: none;
+    gap: 15px;
+}
+.iconlinks li .navicon{
+    font-size: 20px;
+    color: #6E260E;
+    text-decoration: none;
+}
+.iconlinks li .navicon:hover{
+    color: white;
+}
+.h1,h1{
+    font-weight: 500 !important;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+  text-shadow: 5px 5px 3px  rgb(0, 0, 0);;
+}
+.h2,h2{
+    font-weight: 400;
+    font-size: 50px;
+    
+}
+.h3,h3{
+    font-weight: 300;
+    font-size: 40px;
+    font-family:'Trebuchet MS';
+}
+.h4,h4{
+    font-weight: 200;
+    font-size: 30px;
+}
+.h5,h5{
+    font-weight: 100;
+    font-size: 25px;
+}
+.h6,h6{
+    font-weight: 300;
+    font-size: 15px;
+    font-family: Trebuchet MS;
+}
+.p,p{
+    font-weight: 100;
+    font-size: 15px;
+    font-family: none;
+}
+.text-primary{
+    color: #6E260E !important;
+   text-shadow: 4px 3px 3px  rgb(255, 255, 255);;
+}
+/* carousel card */
+.flex-card{
+    width: 900px;
+    height: 300px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+/* career page card */
+.careercard{
+        width: 450px;
+        height: 750px;
+        border-radius: 20px;
+        box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.3);
+        background-color: rgba(0, 0, 0, 0.438);
+        color: white;
+        margin: 0px 0px  10px 180px;
+        padding: 50px;
+     }
+   /* sign up card */
+.acc-card{
+     background-image:  url('../Assets/Home/Background_Img.png');
+     border: 1px solid black;
+     border-radius: 20px;
+     max-width: 400px;
+     height: 400px;
+     text-align: center;
+     padding: 0px 0px 0px 100px;
+}
+/* contact page card */
+.circle{
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    width: fit-content;
+    box-shadow: 0 4px 4px 0  rgba(128, 128, 128, 0.3);
+}
+
+/* menu & branch card */
+   .card-2 {
+       display: block;
+       top: 0px;
+       border: 1px solid rgba(128, 128, 128, 0.394) ;
+       text-align: center;
+       position: relative;
+       max-width: 300%;
+       max-height:500px ;
+       background-color: #ffffffe6;
+       border-radius: 10px;
+       padding: 32px 24px;
+       margin: 12px;
+       text-decoration: none;
+       z-index: 0;
+       overflow: hidden;
+       border: 1px solid #999999;
+
+  &:hover {
+       transition: all 0.2s ease-out;
+       box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+       top: -4px;
+       border: 1px solid #cccccc;
+       background-color: white;
+    }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #fff019;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
+}
+
+.franchise{
+        margin:400px 0px 0px 200px;    }
+     
+/* home page table booking input */
+input{
+    width: 250px ;
+    height: 47px;
+    margin: 10px -30px;
+}
+/* sign up input */
+.input2{
+    border: none;
+    border-radius: 20px;
+    margin: 50px 30px 40px -20px;
+}
+/* menu page  add btn */
+.btnadd{
+    background-color: rgb(255, 0, 0);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 150px;
+    margin:40px 5px ;
+}
+/* home page find a table */
+ .tablebtn{
+    background-color: red;
+    border: 1px grey;
+    color: white;
+    width:250px ;
+    height: 47px ;
+    margin: 10px -30px;    
+   }
+
+
+/* footer icons */
+.icons {
+    font-size: 30px;
+    margin-left: 220px;
+}
+.icons-2 {
+    font-size: 18px;
+    margin: 130px 0 0px 200px;
+}
+   
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
