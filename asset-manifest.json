@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/burgerhouse/static/css/main.86b47159.css",
-    "main.js": "/burgerhouse/static/js/main.b28ea2d3.js",
+    "main.css": "/burgerhouse/static/css/main.a6a65894.css",
+    "main.js": "/burgerhouse/static/js/main.69be6288.js",
     "static/js/453.670e15c7.chunk.js": "/burgerhouse/static/js/453.670e15c7.chunk.js",
     "static/media/franchise img.png": "/burgerhouse/static/media/franchise img.52ff8e2e5fe84e27bebc.png",
     "static/media/bangalore.png": "/burgerhouse/static/media/bangalore.545ee45985112617aa46.png",
@@ -41,12 +41,12 @@
     "static/media/Drinks_6.png": "/burgerhouse/static/media/Drinks_6.e25738b1343f98d94cca.png",
     "static/media/Drinks_2.png": "/burgerhouse/static/media/Drinks_2.78e760b54dbec1413ecc.png",
     "index.html": "/burgerhouse/index.html",
-    "main.86b47159.css.map": "/burgerhouse/static/css/main.86b47159.css.map",
-    "main.b28ea2d3.js.map": "/burgerhouse/static/js/main.b28ea2d3.js.map",
+    "main.a6a65894.css.map": "/burgerhouse/static/css/main.a6a65894.css.map",
+    "main.69be6288.js.map": "/burgerhouse/static/js/main.69be6288.js.map",
     "453.670e15c7.chunk.js.map": "/burgerhouse/static/js/453.670e15c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86b47159.css",
-    "static/js/main.b28ea2d3.js"
+    "static/css/main.a6a65894.css",
+    "static/js/main.69be6288.js"
   ]
 }
