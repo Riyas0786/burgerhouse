@@ -17,7 +17,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://riyas0786.github.io/burgerhouse",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -26,6 +26,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,4 +48,5 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
+  
 }
