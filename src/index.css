@@ -29,6 +29,11 @@ img {
   height: auto;
   display: block;
 }
+.hero-section {
+  background-color: #f9b233; /* same yellow */
+  width: 100%;
+}
+
 
 
 

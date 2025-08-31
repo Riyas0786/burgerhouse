@@ -10,7 +10,7 @@ const Career= () => {
   return (
    <>
    
-       <section className='career'>
+       <section className='header'>
         <div className='container '>
          <div className='row'>
            <h1>WELCOME TO INDIA'S MOST ADMIRED <br/>AND AFFORDABLE FRANCHISE</h1>
@@ -33,9 +33,6 @@ const Career= () => {
               </form>
               </div>
               </div>
-              
-          
-          
           </div>
          </div>
        </section>

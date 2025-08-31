@@ -30,7 +30,7 @@ const Home = () => {
                 </div>
 
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-                    <img src={HeaderImage} alt="CompoImage" className='px-5' width="500px" />
+                    <img src={HeaderImage} alt="CompoImage" className='px-5' />
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@ const Home = () => {
     {/* Landing order now*/}
     <section className='landing py-5'>
         <div className='container'>
-            <h5 className='text-center text-primary bg-warning'style={{width:'300px',margin:'auto',}}>ALWAYS TASTY BURGER</h5>
+            <h5 className='text-center text-primary bg-warning'style={{margin:'auto',}}>ALWAYS TASTY BURGER</h5>
             <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
             <p className='text-center text-primary py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut corporis earum. Adipisci, earum consectetur? Laudantium voluptatum dignissimos ad molestiae qui ullam dolor hic est, ipsam maxime ipsa earum sit magni illo nemo labore eum quis. Iusto obcaecati consequatur delectus.</p>
             <div className='row'>
@@ -110,7 +110,7 @@ const Home = () => {
     <section className='slice'>
        <div className='container-fluid '>
         <div className='row '>
-          <div className='col-12 col-sm-7 col-md-6 col-lg-4 mx-5 '>
+          <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
             <img src={sliceimage} alt='sliceimg' width={200}/>
          </div>
          <div className='col-12 col-sm-7 col-md-6 col-lg-4'>

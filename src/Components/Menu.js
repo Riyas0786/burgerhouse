@@ -48,7 +48,7 @@ const MenuPage = () => {
     <>
       {/* search bar */}     
         < div className='container'>
-         <input type='search'className='form-control mb-3 ' value={searchTerm}
+         <input type='search'className='form-control mb-3 my-5 ' value={searchTerm}
           placeholder='searchfor products' onChange={(e)=> setSearchTerm(e.target.value)}/>
         <div className='row'>
           {filteredProducts.length===0?
@@ -58,7 +58,7 @@ const MenuPage = () => {
             <div className='card-2 '>
              <div class="go-corner" href="#">
               <div class="go-arrow">
-               <img src={product.image} alt='cardimage' className='mx-auto my-5'width={150} height={150} margin={50} />
+               <img src={product.image} alt='cardimage' className='mx-auto my-5' />
                 <h5 className='text-center '>{product.name}</h5>
                  <i className='text-center'>{product.icon}</i>
                   <p className='text-center '>{product.subtitle}</p>
