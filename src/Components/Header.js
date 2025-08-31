@@ -26,7 +26,7 @@ const Header = () => {
 
           
           {/* Navigation Links */}
-        <ul className={`navlinks `}>
+        <ul className={`navlinks ${isOpen ? "open" : ""}`}>
   <li><Link className="link" to="/" >HOME</Link></li>
   <li><Link className="link" to="/menu">MENU</Link></li>
   <li><Link className="link" to="/career">CAREER</Link></li>

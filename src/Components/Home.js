@@ -22,14 +22,14 @@ const Home = () => {
     <section className='fixed-background'>
         <div className='container'>
             <div className='row'>
-                <div className='col-lg-6'>
+                <div className='col-12 col-sm-7 col-md-6 col-lg-4  my-5 '>
                     <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',}}>BURGER
                         <br/>WEEK
                     </h1>
                     <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur minima corrupti distinctio perferendis totam illo est quam laboriosam dignissimos? Aperiam officia fugit atque sunt rerum provident voluptate adipisci quos? Fuga asperiores facere perferendis debitis eligendi aut omnis itaque nam corrupti optio explicabo, inventore quas soluta placeat magnam provident odit?</p>
                 </div>
 
-                <div className='col-lg-6'>
+                <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
                     <img src={HeaderImage} alt="CompoImage" className='px-5' width="500px" />
                 </div>
             </div>
