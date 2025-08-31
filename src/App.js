@@ -24,9 +24,9 @@ function App() {
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/branch' element={<Branch/>}/>
         <Route path='/career' element={<Career/>}/>
-          <Route path='/contact' element={<Contact/>}/>
-          <Route path='/bi bi-person-fill' element={<Account/>}/>
-           <Route path='/bi bi-cart-fill' element={<Cart/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/account' element={<Account/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
       </CartProvider>
       </BrowserRouter>

@@ -48,7 +48,7 @@ const MenuPage = () => {
     <>
       {/* search bar */}     
         < div className='container'>
-         <input type='search'className='form-control mb-3' value={searchTerm}
+         <input type='search'className='form-control mb-3 ' value={searchTerm}
           placeholder='searchfor products' onChange={(e)=> setSearchTerm(e.target.value)}/>
         <div className='row'>
           {filteredProducts.length===0?
@@ -63,7 +63,8 @@ const MenuPage = () => {
                  <i className='text-center'>{product.icon}</i>
                   <p className='text-center '>{product.subtitle}</p>
                    <h5 className='text-center '>₹{product.price}</h5> 
-                    <button className='btnadd' onClick={()=>addToCart(product)}>ADD+</button>
+                   <button className='btn btn-danger mx-3 w-50'>BUY NOW</button>
+                    <button className='btn btn-warning' onClick={()=>addToCart(product)}><i className="bi bi-bag-fill"></i></button>
                    </div>
                   </div>
                  </div>
@@ -73,7 +74,7 @@ const MenuPage = () => {
             </div>
       
          {/* Footer Section */}
-            <section className='fixed-background2'>
+            <section className='footerfixed-background2'>
               <div className='container-fluid'>
                <div className='row'>
                  <div className='col-lg-6'>

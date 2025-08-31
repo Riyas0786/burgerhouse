@@ -23,7 +23,7 @@ const Home = () => {
         <div className='container'>
             <div className='row'>
                 <div className='col-lg-6'>
-                    <h1 className='text-primary'>BURGER
+                    <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',}}>BURGER
                         <br/>WEEK
                     </h1>
                     <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur minima corrupti distinctio perferendis totam illo est quam laboriosam dignissimos? Aperiam officia fugit atque sunt rerum provident voluptate adipisci quos? Fuga asperiores facere perferendis debitis eligendi aut omnis itaque nam corrupti optio explicabo, inventore quas soluta placeat magnam provident odit?</p>
@@ -108,9 +108,9 @@ const Home = () => {
     
     {/* Slice Section */}
     <section className='slice'>
-       <div className='container-fluid py-auto '>
+       <div className='container-fluid '>
         <div className='row '>
-          <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
+          <div className='col-12 col-sm-7 col-md-6 col-lg-4 mx-5 '>
             <img src={sliceimage} alt='sliceimg' width={200}/>
          </div>
          <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
@@ -123,49 +123,49 @@ const Home = () => {
 
      {/* Table Reservation */}
          <section className='header'>
-           <div className='container-fluid '>
+           <div className='container'>
              <div className='row '>
-               <div className='col-lg-3  '>
-                 <img src={sliceimage1} alt='sliceimage' width={150}/>
+               <div className='col-12 col-sm-7 col-md-6 col-lg-4  '>
+                 <img src={sliceimage1} alt='sliceimage' width={100}/>
               </div>
-           <div className='col-lg-3 ' >
+           <div className='col-12 col-sm-7 col-md-6 col-lg-4 ' style={{marginLeft:'-100px'}} >
              <input type='text' id='name' placeholder='NAME'></input>
                <input type='Email' id='email' placeholder='EMAIL'></input>
-                 <input type='date' id='date' placeholder='DATE'></input>
-                 </div>
-              <div className='col-lg-3 '>
+                 <input type='date' id='date' placeholder='DATE'></input> 
+          </div>
+          <div className='col-12 col-sm-7 col-md-6 col-lg-4'style={{marginLeft:'-80px'}}>
              <input type='time'  id='time' placeholder='TIME'></input>
               <input type='text' id='people' placeholder='PEOPLE'></input>
-                <button className='tablebtn'onClick={showAlert}>FIND A TABLE</button>
-            </div>
-             <div className='col-lg-3 '>
-              <img src={sliceimage2} alt='sliceimage2' width={250} />
+               <button className='tablebtn'onClick={showAlert}>FIND A TABLE</button>
+              </div>
+              <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
+              <img src={sliceimage2} alt='sliceimage2' width={150} />
               </div>
            </div>
           </div> 
       </section>
 
     {/* Footer Section */}
-    <section className='fixed-background2'>
+    <section className='footerfixed-background2'>
       <div className='container-fluid'>
        <div className='row'>
-         <div className='col-lg-6'>
+         <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
           <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
             <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
           </div>
-              <div className='col-lg-6' >
+              <div className='col-12 col-sm-7 col-md-6 col-lg-4 mx-5' >
                 <div className='icons-2'>
-              <i className="bi bi-geo-alt-fill text-white ">45,SOUTH CAR STREET,MADURAI</i><br/>
-                 <i className="bi bi-envelope text-white ">INFO@BURGERHOUSE.COM</i><br/>
+                <i className="bi bi-geo-alt-fill text-white">45,SOUTH CAR STREET,MADURAI</i><br/>
+                 <i className="bi bi-envelope text-white  ">INFO@BURGERHOUSE.COM</i><br/>
                  </div>
            </div>
-           <div className='col-lg-4 '>
+           <div className='col-12 col-sm-7 col-md-6 col-lg-4  '>
                 <h6 className='text-white py-3'>BURGERHOUSE 2025 ALL RIGHTS RESERVED </h6>  
                 </div>
-                <div className='col-lg-4'>
+                <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
                   <h6 className='text-white mx-5'>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
                 </div>
-                <div className='col-lg-4'>         
+                <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>         
                   <div className='icons '>
                    <i className="bi bi-instagram text-white mx-2 "></i>
                     <i className="bi bi-facebook text-white mx-2"></i>

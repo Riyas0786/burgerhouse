@@ -11,9 +11,11 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    height: auto;
+    
 }
 /* home footer bg */
-.fixed-background2{
+.footerfixed-background2{
     background-image: url('../Assets/Home/Footer_BGImg.png ');
     background-position: center;
     background-repeat: no-repeat;
@@ -22,52 +24,12 @@
     max-width: fit-content;
     
 }
-/* career page bg */
-.fixedbackground3{
-    background-image: url('../Assets/CAREER/franchise\ img.png');
-    background-position:center;
-    margin-top: 10px;
-    background-repeat:repeat;
-    background-attachment:scroll;
-    background-size:auto;
-    height: 100vmax;
-    max-width: 1200px;
-    width:100% ;  
-}
 
-.navbar{
-    position: relative;
-    padding: 20px;
-}
-.navlinks{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.navlinks li .link{
-    font-size: 20px;
-    text-decoration: none;
-    color: #6E260E;
-}
-.navlinks li .link:hover{
-    color: rgba(255, 255, 255, 0);
-}
-.iconlinks{
-    list-style: none;
-    gap: 15px;
-}
-.iconlinks li .navicon{
-    font-size: 20px;
-    color: #6E260E;
-    text-decoration: none;
-}
-.iconlinks li .navicon:hover{
-    color: white;
-}
+
 .h1,h1{
     font-weight: 500 !important;
     font-size: 55px;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 197, 7, 0.968);
   text-shadow: 5px 5px 3px  rgb(0, 0, 0);;
 }
 .h2,h2{
@@ -77,8 +39,9 @@
 }
 .h3,h3{
     font-weight: 300;
+    color: rgb(0, 0, 0);
     font-size: 40px;
-    font-family:'Trebuchet MS';
+    font-family: "poppins", "sans-serif";
 }
 .h4,h4{
     font-weight: 200;
@@ -99,7 +62,7 @@
     font-family: none;
 }
 .text-primary{
-    color: #6E260E !important;
+    color: #000000 !important;
    text-shadow: 4px 3px 3px  rgb(255, 255, 255);;
 }
 /* carousel card */
@@ -112,25 +75,16 @@
 }
 /* career page card */
 .careercard{
-       max-width: 450px;
+        width: 500px;
         height: 750px;
         border-radius: 20px;
-        box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.3);
+        margin: 0px 30px 40px 160px; 
+        box-shadow: 0 4px 4px 0 rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.438);
-        color: white;
-        margin: 0px 0px  10px 180px;
-        padding: 50px;
+        color: rgb(255, 3, 3);
+        
      }
-   /* sign up card */
-.acc-card{
-     background-image:  url('../Assets/Home/Background_Img.png');
-     border: 1px solid black;
-     border-radius: 20px;
-     max-width: 400px;
-     height: 400px;
-     text-align: center;
-    padding: 0px 100px 0px ;
-}
+ 
 /* contact page card */
 .circle{
     border-radius: 100px;
@@ -185,29 +139,27 @@
   }
 }
 
-.franchise{
-        margin:400px 0px 0px 200px;    }
      
 /* home page table booking input */
 input{
     width: 250px ;
     height: 47px;
-    margin: 10px -30px;
+    
 }
 /* sign up input */
 .input2{
     border: none;
     border-radius: 20px;
-    margin: 50px 30px 40px -20px;
+    margin: 50px 30px 40px -60px;
 }
 /* menu page  add btn */
-.btnadd{
+.buybtn{
     background-color: rgb(255, 0, 0);
     border: none;
     color: rgb(255, 255, 255);
     height: 40px;
     width: 150px;
-    margin:40px 5px ;
+    margin: 10px ;
 }
 /* home page find a table */
  .tablebtn{
@@ -216,25 +168,17 @@ input{
     color: white;
     width:250px ;
     height: 47px ;
-    margin: 10px -30px;    
+    margin: 10px 0px;    
    }
 
 
 /* footer icons */
 .icons {
     font-size: 30px;
-    margin-left: 220px;
+    
 }
 .icons-2 {
     font-size: 18px;
-    margin: 130px 0 0px 200px;
+    margin-left: 600px;
 }
    
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-

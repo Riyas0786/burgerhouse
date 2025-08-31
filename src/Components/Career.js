@@ -1,5 +1,6 @@
 import React from 'react'
 import reliableimg from '../Assets/CAREER/reliable img.png'
+import franchiseimg from '../Assets/CAREER/franchise img.png'
 const Career= () => {
 
   const showAlert = () => {
@@ -9,29 +10,32 @@ const Career= () => {
   return (
    <>
    
-       <section className='fixedbackground3 '>
-        <div className='container'>
+       <section className='career'>
+        <div className='container '>
          <div className='row'>
-          <div className='franchise'>
-           <h1>WELCOME TO<br/>INDIA'S MOST ADMIRED AND<br/> AFFORDABLE FRANCHISE</h1>
-          </div>
-         <div className='col-md-6'>
+           <h1>WELCOME TO INDIA'S MOST ADMIRED <br/>AND AFFORDABLE FRANCHISE</h1>
+           <div className='col-12 col-sm-7 col-md-6 col-lg-4  '> 
+              <img src={franchiseimg} alt='franchiseimg' width={500} className='my-5 'style={{borderRadius:'15px'}}/>
+            </div>
+             <div className='col-12 col-sm-7 col-md-6 col-lg-4 my-5 '> 
            <div className='careercard'>
              <h3>FRANCHISE ENQUIRY</h3>
+             <form className='mx-2 '>
               <label form='name'><h3>Name</h3></label>
-              <input type="text" placeholder='Enter your name' required className='form-control' />
+              <input type="text" placeholder='Enter your name' required className='form-control mx-auto ' />
               <label form='name'><h3>Mobile Number</h3></label>
-              <input type="text" placeholder='Enter your number' className='form-control' />
+              <input type="text" placeholder='Enter your number'required className='form-control mx-auto ' />
               <label form='name'><h3>Email</h3></label>
-              <input type="email" placeholder='Enter your email' className='form-control' />
+              <input type="email" placeholder='Enter your email' required className='form-control mx-auto ' />
               <label form='name'><h3>Location</h3></label>
-              <input type="location" placeholder='Enter your location' className='form-control' />
-              <button className='btn btn-danger tablebtn my-3'onClick={showAlert}>SUBMIT</button>
-            </div>
-           </div>
-          <div className='col-md-6'>
-            <img src={reliableimg} alt="reliable" className='mx-5' width={300}/>
-           </div>
+              <input type="location" placeholder='Enter your location' required className='form-control mx-auto ' />
+              <button className='btn btn-danger tablebtn my-3 mx-5'onClick={showAlert}>SUBMIT</button>
+              </form>
+              </div>
+              </div>
+              
+          
+          
           </div>
          </div>
        </section>
