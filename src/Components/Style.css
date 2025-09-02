@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: fantasy;
+
 }
 /* home navbar bg*/
 .fixed-background{
@@ -164,23 +164,12 @@
 
    border-radius: 8px;
     height: 35px ;
-    
         
+   }
+   .icons-2{
+    font-size: 30px;
+    
    }
 
 
 /* footer icons */
-.icons {
-    font-size: 20px;
-    font-family: sans-serif;
-    margin-left: 250px;
-    
-    
-}
-.icons-2 {
-    font-size: 25px;
-    margin-top: 270px;
-    margin-left: 450px;
-
-}
-   

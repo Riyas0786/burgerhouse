@@ -155,23 +155,22 @@ const Home = () => {
           <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
             <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
            
-
-                <h6 className='text-white py-3'>BURGERHOUSE 2025 ALL RIGHTS RESERVED </h6>  
-                <h6 className='text-white '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
-                </div>
-                
-                  <div className='col-lg-6 ' >
-                <div className='icons'>
+              
                 <i className="bi bi-geo-alt-fill text-white ">45,SOUTH CAR STREET,MADURAI</i><br/>
                  <i className="bi bi-envelope text-white  ">INFO@BURGERHOUSE.COM</i><br/>
-                 </div>
-                  <div className='icons-2 '>    
+                 
+               <i className="bi bi-c-circle text-white py-3">BURGERHOUSE 2025 ALL RIGHTS RESERVED</i> 
+                <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
+                  <div className='icons-2 '> 
+                    <h4 className='text-white'>FOLLOW US ON</h4>   
                    <i className="bi bi-instagram text-white mx-2 "></i>
                     <i className="bi bi-facebook text-white mx-2"></i>
                      <i className="bi bi-twitter text-white mx-2"></i>
                       <i className="bi bi-whatsapp  text-white mx-2"></i>
                       </div>
-                   </div>
+                
+                </div>
+                
                    </div>
                </div>
           
