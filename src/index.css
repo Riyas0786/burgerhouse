@@ -1,4 +1,10 @@
-.navlinks {
+  html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;}
+
+ .navlinks {
   display: flex;
   gap: 2.5rem;
   list-style: none;

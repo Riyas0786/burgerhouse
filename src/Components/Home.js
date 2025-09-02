@@ -162,7 +162,7 @@ const Home = () => {
                <i className="bi bi-c-circle text-white py-3">BURGERHOUSE 2025 ALL RIGHTS RESERVED</i> 
                 <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
                   <div className='icons-2 '> 
-                    <h4 className='text-white'>FOLLOW US ON</h4>   
+                    <h5 className='text-white'>FOLLOW US ON</h5>   
                    <i className="bi bi-instagram text-white mx-2 "></i>
                     <i className="bi bi-facebook text-white mx-2"></i>
                      <i className="bi bi-twitter text-white mx-2"></i>
