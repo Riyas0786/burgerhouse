@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
     {/* Header Section */}
-    <section className='fixed-background'>
+    <section className='fixed-background '>
         <div className='container'>
             <div className='row'>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4  my-5 '>
@@ -30,7 +30,7 @@ const Home = () => {
                 </div>
 
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-                    <img src={HeaderImage} alt="CompoImage" className='px-5' />
+                    <img src={HeaderImage} alt="CompoImage" className='py-5 mx-5' />
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@ const Home = () => {
             <p className='text-center text-primary py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut corporis earum. Adipisci, earum consectetur? Laudantium voluptatum dignissimos ad molestiae qui ullam dolor hic est, ipsam maxime ipsa earum sit magni illo nemo labore eum quis. Iusto obcaecati consequatur delectus.</p>
             <div className='row'>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-                    <img src={LandImage1}  alt="LandngImage" width="300px"style={{marginLeft:'35px'}}  />
+                    <img src={LandImage1}  alt="LandngImage" width="300px"className='mx-auto'  />
                     <h4 className='text-center text-primary'>Tandoor Chicken Burger</h4>
                     <p className='text-center text-primary py-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
                     <div className='d-flex justify-content-center'>
@@ -67,7 +67,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                    <img src={LandImage2}  alt="LandngImage" width="200px" style={{marginLeft:'75px'}} />
+                    <img src={LandImage2}  alt="LandngImage" width="200px" className='mx-auto' />
                     <h4 className='text-center text-primary py-3'>Tandoor Chicken Burger</h4>
                     <p className='text-center text-primary py-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
                     <div className='d-flex justify-content-center'>
@@ -75,7 +75,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                    <img src={LandImage3}  alt="LandngImage" width="300px"style={{marginLeft:'35px'}} />
+                    <img src={LandImage3}  alt="LandngImage" width="300px" className='mx-auto' />
                     <h4 className='text-center text-primary'>Tandoor Chicken Burger</h4>
                     <p className='text-center text-primary py-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
                     <div className='d-flex justify-content-center'>
@@ -89,6 +89,7 @@ const Home = () => {
     {/* Flex card Section */}
     <section className='Flex py-5 '>  
         <div className='container'>
+          <div className='row'>
             <div className='d-flex justify-content-center'>
                 <div className='flex-card'>
                   <div className='row'>
@@ -97,24 +98,25 @@ const Home = () => {
                          <h4 className='text-primary px-5'>UPCOMING EVENTS</h4>
                            <p className='text-primary  mx-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
                       </div>
-                    <div className='col-12 col-sm-7 col-md-6 col-lg-4 mx-auto'>
-                        <img src={FlexImage1} alt="FlexImage" width="380px" className='py-3' />
+                        <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
+                        <img src={FlexImage1} alt="FlexImage" width="380px" className='mx-auto' />
                         </div>
                     </div>
                 </div>
+              </div>
               </div>
             </div>                
     </section>
     
     {/* Slice Section */}
     <section className='slice'>
-       <div className='container-fluid '>
+       <div className='container '>
         <div className='row '>
           <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
             <img src={sliceimage} alt='sliceimg' width={200}/>
          </div>
          <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-            <h5 className='text-center text-primary'style={{paddingTop:'50px'}}>RESERVATION</h5>
+            <h5 className='text-center text-primary'>RESERVATION</h5>
             <h3 className='text-center text-primary'>BOOK YOUR TABLE</h3>
          </div>
         </div>
@@ -123,26 +125,26 @@ const Home = () => {
 
      {/* Table Reservation */}
          <section className='header'>
-           <div className='container'>
-             <div className='row '>
-               <div className='col-12 col-sm-7 col-md-6 col-lg-4  '>
-                 <img src={sliceimage1} alt='sliceimage' width={100}/>
+          <div className='container'> 
+             <div className='row'>
+               <div className='col-lg-3 '>
+                 <img src={sliceimage1} alt='sliceimage' width={120}/>
               </div>
-           <div className='col-12 col-sm-7 col-md-6 col-lg-4 ' style={{marginLeft:'-100px'}} >
-             <input type='text' id='name' placeholder='NAME'></input>
-               <input type='Email' id='email' placeholder='EMAIL'></input>
-                 <input type='date' id='date' placeholder='DATE'></input> 
+           <div className='col-lg-3' >
+             <input type='text' id='name' placeholder='NAME' required className='form-control w-100  my-3'></input>
+               <input type='Email' id='email' placeholder='EMAIL'className='form-control w-100  '></input>
+                 <input type='date' id='date' placeholder='DATE'className='form-control w-100  my-3'></input> 
           </div>
-          <div className='col-12 col-sm-7 col-md-6 col-lg-4'style={{marginLeft:'-80px'}}>
-             <input type='time'  id='time' placeholder='TIME'></input>
-              <input type='text' id='people' placeholder='PEOPLE'></input>
-               <button className='tablebtn'onClick={showAlert}>FIND A TABLE</button>
+          <div className='col-lg-3'>
+             <input type='time'  id='time' placeholder='TIME'className='form-control w-100 my-3'></input>
+              <input type='text' id='people' placeholder='PEOPLE'className='form-control w-100'></input>
+               <button className='tablebtn my-3 w-100 'onClick={showAlert}>FIND A TABLE</button>
               </div>
-              <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-              <img src={sliceimage2} alt='sliceimage2' width={150} />
+              <div className='col-lg-3 '>
+              <img src={sliceimage2} alt='sliceimage2' width={300} />
               </div>
-           </div>
-          </div> 
+               </div>     
+              </div>        
       </section>
 
     {/* Footer Section */}

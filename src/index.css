@@ -15,7 +15,7 @@
   cursor: pointer;
   display: none;
 }
-.container.container-fluid {
+.container.row .container-fluid {
   display: flex;
   flex-direction: column;
   gap: 10px;  /* Small consistent spacing */
