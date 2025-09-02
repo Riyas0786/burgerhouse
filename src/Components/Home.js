@@ -151,33 +151,30 @@ const Home = () => {
     <section className='footerfixed-background2'>
       <div className='container-fluid'>
        <div className='row'>
-         <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
+         <div className='col-lg-6 '>
           <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
             <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
-          </div>
-              <div className='col-12 col-sm-7 col-md-6 col-lg-4 mx-5' >
-                <div className='icons-2'>
-                <i className="bi bi-geo-alt-fill text-white">45,SOUTH CAR STREET,MADURAI</i><br/>
+           
+
+                <h6 className='text-white py-3'>BURGERHOUSE 2025 ALL RIGHTS RESERVED </h6>  
+                <h6 className='text-white '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
+                </div>
+                
+                  <div className='col-lg-6 ' >
+                <div className='icons'>
+                <i className="bi bi-geo-alt-fill text-white ">45,SOUTH CAR STREET,MADURAI</i><br/>
                  <i className="bi bi-envelope text-white  ">INFO@BURGERHOUSE.COM</i><br/>
                  </div>
-           </div>
-           <div className='col-12 col-sm-7 col-md-6 col-lg-4  '>
-                <h6 className='text-white py-3'>BURGERHOUSE 2025 ALL RIGHTS RESERVED </h6>  
-                </div>
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-                  <h6 className='text-white mx-5'>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
-                </div>
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>         
-                  <div className='icons '>
+                  <div className='icons-2 '>    
                    <i className="bi bi-instagram text-white mx-2 "></i>
                     <i className="bi bi-facebook text-white mx-2"></i>
                      <i className="bi bi-twitter text-white mx-2"></i>
                       <i className="bi bi-whatsapp  text-white mx-2"></i>
+                      </div>
                    </div>
                    </div>
-                
-              </div>
-            </div>
+               </div>
+          
        </section>
 
 
