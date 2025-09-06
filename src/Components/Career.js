@@ -15,11 +15,11 @@ const Career= () => {
          <div className='row'>
            <h1>WELCOME TO INDIA'S MOST ADMIRED <br/>AND AFFORDABLE FRANCHISE</h1>
            <div className='col-12 col-sm-7 col-md-6 col-lg-4  '> 
-              <img src={franchiseimg} alt='franchiseimg' width={500} className='my-5 'style={{borderRadius:'15px'}}/>
+              <img src={franchiseimg} alt='franchiseimg'  className='my-5 'style={{borderRadius:'15px'}}/>
             </div>
              <div className='col-12 col-sm-7 col-md-6 col-lg-4 my-5 '> 
            <div className='careercard'>
-             <h3>FRANCHISE ENQUIRY</h3>
+             <h3 className='mx-3'>FRANCHISE ENQUIRY</h3>
              <form className='mx-2 '>
               <label form='name'><h3>Name</h3></label>
               <input type="text" placeholder='Enter your name' required className='form-control mx-auto ' />

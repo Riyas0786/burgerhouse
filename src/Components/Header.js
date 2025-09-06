@@ -45,7 +45,7 @@ const Header = () => {
               </li>
               <li>
                 <Link className="navicon" to="/cart">
-                  <i className="bi bi-cart-fill"></i>
+                  <i className="bi bi-bag-fill"></i>
                 </Link>
               </li>
             </ul>

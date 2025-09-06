@@ -2,6 +2,7 @@ import './App.css';
 import './index.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Header from './Components/Header';
 import Home from './Components/Home';

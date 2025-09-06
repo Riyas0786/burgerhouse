@@ -15,7 +15,7 @@ const Branch = () => {
        <div className='card-2 '>
         <div class="go-corner" href="#">
       <div class="go-arrow">
-        <img src={chennaiimage} alt='chennai' width={200}/>
+        <img src={chennaiimage} alt='chennai' className='mx-auto' width={200}/>
         <h3 className='text-center text-warning'>CHENNAI</h3>
         <i class="bi bi-telephone-fill text-center">9045286176</i>
       </div>
@@ -26,7 +26,7 @@ const Branch = () => {
         <div className='card-2'>
         <div class="go-corner" href="#">
       <div class="go-arrow">
-        <img src={hyderabadimage} alt='hyderabad' width={200}/>
+        <img src={hyderabadimage} alt='hyderabad' className='mx-auto' width={200}/>
         <h3 className='text-center text-primary'>HYDERABAD</h3>
         <i class="bi bi-telephone-fill text-center">9045286176</i>
         </div>
@@ -37,7 +37,7 @@ const Branch = () => {
         <div className='card-2'>
         <div class="go-corner" href="#">
       <div class="go-arrow"></div>
-        <img src={maduraiimage} alt='MADURAI' width={200}/>
+        <img src={maduraiimage} alt='MADURAI' className='mx-auto' width={200}/>
         <h3 className='text-center text-success'>MADURAI</h3>
         <i class="bi bi-telephone-fill text-center">9045286176</i>
         </div>
@@ -48,7 +48,7 @@ const Branch = () => {
       <div className='card-2'>
         <div class="go-corner" href="#">
       <div class="go-arrow">
-        <img src={bangaloreimage} alt='bangalore' width={200}/>
+        <img src={bangaloreimage} alt='bangalore' className='mx-auto'width={200}/>
         <h3 className='text-center text-danger'>BANGALORE</h3>
         <i class="bi bi-telephone-fill text-center">9045286176</i>
     </div>

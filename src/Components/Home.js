@@ -54,12 +54,12 @@ const Home = () => {
     {/* Landing order now*/}
     <section className='landing py-5'>
         <div className='container'>
-            <h5 className='text-center text-primary bg-warning'style={{margin:'auto',}}>ALWAYS TASTY BURGER</h5>
+            <h5 className='text-center text-primary bg-warning'>ALWAYS TASTY BURGER</h5>
             <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
             <p className='text-center text-primary py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut corporis earum. Adipisci, earum consectetur? Laudantium voluptatum dignissimos ad molestiae qui ullam dolor hic est, ipsam maxime ipsa earum sit magni illo nemo labore eum quis. Iusto obcaecati consequatur delectus.</p>
             <div className='row'>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-                    <img src={LandImage1}  alt="LandngImage" width="300px"className='mx-auto'  />
+                    <img src={LandImage1}  alt="LandngImage" width="300px"className='mx-auto my-3'  />
                     <h4 className='text-center text-primary'>Tandoor Chicken Burger</h4>
                     <p className='text-center text-primary py-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
                     <div className='d-flex justify-content-center'>
@@ -67,7 +67,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                    <img src={LandImage2}  alt="LandngImage" width="200px" className='mx-auto' />
+                    <img src={LandImage2}  alt="LandngImage" width="200px" className='mx-auto my-3' />
                     <h4 className='text-center text-primary py-3'>Tandoor Chicken Burger</h4>
                     <p className='text-center text-primary py-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
                     <div className='d-flex justify-content-center'>
@@ -75,7 +75,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                    <img src={LandImage3}  alt="LandngImage" width="300px" className='mx-auto' />
+                    <img src={LandImage3}  alt="LandngImage" width="300px" className='mx-auto my-3' />
                     <h4 className='text-center text-primary'>Tandoor Chicken Burger</h4>
                     <p className='text-center text-primary py-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
                     <div className='d-flex justify-content-center'>
@@ -90,22 +90,22 @@ const Home = () => {
     <section className='Flex py-5 '>  
         <div className='container'>
           <div className='row'>
-            <div className='d-flex justify-content-center'>
+            
                 <div className='flex-card'>
-                  <div className='row'>
-                     <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                       <h5 className='text-primary px-5 py-2'>Discover</h5>
-                         <h4 className='text-primary px-5'>UPCOMING EVENTS</h4>
-                           <p className='text-primary  mx-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
+                  
+                     <div className='col-lg-6'>
+                       <h5 className='text-primary mx-3 py-2'>Discover</h5>
+                         <h1 className='text-primary mx-3'>UPCOMING EVENTS</h1>
+                           <h5 className='text-primary  mx-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</h5>
                       </div>
-                        <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                        <img src={FlexImage1} alt="FlexImage" width="380px" className='mx-auto' />
+                        <div className='col-lg-6'>
+                        <img src={FlexImage1} alt="FlexImag " className='my-3'  />
                         </div>
                     </div>
                 </div>
               </div>
-              </div>
-            </div>                
+      
+                    
     </section>
     
     {/* Slice Section */}
@@ -161,18 +161,28 @@ const Home = () => {
                  
                <i className="bi bi-c-circle text-white py-3">BURGERHOUSE 2025 ALL RIGHTS RESERVED</i> 
                 <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
-                  <div className='icons-2 '> 
-                    <h5 className='text-white'>FOLLOW US ON</h5>   
+                </div>
+                  <div className='col-lg-6 '>
+                    
+                     <div className='icons-2 my-5 mx-5 '>
+                      <div className='googleplay bg-success my-3 w-50 '>
+                      
+                      <i class="fa-brands fa-google-play text-white">ANDROID<br/></i>
+                      </div>
+                      <div className='bg-primary my-3 w-50'> 
+                      
+                      <i className='fa-brands fa-app-store text-white '>IOS </i>
+                      </div>
+                    <h6 className='text-white'>FOLLOW US ON</h6>   
                    <i className="bi bi-instagram text-white mx-2 "></i>
                     <i className="bi bi-facebook text-white mx-2"></i>
                      <i className="bi bi-twitter text-white mx-2"></i>
                       <i className="bi bi-whatsapp  text-white mx-2"></i>
                       </div>
-                
+                    </div>                
+                  </div>
                 </div>
-                
-                   </div>
-               </div>
+               
           
        </section>
 

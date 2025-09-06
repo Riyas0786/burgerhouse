@@ -4,6 +4,12 @@
   padding: 0;
   overflow-x: hidden;}
 
+  section, div {
+  margin: 0;
+  padding: 0;  
+  }
+
+
  .navlinks {
   display: flex;
   gap: 2.5rem;
@@ -26,25 +32,22 @@
   flex-direction: column;
   gap: 10px;  /* Small consistent spacing */
 }
-section, div {
-  margin: 0;
-  padding: 0;
-}
-img {
+ img {
   max-width: 100%;
   height: auto;
-  display: block;
+  display: flex;
 }
-.hero-section {
-  background-color: #f9b233; /* same yellow */
-  width: 100%;
+.text{
+  margin: 0%;
 }
+
 
 
 
 
 @media (max-width: 768px) {
-  .navlinks {
+/* Mobile menu container */
+ .navlinks {
     position: absolute; /* absolute so it can overlay */
     top: 60px; /* adjust based on navbar height */
     left: 0;
@@ -54,6 +57,7 @@ img {
     display: none; /* hidden by default */
     padding: 15px 0;
     background: #fff; /* add background for clarity */
+    border: gray solid 1px;
     border-radius: 5px;
   }
 
