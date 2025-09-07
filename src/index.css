@@ -15,7 +15,9 @@
   gap: 2.5rem;
   list-style: none;
 }
-
+.navicon{
+  color: rgb(95, 42, 22);
+}
 .navlinks .link {
   text-decoration: none;
   font-size: 20px;
@@ -60,7 +62,7 @@
     background-size: cover;
       max-width: 100%;
     position: absolute;
-    top: 56px; /* below navbar */
+    top: 60px; /* below navbar */
     left: 0;
     width: 100%;
 

@@ -37,7 +37,7 @@ const Header = () => {
 
           {/* Icons */}
           <div className="d-flex">
-            <ul className="iconlinks d-flex list-unstyled mb-0">
+            <ul className="iconlinks d-flex  list-unstyled mb-0">
               <li>
                 <Link className="navicon me-3" to="/account">
                   <i className="bi bi-person-fill"></i>

@@ -18,7 +18,7 @@ import footerlogo from '../Assets/Home/Footer_Logo.png';
 import { CartContext } from './Cartprovider';
 
 const products =[
-  {id:1,  name:'VEG BURGER',subtitle:'lorem ispum sdjfksacfj fhufhwjf fdwhuf', price:100,image:Burger_1},
+  {id:1,  name:'VEG BURGER',subtitle:'lorem ispum sdjfksacfj fhufhwjf fdwhuf', price:150,image:Burger_1},
   {id:2, name:'MUTTON BURGER',subtitle:'lorem ispum sdjfksacfj fhufhwjf fdwhuf', price:220,image:Burger_2},
   {id:3, name:'PRAWN BURGER',subtitle:'lorem ispum sdjfksacfj fhufhwjf fdwhuf', price:200,image:Burger_3},
   {id:4, name:'BEEF BURGER',subtitle:'lorem ispum sdjfksacfj fhufhwjf fdwhuf', price:140,image:Burger_4},
