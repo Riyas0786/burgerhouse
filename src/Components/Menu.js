@@ -72,42 +72,50 @@ const MenuPage = () => {
                 )))}
              </div>
             </div>
-      
         {/* Footer Section */}
-            <section className='footerfixed-background2'>
-              <div className='container-fluid'>
-               <div className='row'>
-                 <div className='col-lg-6 '>
-                  <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
-                    <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
-                  
-                        <i className="bi bi-geo-alt-fill text-white py-5">45,SOUTH CAR STREET,MADURAI</i><br/>
-                         <i className="bi bi-envelope text-white my-5 ">INFO@BURGERHOUSE.COM</i><br/>
-                         
-                       <i className="bi bi-c-circle text-white my-5 ">BURGERHOUSE 2025 ALL RIGHTS RESERVED</i> 
-                        
+          <section className='footerfixed-background2'>
+            <div className='container-fluid'>
+             <div className='row'>
+               <div className='col-lg-6 '>
+                <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
+                  <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
+                
+                      <span className="bi bi-geo-alt-fill text-white py-5">45,SOUTH CAR STREET,MADURAI</span><br/>
+                       <span className="bi bi-envelope text-white my-5 ">INFO@BURGERHOUSE.COM</span><br/>
+                       <div className='my-5'>
+                      <span className="bi bi-shop-window text-white">MONDAY-FRIDAY:10AM-11PM<br/>SATURDAY-SUNDAY:10AM-12AM</span>
+                      </div>
+      
+                       
+                     
+                      
+                      </div>
+                        <div className='col-lg-6' style={{justifyItems:'right',margin:'0px -70px'}}>
+                          
+                           <div className='icons-2 my-5 '>
+                            <h5 className='text-white'>DOWNLOAD APP ON</h5>
+                            <button className='btn btn-outline-success  '><span className='fa-brands fa-google-play text-white mx-1'></span>
+                            ANDROID
+                            </button><br/>
+                            <button className='btn btn-outline-primary w-50  '>
+                            <span className='fa-brands fa-app-store text-white mx-auto '></span>APPLE</button>
+                            <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS KHAN</h6>
+                          
+                          <h6 className='text-white'>FOLLOW US ON</h6>   
+                            <i className="bi bi-instagram text-white mx-2 "></i>
+                          <i className="bi bi-facebook text-white mx-2"></i>
+                           <i className="bi bi-twitter text-white mx-2"></i>
+                            <i className="bi bi-whatsapp  text-white mx-2"></i>
+                            </div>
+                            <div className='copyright my-3'>
+                            <span className="bi bi-c-circle text-white">BURGERHOUSE 2025 ALL RIGHTS RESERVED</span> 
+                            </div>
+                          </div>                
                         </div>
-                          <div className='col-lg-6' style={{justifyItems:'right',}}>
-                            
-                             <div className='icons-2 my-5 '>
-                              <h5 className='text-white'>DOWNLOAD APP ON</h5>
-                              <button className='btn btn-outline-success w-100  '>
-                              <i class="fa-brands fa-google-play text-white">ANDROID</i>
-                              </button><br/>
-                              <button className='btn btn-outline-primary  w-100'>
-                              <i className='fa-brands fa-app-store text-white '>IOS </i></button>
-                              <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
-                            
-                            <h6 className='text-white'>FOLLOW US ON</h6>   
-                           <i className="bi bi-instagram text-white mx-2 "></i>
-                            <i className="bi bi-facebook text-white mx-2"></i>
-                             <i className="bi bi-twitter text-white mx-2"></i>
-                              <i className="bi bi-whatsapp  text-white mx-2"></i>
-                              </div>
-                            </div>                
-                          </div>
-                        </div>
-               </section>
+                      </div>
+                     
+                
+             </section>
         
     </>
   
