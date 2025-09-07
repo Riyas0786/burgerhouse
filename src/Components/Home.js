@@ -23,13 +23,13 @@ const Home = () => {
         <div className='container'>
             <div className='row'>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-4  my-5 '>
-                    <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',}}>BURGER
-                        <br/>WEEK
-                    </h1>
+                    <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',}}>BURGER</h1>
+                        <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
+                    
                     <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur minima corrupti distinctio perferendis totam illo est quam laboriosam dignissimos? Aperiam officia fugit atque sunt rerum provident voluptate adipisci quos? Fuga asperiores facere perferendis debitis eligendi aut omnis itaque nam corrupti optio explicabo, inventore quas soluta placeat magnam provident odit?</p>
                 </div>
 
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
+                <div className='col-12 col-sm-7 col-md-6 col-lg-4 ' >
                     <img src={HeaderImage} alt="CompoImage" className='py-5 mx-5' />
                 </div>
             </div>
@@ -154,25 +154,24 @@ const Home = () => {
          <div className='col-lg-6 '>
           <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
             <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
-           
-              
-                <i className="bi bi-geo-alt-fill text-white ">45,SOUTH CAR STREET,MADURAI</i><br/>
-                 <i className="bi bi-envelope text-white  ">INFO@BURGERHOUSE.COM</i><br/>
+          
+                <i className="bi bi-geo-alt-fill text-white py-5">45,SOUTH CAR STREET,MADURAI</i><br/>
+                 <i className="bi bi-envelope text-white my-5 ">INFO@BURGERHOUSE.COM</i><br/>
                  
-               <i className="bi bi-c-circle text-white py-3">BURGERHOUSE 2025 ALL RIGHTS RESERVED</i> 
-                <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
+               <i className="bi bi-c-circle text-white my-5 ">BURGERHOUSE 2025 ALL RIGHTS RESERVED</i> 
+                
                 </div>
-                  <div className='col-lg-6 '>
+                  <div className='col-lg-6' style={{justifyItems:'right',margin:'0px -30px'}}>
                     
-                     <div className='icons-2 my-5 mx-5 '>
-                      <div className='googleplay bg-success my-3 w-50 '>
-                      
-                      <i class="fa-brands fa-google-play text-white">ANDROID<br/></i>
-                      </div>
-                      <div className='bg-primary my-3 w-50'> 
-                      
-                      <i className='fa-brands fa-app-store text-white '>IOS </i>
-                      </div>
+                     <div className='icons-2 my-5 '>
+                      <h5 className='text-white'>DOWNLOAD APP ON</h5>
+                      <button className='btn btn-outline-success w-100  '>
+                      <i class="fa-brands fa-google-play text-white">ANDROID</i>
+                      </button><br/>
+                      <button className='btn btn-outline-primary  w-100'>
+                      <i className='fa-brands fa-app-store text-white '>IOS </i></button>
+                      <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
+                    
                     <h6 className='text-white'>FOLLOW US ON</h6>   
                    <i className="bi bi-instagram text-white mx-2 "></i>
                     <i className="bi bi-facebook text-white mx-2"></i>

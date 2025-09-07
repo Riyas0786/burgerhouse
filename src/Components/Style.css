@@ -11,9 +11,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-      max-width: 100%;
-  width: 100%;
-  box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
     
 }
 /* home footer bg */
@@ -171,16 +171,20 @@
     background-color: red;
     border: 1px grey;
     color: white;
-
    border-radius: 8px;
     height: 35px ;
         
    }
+   .icons{
+    font-size: 60px;
+    color: white;
+   }
    .icons-2{
     font-size: 30px;
-
     
    }
+
+   
 
 
 /* footer icons */

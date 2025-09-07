@@ -8,6 +8,7 @@ const Cart = () => {
 
   return (
     <>
+    <section className="header">
       <div className="container">
         <i className="bi bi-bag-fill">
           
@@ -40,14 +41,22 @@ const Cart = () => {
             ))}
 
             <h3>TOTAL PRICE ₹: {totalPrice}</h3>
-            <button className="btnadd">ORDER</button>
+            <button className="btn btn-danger">ORDER</button>
           </>
         )}
       </div>
-      <section className="icons3">
-        <div className="container">
-          <i classname="bi bi-credit-card-fill"></i>
+      </section>
+
+      <section className="footer bg-black text-center text-white py-5 my-5   ">
+          <h4 >WE ACCEPT ALL CARDS</h4>
+          <h5>Safe & secure payments</h5>
+           <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger"></div>
+          <div className="icons">
+          <i className="fa-solid fa-credit-card "></i>
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
         </div>
+      
       </section>
     </>
   );
