@@ -17,7 +17,7 @@ const Branch = () => {
       <div class="go-arrow">
         <img src={chennaiimage} alt='chennai' className='mx-auto' width={200}/>
         <h3 className='text-center text-warning'>CHENNAI</h3>
-        <i class="bi bi-shop-window">9045286176</i>
+        <i class="bi bi-shop-window">30+</i>
       </div>
       </div>
       </div>
@@ -39,7 +39,7 @@ const Branch = () => {
       <div class="go-arrow"></div>
         <img src={maduraiimage} alt='MADURAI' className='mx-auto' width={200}/>
         <h3 className='text-center text-success'>MADURAI</h3>
-        <span class="bi bi-shop-window">9045286176</span>
+        <span class="bi bi-shop-window"><h1>10+</h1></span>
         </div>
         </div>
         </div>
