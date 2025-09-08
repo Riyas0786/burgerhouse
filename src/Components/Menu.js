@@ -94,10 +94,10 @@ const MenuPage = () => {
                           
                            <div className='icons-2 my-5 '>
                             <h5 className='text-white'>DOWNLOAD APP ON</h5>
-                            <button className='btn btn-outline-success  '><span className='fa-brands fa-google-play text-white mx-1'></span>
+                            <button className='btn btn-success  '><span className='fa-brands fa-google-play text-white mx-1'></span>
                             ANDROID
                             </button><br/>
-                            <button className='btn btn-outline-primary w-50  '>
+                            <button className='btn btn-primary w-50  '>
                             <span className='fa-brands fa-app-store text-white mx-auto '></span>APPLE</button>
                             <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS KHAN</h6>
                           

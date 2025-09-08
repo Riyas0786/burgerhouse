@@ -61,8 +61,8 @@
     background-attachment: fixed;
     background-size: cover;
       max-width: 100%;
-    position: absolute;
-    top: 60px; /* below navbar */
+    position: relative;
+    top: 48px; /* below navbar */
     left: 0;
     width: 100%;
 

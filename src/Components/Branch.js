@@ -17,7 +17,7 @@ const Branch = () => {
       <div class="go-arrow">
         <img src={chennaiimage} alt='chennai' className='mx-auto' width={200}/>
         <h3 className='text-center text-warning'>CHENNAI</h3>
-        <i class="bi bi-telephone-fill text-center">9045286176</i>
+        <i class="bi bi-sh">9045286176</i>
       </div>
       </div>
       </div>
@@ -28,7 +28,7 @@ const Branch = () => {
       <div class="go-arrow">
         <img src={hyderabadimage} alt='hyderabad' className='mx-auto' width={200}/>
         <h3 className='text-center text-primary'>HYDERABAD</h3>
-        <i class="bi bi-telephone-fill text-center">9045286176</i>
+        <i class="bi bi-shop-window">30+</i>
         </div>
         </div>
         </div>
@@ -39,7 +39,7 @@ const Branch = () => {
       <div class="go-arrow"></div>
         <img src={maduraiimage} alt='MADURAI' className='mx-auto' width={200}/>
         <h3 className='text-center text-success'>MADURAI</h3>
-        <i class="bi bi-telephone-fill text-center">9045286176</i>
+        <span class="bi bi-shop-window">9045286176</span>
         </div>
         </div>
         </div>
@@ -50,7 +50,7 @@ const Branch = () => {
       <div class="go-arrow">
         <img src={bangaloreimage} alt='bangalore' className='mx-auto'width={200}/>
         <h3 className='text-center text-danger'>BANGALORE</h3>
-        <i class="bi bi-telephone-fill text-center">9045286176</i>
+        <span class="bi bi-shop-window">25+</span>
     </div>
     </div>
   </div>
