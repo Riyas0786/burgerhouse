@@ -17,7 +17,7 @@ const Branch = () => {
       <div class="go-arrow">
         <img src={chennaiimage} alt='chennai' className='mx-auto' width={200}/>
         <h3 className='text-center text-warning'>CHENNAI</h3>
-        <i class="bi bi-sh">9045286176</i>
+        <i class="bi bi-shop-window">9045286176</i>
       </div>
       </div>
       </div>
