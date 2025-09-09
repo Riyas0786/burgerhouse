@@ -1,72 +1,159 @@
-import React from 'react'
-import language from '../Assets/CONTACT/langauage.png'
-import customer from '../Assets/CONTACT/customer.png'
-import footerlogo from '../Assets/Home/Footer_Logo.png'
+import React, { useState } from "react";
+import language from "../Assets/CONTACT/langauage.png";
+import customer from "../Assets/CONTACT/customer.png";
+import footerlogo from "../Assets/Home/Footer_Logo.png"
+
+
+// Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  return (
-  <>
-x  <section className='header' >
-    <h3 className=' text-center'>IF YOU NEED ENQUIRY/HELP<br/>WE ARE HERE TO HELP YOU</h3>
-    <div className='container'>
-      <div className='row'>
-    <div className='col-12 col-sm-7 col-md-6 col-lg-4 mx-auto '>
-    <div className='circle my-5'>
-      <img src={customer} alt='customer' width={200}/>
-    </div>
-    <h4 className='text-primary '>MAIL TO US SUPPORT@BURGERHOUSE</h4>
-    <input type='text' id='text' placeholder='write your concern' className='mx-auto'></input>
-    <button className=' btn btn-primary '>SUBMIT</button>
-    </div>
-      <div className=' col-12 col-sm-7 col-md-6 col-lg-4 mx-auto '>
-        <div className='circle my-5'>
-      <img src={language} alt='language' width={200}/>
-    </div>
-    <div className='mx-5'>
-    <h4 className='text-primary  '>TALK TO OUR SUPPORT TEAM </h4>
-    <button className='btn btn-danger'>CALL <h5>978653478</h5></button>
-    </div>
-    </div>
-    </div>
-    </div>
-   
-    
-  </section>
-     {/* Footer Section */}
-        <section className='fixed-background2'>
-          <div className='container-fluid'>
-           <div className='row'>
-             <div className='col-lg-6'>
-              <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
-                <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
-              </div>
-                  <div className='col-lg-6' >
-                    <div className='icons-2'>
-                  <i className="bi bi-geo-alt-fill text-white ">45,SOUTH CAR STREET,MADURAI</i><br/>
-                     <i className="bi bi-envelope text-white ">INFO@BURGERHOUSE.COM</i><br/>
-                     </div>
-               </div>
-               <div className='col-lg-4 '>
-                    <h6 className='text-white py-3'>BURGERHOUSE 2025 ALL RIGHTS RESERVED </h6>  
-                    </div>
-                    <div className='col-lg-4'>
-                      <h6 className='text-white mx-5'>DESGNED & DEVELOPED BY <br/>RIYAS</h6>
-                    </div>
-                    <div className='col-lg-4'>         
-                      <div className='icons '>
-                       <i className="bi bi-instagram text-white mx-2 "></i>
-                        <i className="bi bi-facebook text-white mx-2"></i>
-                         <i className="bi bi-twitter text-white mx-2"></i>
-                          <i className="bi bi-whatsapp  text-white mx-2"></i>
-                       </div>
-                       </div>
-                    
-                  </div>
-                </div>
-           </section>
-    
-  </>
-  )
-}
+  const [issueType, setIssueType] = useState("");
+  const [message, setMessage] = useState("");
 
-export default Contact
+  const handleSubmit = () => {
+    if (!issueType || !message.trim()) {
+      toast.warn("⚠️ Please select an issue type and enter your concern.", {
+        position: "top-center",
+      });
+      return;
+    }
+
+    toast.success(`✅ Your concern about "${issueType}" has been submitted!`, {
+      position: "top-center",
+    });
+
+    setIssueType("");
+    setMessage("");
+  };
+
+  return (
+    <>
+      <section className="header">
+        <h3 className="text-center">
+          IF YOU NEED ENQUIRY/HELP <br /> WE ARE HERE TO HELP YOU
+        </h3>
+        <div className="container">
+          <div className="row">
+            {/* Customer Support */}
+            <div className="col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
+              <div className="circle my-5">
+                <img src={customer} alt="customer" width={200} />
+              </div>
+              <h4 className="text-primary">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
+
+              {/* Dropdown */}
+              <select
+                className="form-select my-3"
+                value={issueType}
+                onChange={(e) => setIssueType(e.target.value)}
+              >
+                <option value="">-- Select Issue Type --</option>
+                <option value="Payment Related">💳 Payment Related</option>
+                <option value="Order Not Delivered">🚚 Order Not Delivered</option>
+                <option value="Wrong Item Delivered">🍔 Wrong Item Delivered</option>
+                <option value="Refund Request">💰 Refund Request</option>
+                <option value="Others">📩 Others</option>
+              </select>
+
+              {/* Message box */}
+              <textarea
+                placeholder="Write your concern"
+                className="form-control my-3"
+                rows="4"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+
+              {/* Submit */}
+              <button className="btn btn-primary" onClick={handleSubmit}>
+                SUBMIT
+              </button>
+            </div>
+
+            {/* Call Support */}
+            <div className="col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
+              <div className="circle my-5">
+                <img src={language} alt="language" width={200} />
+              </div>
+              <h4 className="text-primary">TALK TO OUR SUPPORT TEAM</h4>
+              <button className="btn btn-danger">
+                CALL: <span className="fw-bold">978653478</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+         <section className="footerfixed-background2">
+       <div className="container-fluid">
+         <div className="row align-items-center"> {/* ✅ makes both columns level */}
+           
+           {/* Left Column */}
+           <div className="col-lg-6 text-lg-start text-center">
+             <img
+               src={footerlogo}
+               alt="footerlogo"
+               className="py-3 mx-lg-0 mx-auto d-block"
+               width={250}
+             />
+             <p className="text-white py-3">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis amet
+               necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates,
+               numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?
+             </p>
+     
+             <span className="bi bi-geo-alt-fill text-white d-block py-1">
+               45, SOUTH CAR STREET, MADURAI
+             </span>
+             <span className="bi bi-envelope text-white d-block py-1">
+               INFO@BURGERHOUSE.COM
+             </span>
+             <div className="my-2">
+               <span className="bi bi-shop-window text-white">
+                 MONDAY-FRIDAY: 10AM-11PM <br /> SATURDAY-SUNDAY: 10AM-12AM
+               </span>
+             </div>
+           </div>
+     
+           {/* Right Column */}
+           <div className="col-lg-6 text-lg-end text-center">
+             <div className="icons-2 my-3">
+               <h5 className="text-white">DOWNLOAD APP ON</h5>
+               <button className="btn btn-success my-2">
+                 <span className="fa-brands fa-google-play text-white mx-1"></span>
+                 ANDROID
+               </button>
+               <br />
+               <button className="btn btn-primary  my-2">
+                 <span className="fa-brands fa-app-store text-white mx-auto"></span>
+                 APPLE
+               </button>
+               <h6 className="text-white py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
+     
+               <h6 className="text-white">FOLLOW US ON</h6>
+               <i className="bi bi-instagram text-white mx-2 fs-4"></i>
+               <i className="bi bi-facebook text-white mx-2 fs-4"></i>
+               <i className="bi bi-twitter text-white mx-2 fs-4"></i>
+               <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>
+             </div>
+     
+             <div className="copyright my-3">
+               <span className="bi bi-c-circle text-white">
+                 BURGERHOUSE 2025 ALL RIGHTS RESERVED
+               </span>
+             </div>
+           </div>
+     
+         </div>
+       </div>
+     </section>
+           {/* Toast Container */}
+      <ToastContainer />
+    </>
+  );
+};
+
+export default Contact;

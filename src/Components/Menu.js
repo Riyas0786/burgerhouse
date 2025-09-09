@@ -17,6 +17,10 @@ import Drinks_6 from '../Assets/Menu/Drinks_6.png';
 import footerlogo from '../Assets/Home/Footer_Logo.png';
 import { CartContext } from './Cartprovider';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 const products =[
   {id:1,  name:'VEG BURGER',subtitle:'lorem ispum sdjfksacfj fhufhwjf fdwhuf', price:150,image:Burger_1},
   {id:2, name:'MUTTON BURGER',subtitle:'lorem ispum sdjfksacfj fhufhwjf fdwhuf', price:220,image:Burger_2},
@@ -48,16 +52,19 @@ const MenuPage = () => {
     <>
       {/* search bar */}     
         < div className='container'>
-         <input type='search'className='form-control mb-3 my-5 ' value={searchTerm}
+         <input type='search'className='form-control mb-3 my-5 mx-3  ' value={searchTerm}
           placeholder='searchfor products' onChange={(e)=> setSearchTerm(e.target.value)}/>
+             <div className="flash-news">
+              <p>🔥 BUY ONE GET ONE FREE FOR TODAY ONLY !!!! 🔥</p>
+              </div>
+        
         <div className='row'>
           {filteredProducts.length===0?
            (<p>no products found</p>):(filteredProducts.map((product)=>(
-          
            <div className='col-12 col-sm-7 col-md-6 col-lg-4 my-5 'key={product.id}>
             <div className='card-2 '>
-             <div class="go-corner" href="#">
-              <div class="go-arrow">
+             <div className="go-corner" href="#">
+              <div className="go-arrow">
                <img src={product.image} alt='cardimage' className='mx-auto my-5' />
                 <h5 className='text-center '>{product.name}</h5>
                  <i className='text-center'>{product.icon}</i>
@@ -72,51 +79,70 @@ const MenuPage = () => {
                 )))}
              </div>
             </div>
-        {/* Footer Section */}
-          <section className='footerfixed-background2'>
-            <div className='container-fluid'>
-             <div className='row'>
-               <div className='col-lg-6 '>
-                <img src={footerlogo} alt='footerlogo'className='py-3' width={250}/>
-                  <p className='text-white py-5'>Lorem ipsum dolor sit amet consecteltur adipisicing elit.deofu fjeufd fjefjs fefjef djwdskwld Dolorum perspiciatis amet necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates, numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?</p>
-                
-                      <span className="bi bi-geo-alt-fill text-white py-5">45,SOUTH CAR STREET,MADURAI</span><br/>
-                       <span className="bi bi-envelope text-white my-5 ">INFO@BURGERHOUSE.COM</span><br/>
-                       <div className='my-5'>
-                      <span className="bi bi-shop-window text-white">MONDAY-FRIDAY:10AM-11PM<br/>SATURDAY-SUNDAY:10AM-12AM</span>
-                      </div>
-      
-                       
-                     
-                      
-                      </div>
-                        <div className='col-lg-6' style={{justifyItems:'right',margin:'0px -70px'}}>
-                          
-                           <div className='icons-2 my-5 '>
-                            <h5 className='text-white'>DOWNLOAD APP ON</h5>
-                            <button className='btn btn-success  '><span className='fa-brands fa-google-play text-white mx-1'></span>
-                            ANDROID
-                            </button><br/>
-                            <button className='btn btn-primary w-50  '>
-                            <span className='fa-brands fa-app-store text-white mx-auto '></span>APPLE</button>
-                            <h6 className='text-white py-4 '>DESGNED & DEVELOPED BY <br/>RIYAS KHAN</h6>
-                          
-                          <h6 className='text-white'>FOLLOW US ON</h6>   
-                            <i className="bi bi-instagram text-white mx-2 "></i>
-                          <i className="bi bi-facebook text-white mx-2"></i>
-                           <i className="bi bi-twitter text-white mx-2"></i>
-                            <i className="bi bi-whatsapp  text-white mx-2"></i>
-                            </div>
-                            <div className='copyright my-3'>
-                            <span className="bi bi-c-circle text-white">BURGERHOUSE 2025 ALL RIGHTS RESERVED</span> 
-                            </div>
-                          </div>                
-                        </div>
-                      </div>
-                     
-                
-             </section>
-        
+       <section className="footerfixed-background2">
+             <div className="container-fluid">
+               <div className="row align-items-center"> {/* ✅ makes both columns level */}
+                 
+                 {/* Left Column */}
+                 <div className="col-lg-6 text-lg-start text-center">
+                   <img
+                     src={footerlogo}
+                     alt="footerlogo"
+                     className="py-3 mx-lg-0 mx-auto d-block"
+                     width={250}
+                   />
+                   <p className="text-white py-3">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis amet
+                     necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates,
+                     numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?
+                   </p>
+           
+                   <span className="bi bi-geo-alt-fill text-white d-block py-1">
+                     45, SOUTH CAR STREET, MADURAI
+                   </span>
+                   <span className="bi bi-envelope text-white d-block py-1">
+                     INFO@BURGERHOUSE.COM
+                   </span>
+                   <div className="my-2">
+                     <span className="bi bi-shop-window text-white">
+                       MONDAY-FRIDAY: 10AM-11PM <br /> SATURDAY-SUNDAY: 10AM-12AM
+                     </span>
+                   </div>
+                 </div>
+           
+                 {/* Right Column */}
+                 <div className="col-lg-6 text-lg-end text-center">
+                   <div className="icons-2 my-3">
+                     <h5 className="text-white">DOWNLOAD APP ON</h5>
+                     <button className="btn btn-success my-2">
+                       <span className="fa-brands fa-google-play text-white mx-1"></span>
+                       ANDROID
+                     </button>
+                     <br />
+                     <button className="btn btn-primary  my-2">
+                       <span className="fa-brands fa-app-store text-white mx-auto"></span>
+                       APPLE
+                     </button>
+                     <h6 className="text-white py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
+           
+                     <h6 className="text-white">FOLLOW US ON</h6>
+                     <i className="bi bi-instagram text-white mx-2 fs-4"></i>
+                     <i className="bi bi-facebook text-white mx-2 fs-4"></i>
+                     <i className="bi bi-twitter text-white mx-2 fs-4"></i>
+                     <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>
+                   </div>
+           
+                   <div className="copyright my-3">
+                     <span className="bi bi-c-circle text-white">
+                       BURGERHOUSE 2025 ALL RIGHTS RESERVED
+                     </span>
+                   </div>
+                 </div>
+           
+               </div>
+             </div>
+           </section>
+           
     </>
   
   )
