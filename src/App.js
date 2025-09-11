@@ -12,6 +12,7 @@ import Career from './Components/Career';
 import Account from './Components/Accout';
 import Contact from './Components/Contact';
 import Cart from './Components/Cart';
+import Login from './Components/login';
 import { CartProvider } from './Components/Cartprovider';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/account' element={<Account/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/login'element={<Login/>}/>
       </Routes>
       </CartProvider>
       </BrowserRouter>

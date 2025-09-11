@@ -47,7 +47,7 @@ const Branch = () => {
     </div>
     <div className=' col-12 col-sm-7 col-md-6 col-lg-4 '>
       <div className='card-2'>
-        <div class="go-corner" href="#">
+        <div class="go-corner" href="#/menu">
       <div class="go-arrow">
         <img src={bangaloreimage} alt='bangalore' className='mx-auto'width={200}/>
         <h3 className='text-center text-danger'>BANGALORE</h3>
