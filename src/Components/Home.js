@@ -11,11 +11,14 @@ import sliceimage from '../Assets/Home/Slice_Img.png';
 import sliceimage1 from '../Assets/Home/Slice_Img_1.png';
 import sliceimage2 from '../Assets/Home/Slice_Img_2.png';
 import footerlogo from '../Assets/Home/Footer_Logo.png';
+import { Carousel } from 'react-bootstrap';
+import {  useNavigate } from 'react-router-dom';
 
 const Home = () => {
+const navigate = useNavigate();   
   const showAlert = () => {
     alert("Your table has been reserved successfully!");
-  }
+  };  
   return (
     <>
     {/* Header Section */}
@@ -51,40 +54,69 @@ const Home = () => {
         </div>
     </section>
 
-    {/* Landing order now*/}
-    <section className='landing py-5'>
-        <div className='container'>
-            <h5 className='text-center text-primary bg-warning'>ALWAYS TASTY BURGER</h5>
-            <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
-            <p className='text-center text-primary py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut corporis earum. Adipisci, earum consectetur? Laudantium voluptatum dignissimos ad molestiae qui ullam dolor hic est, ipsam maxime ipsa earum sit magni illo nemo labore eum quis. Iusto obcaecati consequatur delectus.</p>
-            <div className='row'>
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-                    <img src={LandImage1}  alt="LandngImage" width="300px"className='mx-auto my-3'  />
-                    <h4 className='text-center text-primary'>Tandoor Chicken Burger</h4>
-                    <p className='text-center text-primary py-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
-                    <div className='d-flex justify-content-center'>
-                        <button className='btn btn-danger'style={{backgroundColor:'red'}}>Order Now</button>
-                    </div>
-                </div>
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                    <img src={LandImage2}  alt="LandngImage" width="200px" className='mx-auto my-3' />
-                    <h4 className='text-center text-primary py-3'>Tandoor Chicken Burger</h4>
-                    <p className='text-center text-primary py-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
-                    <div className='d-flex justify-content-center'>
-                        <button className='btn btn-danger'style={{backgroundColor:'red'}}>Order Now</button>
-                    </div>
-                </div>
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-                    <img src={LandImage3}  alt="LandngImage" width="300px" className='mx-auto my-3' />
-                    <h4 className='text-center text-primary'>Tandoor Chicken Burger</h4>
-                    <p className='text-center text-primary py-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.</p>
-                    <div className='d-flex justify-content-center'>
-                        <button className='btn btn-danger'style={{backgroundColor:'red'}}>Order Now</button>
-                    </div>
-                </div>
-            </div>
+   <section className='landing py-5'>
+  <div className='container'>
+    <h5 className='text-center text-primary mx-auto bg-warning w-50'>
+      ALWAYS TASTY BURGER
+    </h5>
+    <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
+    <p className='text-center text-primary py-2'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut corporis earum.
+      Adipisci, earum consectetur? Laudantium voluptatum dignissimos ad molestiae qui ullam
+      dolor hic est, ipsam maxime ipsa earum sit magni illo nemo labore eum quis.
+      Iusto obcaecati consequatur delectus.
+    </p>
+
+    {/* Slideshow Carousel */}
+    
+    <Carousel interval={2000}
+    pause='hover' controls={false} indicators={false} >
+      {/* Slide 1 */}
+      <Carousel.Item>
+        <div className='text-center'>
+          <img src={LandImage1} alt="LandImage1" width="300px" className='mx-auto my-3' />
+          <h4 className='text-primary'>Tandoor Chicken Burger</h4>
+          <p className='text-primary py-3'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.
+          </p>
+          <button className='btn btn-danger' style={{ backgroundColor: 'red' }}onClick={()=>navigate("/menu")}>
+            Order Now
+          </button>
         </div>
-    </section>
+      </Carousel.Item>
+
+      {/* Slide 2 */}
+      <Carousel.Item>
+        <div className='text-center'>
+          <img src={LandImage2} alt="LandImage2" width="250px" className='mx-auto my-3' />
+          <h4 className='text-primary'>Classic Veggie Burger</h4>
+          <p className='text-primary py-3'>
+            Delicious veggie burger made with fresh ingredients and special sauce.
+          </p>
+          <button className='btn btn-danger' style={{ backgroundColor: 'red' }}onClick={()=>navigate("/menu")}>
+            Order Now
+          </button>
+        </div>
+      </Carousel.Item>
+
+      {/* Slide 3 */}
+      <Carousel.Item>
+        <div className='text-center'>
+          <img src={LandImage3} alt="LandImage3" width="300px" className='mx-auto my-3' />
+          <h4 className='text-primary'>Cheese Overload Burger</h4>
+          <p className='text-primary py-3'>
+            A juicy burger with double cheese, perfect for cheese lovers.
+          </p>
+          <button className='btn btn-danger' style={{ backgroundColor: 'red' }} onClick={()=>navigate("/menu")}>
+            Order Now
+          </button>
+        </div>
+      </Carousel.Item>
+    </Carousel>
+  </div>
+</section>
+
 
     {/* Flex card Section */}
     <section className="container my-5">
