@@ -87,7 +87,7 @@
        
         width: 400px;
         height: 550px;
-        background-color: rgba(241, 205, 106, 0.76);
+        background-color: rgba(238, 236, 231, 0.788);
         border: 1px none;
         border-radius: 20px;
         margin: 0px 30px 40px 6px; 
@@ -159,15 +159,8 @@
     border: none;
     border-radius: 20px;
 }
-/* menu page  add btn */
-.buybtn{
-    background-color: rgb(255, 0, 0);
-    border: none;
-    color: rgb(255, 255, 255);
-    height: 40px;
-    width: 150px;
-    margin: 10px ;
-}
+
+
 /* home page find a table */
  .tablebtn{
     background-color: red;

@@ -114,5 +114,22 @@
   .menuicon {
     display: block;
   }
+@media (max-width: 576px) {
+  .signup-form input {
+    width: 100% !important;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-icons i {
+    font-size: 1.5rem;
+    margin: 0 8px;
+  }
+}
+@media (max-width: 576px) {
+  .burger-image {
+    display: none;   /* OR reduce width if you want */
+    /* width: 120px; */
+  }
+}
 
 }

@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import franchiseimg from "../Assets/CAREER/franchise img.png";
 import trustableimg from "../Assets/CAREER/trustableimg.png";
 import footerlogo from "../Assets/Home/Footer_Logo.png";
-
+import Branch from "../Assets/CAREER/branches.png";
 const Career = () => {
   const [Name, setName] = useState("");
   const [Mobilenumber, setMobilenumber] = useState("");
@@ -28,30 +28,31 @@ const Career = () => {
   return (
     <>
       <section className="header">
-        <div className="container">
-          <div className="row">
             <h1>
               WELCOME TO INDIA'S MOST ADMIRED <br /> AND AFFORDABLE FRANCHISE
             </h1>
-
-            <Carousel interval={3000}>
+          
+            <Carousel interval={2000}>
               <Carousel.Item>
                 <img
                   src={franchiseimg}
                   alt="franchiseimg"
                   className="my-5 mx-auto"
                 
-                  style={{ borderRadius: "15px",height:'600px',width:'500px' }}
+                  style={{ borderRadius: "15px",height:'600px',width:'600px' }}
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img src={trustableimg} alt="trustable" className="my-5 mx-auto" height={500} width={500} 
-                style={{borderRadius:'15px',height:'600px',width:'500px'}}/>
+                style={{borderRadius:'15px',height:'600px',width:'600px'}}/>
               </Carousel.Item>
-            </Carousel>
+              <Carousel.Item>
+                <img src={Branch} alt="branch"className="my-5 mx-auto" height={500} width={500} 
+                style={{borderRadius:'15px',height:'600px',width:'600px'}}/>
+              </Carousel.Item>
 
-            <div className="col-12 col-sm-7 col-md-6 col-lg-4 my-5 mx-auto">
-              <div className="careercard">
+              <Carousel.Item>
+              <div className="careercard mx-auto">
                 <h3 className="mx-3">FRANCHISE ENQUIRY</h3>
                 <form  onSubmit={handlesubmit}>
                   <label htmlFor="name">
@@ -110,9 +111,10 @@ const Career = () => {
                   </button>
                 </form>
               </div>
-            </div>
-          </div>
-        </div>
+                  </Carousel.Item>
+                </Carousel>    
+            
+    
       </section>
 
       {/* Footer Section */}
