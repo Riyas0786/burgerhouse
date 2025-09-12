@@ -95,13 +95,13 @@ const Branch = () => {
         <div className="icons-2 my-3">
           <h5 className="text-white">DOWNLOAD APP ON</h5>
           <button className="btn btn-success my-2">
-            <span className="fa-brands fa-google-play text-white mx-1"></span>
-            ANDROID
+            <span className="fa-brands fa-google-play text-white mx-1"></span>GET IT ON <br/>
+            GOOGLE PLAY
           </button>
           <br />
-          <button className="btn btn-primary  my-2">
-            <span className="fa-brands fa-app-store text-white mx-auto"></span>
-            APPLE
+          <button className="btn btn-primary my-2" style={{width:'127px'}}>
+            <span className="bi bi-apple text-white mx-auto"></span>
+            GET IT ON<br/>APP STORE
           </button>
           <h6 className="text-white py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
 

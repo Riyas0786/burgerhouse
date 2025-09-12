@@ -89,7 +89,8 @@ const Cart = () => {
       {/* Footer Section */}
      <section className="footer bg-black text-center text-white py-5 mt-5">
   <h4>WE ACCEPT ALL CARDS</h4>
-  <h5>Safe & secure payments</h5>
+  <span className="bi bi-shield-check" style={{fontSize:'100px'}}>
+  <h5>100%<br/>Safe & secure payments</h5></span>
   <div className="h4 pb-2 mb-4 text-danger border-bottom border-danger"></div>
   <div className="icons">
     
