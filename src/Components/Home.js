@@ -10,7 +10,6 @@ import FlexImage1 from '../Assets/Home/Container_Img.png';
 import sliceimage from '../Assets/Home/Slice_Img.png';
 import sliceimage1 from '../Assets/Home/Slice_Img_1.png';
 import sliceimage2 from '../Assets/Home/Slice_Img_2.png';
-import footerlogo from '../Assets/Home/Footer_Logo.png';
 import { Carousel } from 'react-bootstrap';
 import {  useNavigate } from 'react-router-dom';
 
@@ -25,15 +24,15 @@ const navigate = useNavigate();
     <section className='fixed-background '>
         <div className='container'>
             <div className='row'>
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4  my-5 '>
+                <div className='col-lg-6  my-5 '>
                     <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',}}>BURGER</h1>
                         <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
                     
                     <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur minima corrupti distinctio perferendis totam illo est quam laboriosam dignissimos? Aperiam officia fugit atque sunt rerum provident voluptate adipisci quos? Fuga asperiores facere perferendis debitis eligendi aut omnis itaque nam corrupti optio explicabo, inventore quas soluta placeat magnam provident odit?</p>
                 </div>
 
-                <div className='col-12 col-sm-7 col-md-6 col-lg-4 ' >
-                    <img src={HeaderImage} alt="CompoImage" className='py-5 mx-5' />
+                <div className=' col-lg-6 ' >
+                    <img src={HeaderImage} alt="CompoImage" className='justify-content-right' />
                 </div>
             </div>
         </div>
@@ -57,7 +56,7 @@ const navigate = useNavigate();
    <section className='landing py-5'>
   <div className='container'>
     <h5 className='text-center text-primary mx-auto bg-warning w-50'>
-      ALWAYS TASTY BURGER
+    
     </h5>
     <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
     <p className='text-center text-primary py-2'>
@@ -169,13 +168,13 @@ const navigate = useNavigate();
               </div>
            <div className='col-lg-3' >
              <input type='text' id='name' placeholder='NAME' required className='form-control w-100  my-3'></input>
-               <input type='Email' id='email' placeholder='EMAIL'className='form-control w-100  '></input>
+               <input type='Email' id='email' placeholder='EMAIL' required className='form-control w-100  '></input>
                  <input type='date' id='date' placeholder='DATE'className='form-control w-100  my-3'></input> 
           </div>
           <div className='col-lg-3'>
              <input type='time'  id='time' placeholder='TIME'className='form-control w-100 my-3'></input>
               <input type='text' id='people' placeholder='PEOPLE'className='form-control w-100'></input>
-               <button className='tablebtn my-3 w-100 'onClick={showAlert}>FIND A TABLE</button>
+               <button className='btn btn-danger my-3 w-100 'onClick={showAlert}>FIND A TABLE</button>
               </div>
               <div className='col-lg-3 '>
               <img src={sliceimage2} alt='sliceimage2' width={300} />
@@ -183,72 +182,6 @@ const navigate = useNavigate();
                </div>     
               </div>        
       </section>
-
-    <section className="footerfixed-background2">
-  <div className="container-fluid">
-    <div className="row align-items-center"> {/* ✅ makes both columns level */}
-      
-      {/* Left Column */}
-      <div className="col-lg-6 text-lg-start text-center">
-        <img
-          src={footerlogo}
-          alt="footerlogo"
-          className="py-3 mx-lg-0 mx-auto d-block"
-          width={250}
-        />
-        <p className="text-white py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis amet
-          necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates,
-          numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?
-        </p>
-
-        <span className="bi bi-geo-alt-fill text-white d-block py-1">
-          45, SOUTH CAR STREET, MADURAI
-        </span>
-        <span className="bi bi-envelope text-white d-block py-1">
-          INFO@BURGERHOUSE.COM
-        </span>
-        <div className="my-2">
-          <span className="bi bi-shop-window text-white">
-            MONDAY-FRIDAY: 10AM-11PM <br /> SATURDAY-SUNDAY: 10AM-12AM
-          </span>
-        </div>
-      </div>
-
-      {/* Right Column */}
-      <div className="col-lg-6 text-lg-end text-center">
-        <div className="icons-2 my-3">
-          <h5 className="text-white">DOWNLOAD APP ON</h5>
-          <button className="btn btn-success my-2">
-            <span className="fa-brands fa-google-play text-white mx-1"></span>GET IT ON <br/>
-            GOOGLE PLAY
-          </button>
-          <br />
-          <button className="btn btn-primary my-2" style={{width:'127px'}}>
-            <span className="bi bi-apple text-white mx-auto"></span>
-            GET IT ON<br/>APP STORE
-          </button>
-          <h6 className="text-white py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
-
-          <h6 className="text-white">FOLLOW US ON</h6>
-          <i className="bi bi-instagram text-white mx-2 fs-4"></i>
-          <i className="bi bi-facebook text-white mx-2 fs-4"></i>
-          <i className="bi bi-twitter text-white mx-2 fs-4"></i>
-          <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>
-        </div>
-
-        <div className="copyright my-3">
-          <span className="bi bi-c-circle text-white">
-            BURGERHOUSE 2025 ALL RIGHTS RESERVED
-          </span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
     </>
   )
 }

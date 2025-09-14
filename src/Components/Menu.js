@@ -14,50 +14,112 @@ import Drinks_3 from '../Assets/Menu/Drinks_3.png';
 import Drinks_4 from '../Assets/Menu/Drinks_4.png';
 import Drinks_5 from '../Assets/Menu/Drinks_5.png';
 import Drinks_6 from '../Assets/Menu/Drinks_6.png';
-import footerlogo from '../Assets/Home/Footer_Logo.png';
+
 import { CartContext } from './Cartprovider';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 
 const products = [
-  { id: 1, name: 'VEG BURGER', subtitle: 'Fresh and tasty veg burger', price: 150, image: Burger_1 },
-  { id: 2, name: 'MUTTON BURGER', subtitle: 'Delicious mutton burger', price: 220, image: Burger_2 },
-  { id: 3, name: 'PRAWN BURGER', subtitle: 'Crispy prawn delight', price: 200, image: Burger_3 },
-  { id: 4, name: 'BEEF BURGER', subtitle: 'Juicy beef patty burger', price: 140, image: Burger_4 },
-  { id: 5, name: 'CHICKEN BURGER', subtitle: 'Classic chicken burger', price: 130, image: Burger_5 },
-  { id: 6, name: 'CHEESE BURGER', subtitle: 'Cheesy goodness burger', price: 110, image: Burger_6 },
-  { id: 7, name: 'HOTDOG BURGER', subtitle: 'Hotdog style burger', price: 180, image: Burger_7 },
-  { id: 8, name: 'CHICKEN WINGS', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8 },
-  { id: 9, name: 'BROASTED BURGER', subtitle: 'Crispy broasted burger', price: 160, image: Burger_9 },
-  { id: 10, name: 'MOJITO', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1 },
-  { id: 11, name: 'LIME', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2 },
-  { id: 12, name: 'GINGER LIME', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3 },
-  { id: 13, name: 'ORANGE', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4 },
-  { id: 14, name: 'COCKTAIL', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5 },
-  { id: 15, name: 'GRAPE LIME', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6 },
+  { id: 1, name: 'VEG BURGER', category: 'Food', subtitle: 'Fresh and tasty veg burger', price: 150, image: Burger_1 },
+  { id: 2, name: 'MUTTON BURGER', category: 'Food', subtitle: 'Delicious mutton burger', price: 220, image: Burger_2 },
+  { id: 3, name: 'PRAWN BURGER', category: 'Food', subtitle: 'Crispy prawn delight', price: 200, image: Burger_3 },
+  { id: 4, name: 'BEEF BURGER', category: 'Food', subtitle: 'Juicy beef patty burger', price: 140, image: Burger_4 },
+  { id: 5, name: 'CHICKEN BURGER', category: 'Food', subtitle: 'Classic chicken burger', price: 130, image: Burger_5 },
+  { id: 6, name: 'CHEESE BURGER', category: 'Food', subtitle: 'Cheesy goodness burger', price: 110, image: Burger_6 },
+  { id: 7, name: 'HOTDOG BURGER', category: 'Food', subtitle: 'Hotdog style burger', price: 180, image: Burger_7 },
+  { id: 8, name: 'CHICKEN WINGS', category: 'Food', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8 },
+  { id: 9, name: 'BROASTED BURGER', category: 'Food', subtitle: 'Crispy broasted burger', price: 160, image: Burger_9 },
+  { id: 10, name: 'MOJITO', category: 'Drink', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1 },
+  { id: 11, name: 'LIME', category: 'Drink', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2 },
+  { id: 12, name: 'GINGER LIME', category: 'Drink', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3 },
+  { id: 13, name: 'ORANGE', category: 'Drink', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4 },
+  { id: 14, name: 'COCKTAIL', category: 'Drink', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5 },
+  { id: 15, name: 'GRAPE LIME', category: 'Drink', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6 },
 ];
 
 const MenuPage = () => {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
-  const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const [searchTerm, setSearchTerm] = useState('');
+  const [category, setCategory] = useState('All');
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
+  const [sortOrder, setSortOrder] = useState('default');
+
+  
+  let filteredProducts = products.filter((product) => {
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = category === 'All' || product.category === category;
+    const matchesMin = minPrice === '' || product.price >= Number(minPrice);
+    const matchesMax = maxPrice === '' || product.price <= Number(maxPrice);
+    return matchesSearch && matchesCategory && matchesMin && matchesMax;
+  });
+
+  // ✅ Sorting Logic
+  if (sortOrder === 'lowToHigh') {
+    filteredProducts.sort((a, b) => a.price - b.price);
+  } else if (sortOrder === 'highToLow') {
+    filteredProducts.sort((a, b) => b.price - a.price);
+  }
 
   return (
     <>
-      {/* Search bar */}
       <div className="container">
+        {/* Search bar */}
         <input
           type="search"
-          className="form-control mb-3 my-5 mx-3"
+          className="form-control mb-3 my-3"
           value={searchTerm}
           placeholder="Search for products..."
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+
+        {/* Filters Row */}
+        <div className="d-flex flex-wrap gap-2 mb-3">
+          {/* Category Filter */}
+          <select
+            className="form-select"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            style={{ maxWidth: "200px" }}
+          >
+            <option value="All">All</option>
+            <option value="Food">Burgers & Food</option>
+            <option value="Drink">Drinks</option>
+          </select>
+
+          {/* Price Range Filter */}
+          <input
+            type="number"
+            placeholder="Min Price"
+            className="form-control"
+            value={minPrice}
+            onChange={(e) => setMinPrice(e.target.value)}
+            style={{ maxWidth: "120px" }}
+          />
+          <input
+            type="number"
+            placeholder="Max Price"
+            className="form-control"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(e.target.value)}
+            style={{ maxWidth: "120px" }}
+          />
+
+          {/* Sort Option */}
+          <select
+            className="form-select"
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+            style={{ maxWidth: "180px" }}
+          >
+            <option value="default">Sort by</option>
+            <option value="lowToHigh">Price: Low to High</option>
+            <option value="highToLow">Price: High to Low</option>
+          </select>
+        </div>
 
         {/* Flash news */}
         <div className="flash-news text-center my-3">
@@ -71,35 +133,35 @@ const MenuPage = () => {
           ) : (
             filteredProducts.map((product) => (
               <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
-                <div className="card h-100 shadow">
+                <div className="card-2 text-center p-3">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="card-img-top p-3"
-                    style={{ height: '200px', objectFit: 'contain' }}
+                    style={{ height: '150px', objectFit: 'contain' }}
+                    className="mx-auto"
                   />
-                  <div className="card-body text-center">
-                    <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.subtitle}</p>
-                    <h5 className="text-danger">₹{product.price}</h5>
-                    <div className="d-flex justify-content-center gap-2 mt-3">
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => {addToCart(product); 
-                                       navigate('/cart')}}
-                      >
-                        BUY NOW
-                      </button>
-                      <button
-                        className="btn btn-warning"
-                        onClick={() => {
-                          addToCart(product);
-                          navigate('/cart');
-                        }}
-                      >
-                        <i className="bi bi-bag-fill"></i>
-                      </button>
-                    </div>
+                  <h5 className="card-title mt-2">{product.name}</h5>
+                  <p className="card-text">{product.subtitle}</p>
+                  <h5 className="text-danger">₹{product.price}</h5>
+                  <div className="d-flex justify-content-center gap-2 mt-3">
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => {
+                        addToCart(product);
+                        navigate('/cart');
+                      }}
+                    >
+                      BUY NOW
+                    </button>
+                    <button
+                      className="btn btn-warning"
+                      onClick={() => {
+                        addToCart(product);
+                        
+                      }}
+                    >
+                      <i className="bi bi-bag-fill"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -107,70 +169,6 @@ const MenuPage = () => {
           )}
         </div>
       </div>
-
-      {/* Footer */}
-      <section className="footerfixed-background2 mt-5 py-4 bg-dark">
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            {/* Left Column */}
-            <div className="col-lg-6 text-lg-start text-center text-white">
-              <img
-                src={footerlogo}
-                alt="footerlogo"
-                className="py-3 mx-lg-0 mx-auto d-block"
-                width={250}
-              />
-              <p className="py-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis amet
-                necessitatibus velit vitae inventore quae iusto repellendus ullam libero voluptates,
-                numquam cum cumque atque.
-              </p>
-
-              <span className="bi bi-geo-alt-fill d-block py-1">
-                45, SOUTH CAR STREET, MADURAI
-              </span>
-              <span className="bi bi-envelope d-block py-1">
-                INFO@BURGERHOUSE.COM
-              </span>
-              <div className="my-2">
-                <span className="bi bi-shop-window">
-                  MONDAY-FRIDAY: 10AM-11PM <br /> SATURDAY-SUNDAY: 10AM-12AM
-                </span>
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="col-lg-6 text-lg-end text-center text-white">
-              <div className="icons-2 my-3">
-                <h5>DOWNLOAD APP ON</h5>
-                <button className="btn btn-success my-2">
-                  <span className="fa-brands fa-google-play text-white mx-1"></span>
-                  GET IT ON <br />
-                  GOOGLE PLAY
-                </button>
-                <br />
-                <button className="btn btn-primary my-2" style={{ width: '127px' }}>
-                  <span className="bi bi-apple text-white mx-auto"></span>
-                  GET IT ON<br />APP STORE
-                </button>
-                <h6 className="py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
-
-                <h6>FOLLOW US ON</h6>
-                <i className="bi bi-instagram mx-2 fs-4"></i>
-                <i className="bi bi-facebook mx-2 fs-4"></i>
-                <i className="bi bi-twitter mx-2 fs-4"></i>
-                <i className="bi bi-whatsapp mx-2 fs-4"></i>
-              </div>
-
-              <div className="copyright my-3">
-                <span className="bi bi-c-circle">
-                  BURGERHOUSE 2025 ALL RIGHTS RESERVED
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };

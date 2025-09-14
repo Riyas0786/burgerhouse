@@ -162,14 +162,7 @@
 
 
 /* home page find a table */
- .tablebtn{
-    background-color: red;
-    border: 1px grey;
-    color: white;
-   border-radius: 8px;
-    height: 35px ;
-        
-   }
+ 
    .icons{
     font-size: 60px;
     color: white;
@@ -206,6 +199,6 @@
   }
 }
 
-   
+ 
 
 
