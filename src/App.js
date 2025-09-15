@@ -3,7 +3,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import {  Route, Routes, useLocation } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
@@ -16,6 +16,9 @@ import Cart from './Components/Cart';
 import Login from './Components/login';
 import { CartProvider } from './Components/Cartprovider';
 
+
+
+
 function AppContent() {
   const location = useLocation();
 
@@ -26,8 +29,9 @@ function AppContent() {
 
   return (
     <>
-      <Header />
+
       <CartProvider>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
@@ -39,6 +43,7 @@ function AppContent() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </CartProvider>
+      
 
 
       {!shouldHideFooter && <Footer />}
@@ -48,9 +53,9 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    
       <AppContent />
-    </BrowserRouter>
+
   );
 }
 

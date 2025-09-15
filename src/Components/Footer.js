@@ -5,6 +5,9 @@ const Footer = () => {
   const Google = () => {
     window.location.href = "https://play.google.com/store/games?hl=hi&pli=1"; // external site
   };
+  const insta =()=>{
+    window.location.href="https://www.instagram.com/its_riyaz005/?next=%2F";
+  }
 
   return (
     <section className="footerfixed-background2">
@@ -25,7 +28,7 @@ const Footer = () => {
           numquam cum cumque atque. Recusandae exercitationem perferendis quibusdam quos?
         </p>
 
-        <span className="bi bi-geo-alt-fill text-white d-block py-1">
+        <span className="bi bi-geo-alt-fill text-white d-block py-2">
           45, SOUTH CAR STREET, MADURAI
         </span>
         <span className="bi bi-envelope text-white d-block py-1">
@@ -54,7 +57,8 @@ const Footer = () => {
           <h6 className="text-white py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
 
           <h6 className="text-white">FOLLOW US ON</h6>
-          <i className="bi bi-instagram text-white mx-2 fs-4"></i>
+          <button className='btn btn-disabled'onClick={insta}>
+          <i className="bi bi-instagram text-white mx-2 fs-4"></i></button>
           <i className="bi bi-facebook text-white mx-2 fs-4"></i>
           <i className="bi bi-twitter text-white mx-2 fs-4"></i>
           <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>

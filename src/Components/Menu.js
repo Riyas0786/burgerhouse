@@ -14,9 +14,9 @@ import Drinks_3 from '../Assets/Menu/Drinks_3.png';
 import Drinks_4 from '../Assets/Menu/Drinks_4.png';
 import Drinks_5 from '../Assets/Menu/Drinks_5.png';
 import Drinks_6 from '../Assets/Menu/Drinks_6.png';
-
+ import { FaExclamationCircle } from 'react-icons/fa';
 import { CartContext } from './Cartprovider';
-
+ 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -44,20 +44,16 @@ const MenuPage = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('All');
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
   const [sortOrder, setSortOrder] = useState('default');
 
   
   let filteredProducts = products.filter((product) => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = category === 'All' || product.category === category;
-    const matchesMin = minPrice === '' || product.price >= Number(minPrice);
-    const matchesMax = maxPrice === '' || product.price <= Number(maxPrice);
-    return matchesSearch && matchesCategory && matchesMin && matchesMax;
+    return matchesSearch && matchesCategory 
   });
 
-  // ✅ Sorting Logic
+  
   if (sortOrder === 'lowToHigh') {
     filteredProducts.sort((a, b) => a.price - b.price);
   } else if (sortOrder === 'highToLow') {
@@ -70,9 +66,11 @@ const MenuPage = () => {
         {/* Search bar */}
         <input
           type="search"
+          
           className="form-control mb-3 my-3"
           value={searchTerm}
           placeholder="Search for products..."
+          
           onChange={(e) => setSearchTerm(e.target.value)}
         />
 
@@ -86,27 +84,10 @@ const MenuPage = () => {
             style={{ maxWidth: "200px" }}
           >
             <option value="All">All</option>
-            <option value="Food">Burgers & Food</option>
+            <option value="Food">Burgers </option>
             <option value="Drink">Drinks</option>
           </select>
 
-          {/* Price Range Filter */}
-          <input
-            type="number"
-            placeholder="Min Price"
-            className="form-control"
-            value={minPrice}
-            onChange={(e) => setMinPrice(e.target.value)}
-            style={{ maxWidth: "120px" }}
-          />
-          <input
-            type="number"
-            placeholder="Max Price"
-            className="form-control"
-            value={maxPrice}
-            onChange={(e) => setMaxPrice(e.target.value)}
-            style={{ maxWidth: "120px" }}
-          />
 
           {/* Sort Option */}
           <select
@@ -129,7 +110,8 @@ const MenuPage = () => {
         {/* Products Grid */}
         <div className="row">
           {filteredProducts.length === 0 ? (
-            <p>No products found</p>
+            <FaExclamationCircle size={50} color="gray"  />
+           
           ) : (
             filteredProducts.map((product) => (
               <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
@@ -169,6 +151,9 @@ const MenuPage = () => {
           )}
         </div>
       </div>
+ 
+
+
     </>
   );
 };

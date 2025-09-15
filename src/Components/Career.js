@@ -27,7 +27,7 @@ const Career = () => {
   return (
     <>
       <section className="header">
-            <h1>
+            <h1 style={{textAlign:'center'}}>
               WELCOME TO INDIA'S MOST ADMIRED <br /> AND AFFORDABLE FRANCHISE
             </h1>
           
@@ -38,7 +38,7 @@ const Career = () => {
                   alt="franchiseimg"
                   className="my-5 mx-auto"
                 
-                  style={{ borderRadius: "15px",height:'600px',width:'600px' }}
+                  style={{ borderRadius: "15px",height:'600px',width:'auto' }}
                 />
               </Carousel.Item>
               <Carousel.Item>

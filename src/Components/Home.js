@@ -68,8 +68,8 @@ const navigate = useNavigate();
 
     {/* Slideshow Carousel */}
     
-    <Carousel interval={2000}
-    pause='hover' controls={false} indicators={false} >
+    <Carousel interval={1550}
+    pause='hover' controls={false} indicators={false}  >
       {/* Slide 1 */}
       <Carousel.Item>
         <div className='text-center'>

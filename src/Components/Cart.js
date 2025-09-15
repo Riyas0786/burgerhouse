@@ -129,7 +129,7 @@ const Cart = () => {
           <i className="fa-brands fa-cc-visa mx-2"></i>
           <i className="fa-brands fa-cc-mastercard mx-2"></i>
           <i className="fa-brands fa-cc-paypal mx-2"></i>
-          <i className="bi bi-paytm mx-2"></i>
+          
         </div>
         <div className="col-lg-4">
             <li>LEGAL<br/>Terms & Conditions<br/>Privacy Policy<br/>Promotional</li>
@@ -138,7 +138,7 @@ const Cart = () => {
         <li>Contact us <br/>Help & Support<br/>Partner with us <br/>Ride with u</li>
       </div>
           <div className="col-lg-4">
-           <li> Life at BurgerHouse<br/>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</li>
+           <li > Life at BurgerHouse<br/>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</li>
           </div>
         <h6 className="my-5 mb-0">All Rights Reserved</h6>
         </div></div>
