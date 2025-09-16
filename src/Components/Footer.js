@@ -19,7 +19,7 @@ const Footer = () => {
         <img
           src={footerlogo}
           alt="footerlogo"
-          className=" mx-lg-0 mx-auto d-block"
+          className=" d-block my-4"
           width={250}
         />
         <p className="text-white py-3">
@@ -43,27 +43,29 @@ const Footer = () => {
           </div>
           <div className='col-lg-4 text-center text-white  '>
             
+        <div className="icons-2 my-3">
+          <h5 className="text-white">DOWNLOAD APP ON</h5>
+          <button className="btn btn my-2 text-white" style={{backgroundColor:' rgba(255, 7, 7, 1)'}} onClick={Google}>
+            <span className="fa-brands fa-google-play text-white mx-1"></span>GET IT ON <br/>
+            GOOGLE PLAY
+          </button>
+          
+          <button className="btn btn my-2 mx-3 text-white" style={{width:'127px',backgroundColor:'blue'}}>
+            <span className="bi bi-apple text-white mx-auto"></span>
+            GET IT ON<br/>APP STORE
+          </button>
+          </div>
+        </div>
+      
+
+      {/* Right Column */}
+      <div className="col-lg-4 text-lg-end text-center text-white">
+           
           <h5>LEGAL</h5> 
           <h6>Terms & Conditions<br/> Privacy Policy<br/>Promotional</h6>
           <h5 > LIFE AT BURGERHOUSE</h5>
           <h6>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</h6>
           
-        </div>
-      
-
-      {/* Right Column */}
-      <div className="col-lg-4 text-lg-end text-center">
-        <div className="icons-2 my-3">
-          <h5 className="text-white">DOWNLOAD APP ON</h5>
-          <button className="btn btn-success my-2" onClick={Google}>
-            <span className="fa-brands fa-google-play text-white mx-1"></span>GET IT ON <br/>
-            GOOGLE PLAY
-          </button>
-          <br />
-          <button className="btn btn-primary my-2" style={{width:'127px'}}>
-            <span className="bi bi-apple text-white mx-auto"></span>
-            GET IT ON<br/>APP STORE
-          </button>
           <h6 className="text-white py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
 
           <h6 className="text-white">FOLLOW US ON</h6>
@@ -73,10 +75,6 @@ const Footer = () => {
           <i className="bi bi-twitter text-white mx-2 fs-4"></i>
           <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>
           
-        </div>
-         
-        
-
         <div className="copyright my-3">
           <span className="bi bi-c-circle text-white">
             BURGERHOUSE 2025 ALL RIGHTS RESERVED

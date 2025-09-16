@@ -10,52 +10,39 @@ const Branch = () => {
     <>
 <section className='header'>
   <h3 className='text-primary text-center'>WE HAVE MULTIPLE BRANCHES ON TOP CITIES IN INDIA  </h3>
-  <div className='container'>
+  <div className='container  ' style={{textAlign:'center',}}>
     <div className='row py-5'>
-      <div className='col-12 col-sm-7 col-md-6 col-lg-4  '>
-       <div className='card-2 '>
-        <div class="go-corner" href="#">
-      <div class="go-arrow">
+      <div className='col-12 col-sm-7 col-md-6 col-lg-4 my-4 '>
+       <div className='rounded shadow  '>
         <img src={chennaiimage} alt='chennai' className='mx-auto' width={200}/>
         <h3 className='text-center text-warning'>CHENNAI</h3>
-        <i class="bi bi-shop-window">30+</i>
-      </div>
-      </div>
+        <span class="bi bi-shop-window">30+</span>
       </div>
           </div>   
-       <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-        <div className='card-2'>
-        <div class="go-corner" href="#">
-      <div class="go-arrow">
+       <div className='col-12 col-sm-7 col-md-6 col-lg-4 my-4'>
+        <div className='rounded shadow'>
         <img src={hyderabadimage} alt='hyderabad' className='mx-auto' width={200}/>
         <h3 className='text-center text-primary'>HYDERABAD</h3>
         <i class="bi bi-shop-window">30+</i>
         </div>
-        </div>
-        </div>
-    </div>
-       <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-        <div className='card-2'>
-        <div class="go-corner" href="#">
-      <div class="go-arrow"></div>
+     </div>
+       <div className='col-12 col-sm-7 col-md-6 col-lg-4 my-4'>
+        <div className='rounded shadow'>
         <img src={maduraiimage} alt='MADURAI' className='mx-auto' width={200}/>
         <h3 className='text-center text-success'>MADURAI</h3>
         <span class="bi bi-shop-window">10+</span>
         </div>
-        </div>
-        </div>
-    </div>
+     </div>
     <div className=' col-12 col-sm-7 col-md-6 col-lg-4 '>
-      <div className='card-2'>
-        <div class="go-corner" href="#/menu">
+      <div className='rounded shadow my-4'>
       <div class="go-arrow">
         <img src={bangaloreimage} alt='bangalore' className='mx-auto'width={200}/>
         <h3 className='text-center text-danger'>BANGALORE</h3>
         <span class="bi bi-shop-window">25+</span>
     </div>
     </div>
-  </div>
-  </div>
+    </div>
+   </div>
   </div>
 </section>
 

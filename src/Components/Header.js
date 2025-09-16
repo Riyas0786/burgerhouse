@@ -15,9 +15,9 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <section className="fixed-background d-flex justify-content-center">
+    <section className="fixed-background  d-flex justify-content-center">
       <div className="container">
-        <nav className="navbar d-flex align-items-center justify-content-between">
+        <nav className="navbar d-flex align-items-end justify-content-between">
           {/* Logo */}
           <div className="logo">
             <Link to="/">

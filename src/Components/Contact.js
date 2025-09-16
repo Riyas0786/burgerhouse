@@ -31,15 +31,15 @@ const Contact = () => {
         <h3 className="text-center">
           IF YOU NEED ENQUIRY/HELP <br /> WE ARE HERE TO HELP YOU
         </h3>
-        <div className="container">
-          <div className="row">
+        <div className="container-fluid">
+          <div className="row ">
             <div className="col-12 col-sm-7 col-md-6 col-lg-4  text-center my-4">
-              <div className="contactcard mx-auto">
+              <div className="contactcard mx-auto"  >
                <span className="fa-solid fa-clock-rotate-left" style={{fontSize:'80px',marginTop:'10px'}}></span></div>
-               <h4 className="text-primary text-center my-2">24/7<br/>CUSTOMER SUPPORT</h4>
+               <h4 className="fw-bold text-center my-2">24/7<br/>CUSTOMER SUPPORT</h4>
                <h4 className="text-primary text-center "> ALL REGIONAL LANGUAGE </h4>
-               <div className="text-decoration-underline text-start mx-5">
-               <h5>TAMIL</h5>
+               <div className=" text-center ">
+               <h5> TAMIL</h5>
                <h5>TELUGU</h5>
                <h5>MALAYALAM</h5>
                <h5>KANNADA</h5>
@@ -52,7 +52,7 @@ const Contact = () => {
                 <span className="bi bi-chat-left-text" style={{fontSize:'80px'}}></span>
                 </div>
               
-              <h4 className="text-primary text-center">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
+              <h4 className="fw-bold text-center">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
 
               {/* Dropdown */}
               <select
@@ -87,7 +87,7 @@ const Contact = () => {
             <div className=" col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
             <div className="contactcard mx-auto my-4">
              <span className="bi bi-headset "style={{fontSize:'80px', marginBottom:'20px'}}></span></div>
-              <h4 className="text-primary ">TALK TO OUR SUPPORT TEAM</h4>
+              <h4 className="fw-bold ">TALK TO OUR <br/> SUPPORT TEAM</h4>
               <button className="btn btn-danger my-5 mb-3" onClick={()=>(window.location.href='tel:9159658882')}>
                 CALL NOW <span className="fw-bold"></span>
               </button>
