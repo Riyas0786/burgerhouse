@@ -26,28 +26,29 @@ const Career = () => {
 
   return (
     <>
-      <section className="header">
+      <section className="header ">
             <h1 style={{textAlign:'center'}}>
-              WELCOME TO INDIA'S MOST ADMIRED <br /> AND AFFORDABLE FRANCHISE
+              WELCOME TO INDIA'S MOST ADMIRED  AND AFFORDABLE FRANCHISE
             </h1>
           
-            <Carousel interval={2000}>
+            <Carousel interval={2000}
+            pause="hover" controls='true' indicators='true '>
               <Carousel.Item>
                 <img
                   src={franchiseimg}
                   alt="franchiseimg"
                   className="my-5 mx-auto"
                 
-                  style={{ borderRadius: "15px",height:'600px',width:'auto' }}
+                  style={{ borderRadius: "15px",height:'600px',width:'500px' }}
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img src={trustableimg} alt="trustable" className="my-5 mx-auto" height={500} width={500} 
-                style={{borderRadius:'15px',height:'600px',width:'600px'}}/>
+                style={{borderRadius:'15px',height:'600px',width:'500px'}}/>
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Branch} alt="branch"className="my-5 mx-auto" height={500} width={500} 
-                style={{borderRadius:'15px',height:'600px',width:'600px'}}/>
+                <img src={Branch} alt="branch"className="my-5 mx-auto"
+                style={{borderRadius:'15px',height:'600px',width:'500px'}}/>
               </Carousel.Item>
 
               <Carousel.Item>

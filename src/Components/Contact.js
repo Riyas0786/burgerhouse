@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const [issueType, setIssueType] = useState("");
   const [message, setMessage] = useState("");
-
+  
   const handleSubmit = () => {
     if (!issueType || !message.trim()) {
       toast.warn("⚠️ Please select an issue type and enter your concern.", {
@@ -33,15 +33,14 @@ const Contact = () => {
         </h3>
         <div className="container">
           <div className="row">
-            <div className="col-12 col-sm-7 col-md-6 col-lg-4  text-center">
-               <span className="bi bi-shield-fill-check " style={{fontSize:'100px'}}>
-                <h5 className="text-center">100%<br/>Trustable</h5>
-               </span>
+            <div className="col-12 col-sm-7 col-md-6 col-lg-4  text-center my-4">
+               <span className="fa-solid fa-clock-rotate-left" style={{fontSize:'80px'}}></span>
+               <h4 className="text-primary text-center my-2">24/7<br/>CUSTOMER SUPPORT</h4>
               </div>
 
             {/* Customer Support */}
             <div className="col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
-                <span className="bi bi-chat-left-text" style={{fontSize:'100px'}}></span>
+                <span className="bi bi-chat-left-text" style={{fontSize:'80px'}}></span>
 
               
               <h4 className="text-primary">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
@@ -70,17 +69,17 @@ const Contact = () => {
               ></textarea>
 
               {/* Submit */}
-              <button className="btn btn-primary" onClick={handleSubmit}>
+              <button className="btn btn-primary mb-3" onClick={handleSubmit} >
                 SUBMIT
               </button>
             </div>
 
             {/* Call Support */}
             <div className="col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
-             <span className="bi bi-telephone"style={{fontSize:'100px'}}></span>
+             <span className="bi bi-headset"style={{fontSize:'80px'}}></span>
               <h4 className="text-primary ">TALK TO OUR SUPPORT TEAM</h4>
-              <button className="btn btn-danger">
-                CALL: <span className="fw-bold">978653478</span>
+              <button className="btn btn-danger my-5 mb-3" onClick={()=>(window.location.href='tel:9159658882')}>
+                CALL NOW <span className="fw-bold"></span>
               </button>
             </div>
           </div>

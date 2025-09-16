@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {  Route, Routes, useLocation } from 'react-router-dom';
+import { useState,useEffect } from 'react';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
@@ -15,7 +16,7 @@ import Contact from './Components/Contact';
 import Cart from './Components/Cart';
 import Login from './Components/login';
 import { CartProvider } from './Components/Cartprovider';
-
+import Loading from './Components/Loading';
 
 
 
@@ -24,13 +25,25 @@ function AppContent() {
 
   // Pages where footer should NOT be visible
   const hideFooterRoutes = ["/account", "/cart", "/login"];
-
   const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
+    const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // simulate API or page load
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
 
       <CartProvider>
+        
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
