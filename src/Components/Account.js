@@ -126,7 +126,7 @@ const SignUp = () => {
         <div style={{ position:"relative",   }}>
           <img
             src={BurgerImg}
-            alt="Burger House"
+            alt="Burger House" className="burgerimg"
             style={{ width: "400px", height: "550px", marginTop:'13px' }}/>
           </div>
         </div>

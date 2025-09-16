@@ -43,7 +43,7 @@ const Contact = () => {
                 <span className="bi bi-chat-left-text" style={{fontSize:'80px'}}></span>
 
               
-              <h4 className="text-primary">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
+              <h4 className="text-primary text-center">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
 
               {/* Dropdown */}
               <select

@@ -14,7 +14,6 @@ import Drinks_3 from '../Assets/Menu/Drinks_3.png';
 import Drinks_4 from '../Assets/Menu/Drinks_4.png';
 import Drinks_5 from '../Assets/Menu/Drinks_5.png';
 import Drinks_6 from '../Assets/Menu/Drinks_6.png';
- import { FaExclamationCircle } from 'react-icons/fa';
 import { CartContext } from './Cartprovider';
  
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -102,16 +101,17 @@ const MenuPage = () => {
           </select>
         </div>
 
-        {/* Flash news */}
-        <div className="flash-news text-center my-3">
-          <p>🔥 BUY ONE GET ONE FREE FOR TODAY ONLY !!!! 🔥</p>
+          {/* Flash news */}
+ 
+          <div className="flash-news text-center my-3" >
+          <p>🔥 BUY ONE GET ONE FREE FOR LIMITED TIME ONLY !!!! 🔥</p>
         </div>
+    
 
         {/* Products Grid */}
         <div className="row">
           {filteredProducts.length === 0 ? (
-            <FaExclamationCircle size={50} color="gray"  />
-           
+            <h4>NO PRODUCTS FOUND</h4>
           ) : (
             filteredProducts.map((product) => (
               <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>

@@ -19,13 +19,14 @@
   color: rgb(95, 42, 22);
 }
 .navlinks .link {
-  text-decoration: none;
+  text-decoration: none ; 
   font-size: 20px;
   font-weight: bold;
   color: rgba(114, 34, 22, 0.932);
 }
 .navlinks .link:hover {
   color: rgb(255, 255, 255);
+  text-decoration:dashed!important;
   transition: 0.3s;
 }
 
@@ -72,6 +73,9 @@
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
   }
+  .menuicon{
+     display: block;
+  }
 
   .navlinks.open {
     max-height: 500px; /* enough to fit all links */
@@ -111,9 +115,6 @@
 }
 
 
-  .menuicon {
-    display: block;
-  }
 @media (max-width: 576px) {
   .signup-form input {
     width: 100% !important;
@@ -126,9 +127,8 @@
   }
 }
 @media (max-width: 576px) {
-  .burger-image {
-    display: none;   /* OR reduce width if you want */
-    /* width: 120px; */
+  .burgerimg {
+    display: none; 
   }
 }
 

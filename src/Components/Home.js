@@ -167,12 +167,12 @@ const navigate = useNavigate();
                  <img src={sliceimage1} alt='sliceimage' width={120}/>
               </div>
            <div className='col-lg-3' >
-             <input type='text' id='name' placeholder='NAME' required className='form-control w-100  my-3'></input>
+             <input type='text' id='name'  placeholder='NAME' required className='form-control w-100  my-3'></input>
                <input type='Email' id='email' placeholder='EMAIL' required className='form-control w-100  '></input>
-                 <input type='date' id='date' placeholder='DATE'className='form-control w-100  my-3'></input> 
+                 <input type='date' id='date' placeholder='DATE' required className='form-control w-100  my-3'></input> 
           </div>
           <div className='col-lg-3'>
-             <input type='time'  id='time' placeholder='TIME'className='form-control w-100 my-3'></input>
+             <input type='time'  id='time' placeholder='TIME' required className='form-control w-100 my-3'></input>
               <input type='text' id='people' placeholder='PEOPLE'className='form-control w-100'></input>
                <button className='btn btn-danger my-3 w-100 'onClick={showAlert}>FIND A TABLE</button>
               </div>
