@@ -128,16 +128,7 @@ const Cart = () => {
           <i className="fa-brands fa-cc-paypal mx-2"></i>
         <div className="h4 pb-2 mb-4 text-danger border-bottom border-white"></div>   
         </div>
-        <div className="col-lg-4">
-            <li>LEGAL<br/>Terms & Conditions<br/>Privacy Policy<br/>Promotional</li>
-        </div>
-        <div className="col-lg-4">
-        <li>Contact us <br/>Help & Support<br/>Partner with us <br/>Ride with u</li>
-      </div>
-          <div className="col-lg-4">
-           <li > Life at BurgerHouse<br/>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</li>
-          </div>
-        <h6 className="my-5 mb-0">All Rights Reserved</h6>
+       
         </div></div>
       </section>
 

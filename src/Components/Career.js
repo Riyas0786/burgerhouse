@@ -52,7 +52,7 @@ const Career = () => {
               </Carousel.Item>
 
               <Carousel.Item>
-              <div className="careercard mx-auto">
+              <div className="rounded shadow p-4 w-50 mx-auto">
                 <h3 className="mx-3">FRANCHISE ENQUIRY</h3>
                 <form  onSubmit={handlesubmit}>
                   <label htmlFor="name">

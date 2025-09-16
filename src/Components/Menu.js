@@ -103,7 +103,7 @@ const MenuPage = () => {
 
           {/* Flash news */}
  
-          <div className="flash-news text-center my-3" >
+          <div className="text-center text-white bg-danger" >
           <p>🔥 BUY ONE GET ONE FREE FOR LIMITED TIME ONLY !!!! 🔥</p>
         </div>
     
@@ -115,7 +115,7 @@ const MenuPage = () => {
           ) : (
             filteredProducts.map((product) => (
               <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
-                <div className="card-2 text-center p-3">
+                <div className=" rounded shadow  p-5 mb-3 mx-2" style={{textAlign:'center'}}>
                   <img
                     src={product.image}
                     alt={product.name}

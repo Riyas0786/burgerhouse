@@ -34,14 +34,23 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-7 col-md-6 col-lg-4  text-center my-4">
-               <span className="fa-solid fa-clock-rotate-left" style={{fontSize:'80px'}}></span>
+              <div className="contactcard mx-auto">
+               <span className="fa-solid fa-clock-rotate-left" style={{fontSize:'80px',marginTop:'10px'}}></span></div>
                <h4 className="text-primary text-center my-2">24/7<br/>CUSTOMER SUPPORT</h4>
+               <h4 className="text-primary text-center "> ALL REGIONAL LANGUAGE </h4>
+               <div className="text-decoration-underline text-start mx-5">
+               <h5>TAMIL</h5>
+               <h5>TELUGU</h5>
+               <h5>MALAYALAM</h5>
+               <h5>KANNADA</h5>
+               </div>
               </div>
 
             {/* Customer Support */}
             <div className="col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
+              <div className="contactcard mx-auto my-4">
                 <span className="bi bi-chat-left-text" style={{fontSize:'80px'}}></span>
-
+                </div>
               
               <h4 className="text-primary text-center">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
 
@@ -75,8 +84,9 @@ const Contact = () => {
             </div>
 
             {/* Call Support */}
-            <div className="col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
-             <span className="bi bi-headset"style={{fontSize:'80px'}}></span>
+            <div className=" col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
+            <div className="contactcard mx-auto my-4">
+             <span className="bi bi-headset "style={{fontSize:'80px', marginBottom:'20px'}}></span></div>
               <h4 className="text-primary ">TALK TO OUR SUPPORT TEAM</h4>
               <button className="btn btn-danger my-5 mb-3" onClick={()=>(window.location.href='tel:9159658882')}>
                 CALL NOW <span className="fw-bold"></span>

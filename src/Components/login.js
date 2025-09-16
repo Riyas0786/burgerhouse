@@ -54,7 +54,7 @@ const Login = () => {
           </h3>
 
           <form
-            onSubmit={handleLogin}
+            onSubmit={handleLogin} className="signupform"
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
           >
             <input

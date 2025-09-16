@@ -25,8 +25,8 @@ const navigate = useNavigate();
         <div className='container'>
             <div className='row'>
                 <div className='col-lg-6  my-5 '>
-                    <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',}}>BURGER</h1>
-                        <h1 style={{color:'#6E260E',textShadow: '4px 3px 3px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
+                    <h1 style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',}}>BURGER</h1>
+                        <h1 style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
                     
                     <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur minima corrupti distinctio perferendis totam illo est quam laboriosam dignissimos? Aperiam officia fugit atque sunt rerum provident voluptate adipisci quos? Fuga asperiores facere perferendis debitis eligendi aut omnis itaque nam corrupti optio explicabo, inventore quas soluta placeat magnam provident odit?</p>
                 </div>
@@ -56,7 +56,7 @@ const navigate = useNavigate();
    <section className='landing py-5'>
   <div className='container'>
     <h5 className='text-center text-primary mx-auto bg-warning w-50'>
-    
+    ALWAYS TASTY
     </h5>
     <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
     <p className='text-center text-primary py-2'>
@@ -65,15 +65,17 @@ const navigate = useNavigate();
       dolor hic est, ipsam maxime ipsa earum sit magni illo nemo labore eum quis.
       Iusto obcaecati consequatur delectus.
     </p>
+    </div>
+    </section>
 
     {/* Slideshow Carousel */}
-    
+    <section className='carousel burger'>
     <Carousel interval={1550}
     pause='hover' controls={false} indicators={false}  >
       {/* Slide 1 */}
       <Carousel.Item>
         <div className='text-center'>
-          <img src={LandImage1} alt="LandImage1" width="300px" className='mx-auto my-3' />
+          <img src={LandImage1} alt="LandImage1" width="300px" className='mx-auto ' />
           <h4 className='text-primary'>Tandoor Chicken Burger</h4>
           <p className='text-primary py-3'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -87,10 +89,10 @@ const navigate = useNavigate();
 
       {/* Slide 2 */}
       <Carousel.Item>
-        <div className='text-center'>
-          <img src={LandImage2} alt="LandImage2" width="250px" className='mx-auto my-3' />
+        <div className='text-center '>
+          <img src={LandImage2} alt="LandImage2" width="263px" className='mx-auto ' />
           <h4 className='text-primary'>Classic Veggie Burger</h4>
-          <p className='text-primary py-3'>
+          <p className='text-primary '>
             Delicious veggie burger made with fresh ingredients and special sauce.
           </p>
           <button className='btn btn-danger' style={{ backgroundColor: 'red' }}onClick={()=>navigate("/menu")}>
@@ -102,7 +104,7 @@ const navigate = useNavigate();
       {/* Slide 3 */}
       <Carousel.Item>
         <div className='text-center'>
-          <img src={LandImage3} alt="LandImage3" width="300px" className='mx-auto my-3' />
+          <img src={LandImage3} alt="LandImage3" width="300px" className='mx-auto ' />
           <h4 className='text-primary'>Cheese Overload Burger</h4>
           <p className='text-primary py-3'>
             A juicy burger with double cheese, perfect for cheese lovers.
@@ -113,13 +115,13 @@ const navigate = useNavigate();
         </div>
       </Carousel.Item>
     </Carousel>
-  </div>
+  
 </section>
 
 
     {/* Flex card Section */}
     <section className="container my-5">
-  <div className="row align-items-center shadow p-4">
+  <div className="row align-items-center rounded shadow p-4 ">
     {/* Text Section */}
     <div className="col-12 col-md-6">
       <h5 className="text-muted">Discover</h5>
@@ -149,7 +151,7 @@ const navigate = useNavigate();
        <div className='container '>
         <div className='row '>
           <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-            <img src={sliceimage} alt='sliceimg' width={200}/>
+            <img src={sliceimage} alt='sliceimg' width={200} />
          </div>
          <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
             <h5 className='text-center text-primary'>RESERVATION</h5>
@@ -167,17 +169,17 @@ const navigate = useNavigate();
                  <img src={sliceimage1} alt='sliceimage' width={120}/>
               </div>
            <div className='col-lg-3' >
-             <input type='text' id='name'  placeholder='NAME' required className='form-control w-100  my-3'></input>
-               <input type='Email' id='email' placeholder='EMAIL' required className='form-control w-100  '></input>
-                 <input type='date' id='date' placeholder='DATE' required className='form-control w-100  my-3'></input> 
+             <input type='text'  placeholder='NAME' required className='form-control w-100  '></input>
+               <input type='Email'  placeholder='EMAIL' required className='form-control w-100 my-3 '></input>
+                 <input type='date'  placeholder='DATE' required className='form-control w-100  my-3'></input> 
           </div>
-          <div className='col-lg-3'>
-             <input type='time'  id='time' placeholder='TIME' required className='form-control w-100 my-3'></input>
-              <input type='text' id='people' placeholder='PEOPLE'className='form-control w-100'></input>
-               <button className='btn btn-danger my-3 w-100 'onClick={showAlert}>FIND A TABLE</button>
+          <div className='col-lg-3' >
+             <input type='time'   placeholder='TIME' required className='form-control w-100 '></input>
+              <input type='text'  placeholder='PEOPLE'className='form-control w-100 my-3'></input>
+               <button className='btn btn-danger w-100 'style={{backgroundColor:'red'}} onClick={showAlert}>FIND A TABLE</button>
               </div>
               <div className='col-lg-3 '>
-              <img src={sliceimage2} alt='sliceimage2' width={300} />
+              <img src={sliceimage2} alt='sliceimage2' width={400} />
               </div>
                </div>     
               </div>        

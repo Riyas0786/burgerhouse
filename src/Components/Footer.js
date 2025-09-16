@@ -12,14 +12,14 @@ const Footer = () => {
   return (
     <section className="footerfixed-background2">
   <div className="container-fluid">
-    <div className="row align-items-center"> {/* ✅ makes both columns level */}
+    <div className="row align-items-end"> {/* ✅ makes both columns level */}
       
       {/* Left Column */}
-      <div className="col-lg-6 text-lg-start text-center">
+      <div className="col-lg-4 text-lg-start text-center ">
         <img
           src={footerlogo}
           alt="footerlogo"
-          className="py-3 mx-lg-0 mx-auto d-block"
+          className=" mx-lg-0 mx-auto d-block"
           width={250}
         />
         <p className="text-white py-3">
@@ -38,11 +38,21 @@ const Footer = () => {
           <span className="bi bi-shop-window text-white">
             MONDAY-FRIDAY: 10AM-11PM <br /> SATURDAY-SUNDAY: 10AM-12AM
           </span>
+           </div>
+          <h6 className="py-3 my-3 text-white mb-1">All Rights Reserved</h6>
+          </div>
+          <div className='col-lg-4 text-center text-white  '>
+            
+          <h5>LEGAL</h5> 
+          <h6>Terms & Conditions<br/> Privacy Policy<br/>Promotional</h6>
+          <h5 > LIFE AT BURGERHOUSE</h5>
+          <h6>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</h6>
+          
         </div>
-      </div>
+      
 
       {/* Right Column */}
-      <div className="col-lg-6 text-lg-end text-center">
+      <div className="col-lg-4 text-lg-end text-center">
         <div className="icons-2 my-3">
           <h5 className="text-white">DOWNLOAD APP ON</h5>
           <button className="btn btn-success my-2" onClick={Google}>
@@ -62,7 +72,10 @@ const Footer = () => {
           <i className="bi bi-facebook text-white mx-2 fs-4"></i>
           <i className="bi bi-twitter text-white mx-2 fs-4"></i>
           <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>
+          
         </div>
+         
+        
 
         <div className="copyright my-3">
           <span className="bi bi-c-circle text-white">
@@ -70,9 +83,8 @@ const Footer = () => {
           </span>
         </div>
       </div>
-
-    </div>
-  </div>
+     </div>
+   </div>
 </section>
 
 
