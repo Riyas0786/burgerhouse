@@ -47,7 +47,7 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100 bg-warning-subtle p-3">
+    <div className="d-flex justify-content-center align-items-center min-vh-100 ">
       <div className="d-flex flex-wrap shadow rounded-3 overflow-hidden bg-white" style={{ maxWidth: "800px" }}>
         
         {/* Left Side - Form */}

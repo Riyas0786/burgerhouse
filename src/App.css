@@ -7,9 +7,6 @@
   background: url('./Assets/Home/Background_Img.png'); 
 }
 
-.logo-circle {
-  animation: bounce  1.5s infinite;
-}
 
 .loading-text {
   margin-top: 20px;
@@ -17,7 +14,7 @@
   letter-spacing: 2px;
   font-weight: 600;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.441);
+  
 }
 .dots {
   margin-top: 15px;

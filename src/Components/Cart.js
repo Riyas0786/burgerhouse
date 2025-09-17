@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import VegNonVegIcon from "./VegNonVegIcon";
 const Cart = () => {
   const { cartItem, increaseQty, decreaseQty, removeItem, setCartItem } = useContext(CartContext);
   const navigate =useNavigate();
@@ -49,7 +49,9 @@ const Cart = () => {
               <div className="row">
                 {cartItem.map((item) => (
                   <div key={item.id} className="col-12 col-sm-6 col-md-4 py-3">
-                    <div className="card h-100 shadow-sm p-3 text-center">
+                    <div className=" rounded shadow h-100 text-center" style={{position:'relative'}}>
+                  <div style={{ position: "absolute", top: "8px", right: "8px" }}>
+                  <VegNonVegIcon type={item.isVeg ? "veg" : "non-veg"} size={24}  /></div>
                       <img
                         src={item.image}
                         alt={item.name}

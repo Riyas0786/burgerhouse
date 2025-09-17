@@ -19,7 +19,7 @@ import { CartProvider } from './Components/Cartprovider';
 import Loading from './Components/Loading';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import VegNonVegBadge from './Components/VegNonVegIcon.js';
 
 
 
@@ -59,6 +59,7 @@ function AppContent() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        <VegNonVegBadge/>
       </CartProvider>
       
 

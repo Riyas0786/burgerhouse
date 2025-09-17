@@ -28,11 +28,11 @@ const Career = () => {
     <>
       <section className="header ">
             <h1 style={{textAlign:'center'}}>
-              WELCOME TO INDIA'S MOST ADMIRED  AND AFFORDABLE FRANCHISE
+              WELCOME TO INDIA'S MOST <br/>ADMIRED  AND AFFORDABLE FRANCHISE
             </h1>
           
             <Carousel interval={2000}
-            pause="hover" controls='true' indicators='true '>
+            pause="hover" controls='false' indicators='false '>
               <Carousel.Item>
                 <img
                   src={franchiseimg}

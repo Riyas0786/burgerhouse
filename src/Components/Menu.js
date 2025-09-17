@@ -15,28 +15,28 @@ import Drinks_4 from '../Assets/Menu/Drinks_4.png';
 import Drinks_5 from '../Assets/Menu/Drinks_5.png';
 import Drinks_6 from '../Assets/Menu/Drinks_6.png';
 import { CartContext } from './Cartprovider';
- 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
+import VegNonVegIcon from './VegNonVegIcon';
+
 
 const products = [
-  { id: 1, name: 'VEG BURGER', category: 'Food', subtitle: 'Fresh and tasty veg burger', price: 150, image: Burger_1 },
-  { id: 2, name: 'MUTTON BURGER', category: 'Food', subtitle: 'Delicious mutton burger', price: 220, image: Burger_2 },
-  { id: 3, name: 'PRAWN BURGER', category: 'Food', subtitle: 'Crispy prawn delight', price: 200, image: Burger_3 },
-  { id: 4, name: 'BEEF BURGER', category: 'Food', subtitle: 'Juicy beef patty burger', price: 140, image: Burger_4 },
-  { id: 5, name: 'CHICKEN BURGER', category: 'Food', subtitle: 'Classic chicken burger', price: 130, image: Burger_5 },
-  { id: 6, name: 'CHEESE BURGER', category: 'Food', subtitle: 'Cheesy goodness burger', price: 110, image: Burger_6 },
-  { id: 7, name: 'HOTDOG BURGER', category: 'Food', subtitle: 'Hotdog style burger', price: 180, image: Burger_7 },
-  { id: 8, name: 'CHICKEN WINGS', category: 'Food', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8 },
-  { id: 9, name: 'BROASTED BURGER', category: 'Food', subtitle: 'Crispy broasted burger', price: 160, image: Burger_9 },
-  { id: 10, name: 'MOJITO', category: 'Drink', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1 },
-  { id: 11, name: 'LIME', category: 'Drink', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2 },
-  { id: 12, name: 'GINGER LIME', category: 'Drink', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3 },
-  { id: 13, name: 'ORANGE', category: 'Drink', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4 },
-  { id: 14, name: 'COCKTAIL', category: 'Drink', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5 },
-  { id: 15, name: 'GRAPE LIME', category: 'Drink', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6 },
+  { id: 1, name: 'VEG BURGER', category: 'Food', subtitle: 'Fresh and tasty veg burger', price: 150, image: Burger_1, isVeg: true },
+  { id: 2, name: 'MUTTON BURGER', category: 'Food', subtitle: 'Delicious mutton burger', price: 220, image: Burger_2, isVeg: false },
+  { id: 3, name: 'PRAWN BURGER', category: 'Food', subtitle: 'Crispy prawn delight', price: 200, image: Burger_3, isVeg: false },
+  { id: 4, name: 'BEEF BURGER', category: 'Food', subtitle: 'Juicy beef patty burger', price: 140, image: Burger_4, isVeg: false },
+  { id: 5, name: 'CHICKEN BURGER', category: 'Food', subtitle: 'Classic chicken burger', price: 130, image: Burger_5, isVeg: false },
+  { id: 6, name: 'CHEESE BURGER', category: 'Food', subtitle: 'Cheesy goodness burger', price: 110, image: Burger_6, isVeg: true },
+  { id: 7, name: 'HOTDOG BURGER', category: 'Food', subtitle: 'Hotdog style burger', price: 180, image: Burger_7, isVeg: false },
+  { id: 8, name: 'CHICKEN WINGS', category: 'Food', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8, isVeg: false },
+  { id: 9, name: 'BROASTED BURGER', category: 'Food', subtitle: 'Crispy broasted burger', price: 160, image: Burger_9, isVeg: false },
+  { id: 10, name: 'MOJITO', category: 'Drink', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1, isVeg: true },
+  { id: 11, name: 'LIME', category: 'Drink', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2, isVeg: true },
+  { id: 12, name: 'GINGER LIME', category: 'Drink', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3, isVeg: true },
+  { id: 13, name: 'ORANGE', category: 'Drink', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4, isVeg: true },
+  { id: 14, name: 'COCKTAIL', category: 'Drink', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5, isVeg: true },
+  { id: 15, name: 'GRAPE LIME', category: 'Drink', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6, isVeg: true },
 ];
-
 const MenuPage = () => {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
@@ -115,13 +115,15 @@ const MenuPage = () => {
           ) : (
             filteredProducts.map((product) => (
               <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
-                <div className=" rounded shadow  p-5 mb-3 mx-2" style={{textAlign:'center'}}>
+                <div className=" rounded shadow  p-5 mb-3 mx-2" style={{textAlign:'center',position:'relative'}}>
+                  <div style={{ position: "absolute", top: "8px", right: "8px" }}>
+                  <VegNonVegIcon type={product.isVeg ? "veg" : "non-veg"} size={24}  /></div>
                   <img
                     src={product.image}
                     alt={product.name}
                     style={{ height: '150px', objectFit: 'contain' }}
                     className="mx-auto"
-                  />
+                  />  
                   <h5 className="card-title mt-2">{product.name}</h5>
                   <p className="card-text">{product.subtitle}</p>
                   <h5 className="text-danger">₹{product.price}</h5>

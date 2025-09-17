@@ -7,8 +7,8 @@ export default function Loading() {
       <div className="logo-circle">
         <img src={Logo}alt="logo"  
       /></div>
-      <h2 className="loading-text">THINK BURGER</h2>
-      <h2 className="loading-text bg-danger text-white">THINK BURGER HOUSE</h2>
+      <h2 className="loading-text text-white">THINK BURGER</h2>
+      <h2 className="loading-text  text-primary text-center">THINK BURGER HOUSE</h2>
       <div className="dots">
         <span></span>
         <span></span>
