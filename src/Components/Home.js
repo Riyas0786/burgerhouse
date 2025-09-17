@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeaderImage from '../Assets/Home/Banner_Img.png';
 import BannerImage1 from '../Assets/Home/Header_Img_1.png';
 import BannerImage2 from '../Assets/Home/Header_Img_2.png';
@@ -12,11 +12,28 @@ import sliceimage1 from '../Assets/Home/Slice_Img_1.png';
 import sliceimage2 from '../Assets/Home/Slice_Img_2.png';
 import { Carousel } from 'react-bootstrap';
 import {  useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
 
 const Home = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const[date,setDate]=useState("");
+  const[time,setTime]=useState("");
+  const[people,setPeople]=useState("");
 const navigate = useNavigate();   
-  const showAlert = () => {
-    alert("Your table has been reserved successfully!");
+  const tablebtn = (e) => {
+    e.preventDefault();
+  if(!name||!email||!date||!time||!people){
+    toast.error("!!Please input all fields");
+    return;}
+    toast.success("Your table has been reserved successfully!");
+    setName();
+    setEmail();
+    setDate();
+    setTime();
+    setPeople();
+
   };  
   return (
     <>
@@ -168,15 +185,22 @@ const navigate = useNavigate();
                <div className='col-lg-3 '>
                  <img src={sliceimage1} alt='sliceimage' width={120}/>
               </div>
-           <div className='col-lg-3' >
-             <input type='text'  placeholder='NAME' required className='form-control w-100  '></input>
-               <input type='Email'  placeholder='EMAIL' required className='form-control w-100 my-3 '></input>
-                 <input type='date'  placeholder='DATE' required className='form-control w-100  my-3'></input> 
+              <div className='col-lg-3' >
+             <input type='text'  placeholder='NAME' required className='form-control w-100  '
+             value={name} onChange={(e) => setName(e.target.value)}/>
+               <input type='Email'  placeholder='EMAIL' required className='form-control w-100 my-3 '
+               value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                 <input type='date'  placeholder='DATE' required className='form-control w-100  my-3'
+                 value={date} onChange={(e) => setDate(e.target.value)}/> 
+                 
           </div>
-          <div className='col-lg-3' >
-             <input type='time'   placeholder='TIME' required className='form-control w-100 '></input>
-              <input type='text'  placeholder='PEOPLE'className='form-control w-100 my-3'></input>
-               <button className='btn btn-danger w-100 'style={{backgroundColor:'red'}} onClick={showAlert}>FIND A TABLE</button>
+          <div className='col-lg-3'>
+             <input type='time'   placeholder='TIME' required className='form-control w-100 '
+             value={time} onChange={(e) => setTime(e.target.value)}/>
+              <input type='text'  placeholder='PEOPLE'className='form-control w-100 my-3'
+              value={people} onChange={(e) => setPeople(e.target.value)}></input>
+               <button className='btn btn-danger w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >FIND A TABLE</button>
+             
               </div>
               <div className='col-lg-3 '>
               <img src={sliceimage2} alt='sliceimage2' width={400} />

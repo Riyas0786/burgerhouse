@@ -4,23 +4,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('./Assets/Home/Background_Img.png');
-  color: white;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
+  background: url('./Assets/Home/Background_Img.png'); 
 }
 
 .logo-circle {
-  width: 150px;
-  height: 150px;
-  background: white;
-  color: #ff5722;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  font-weight: bold;
   animation: bounce  1.5s infinite;
 }
 
@@ -32,13 +19,11 @@
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.441);
 }
-
 .dots {
   margin-top: 15px;
   display: flex;
   gap: 8px;
 }
-
 .dots span {
   width: 10px;
   height: 10px;

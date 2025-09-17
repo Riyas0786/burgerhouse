@@ -88,20 +88,4 @@
     margin: 0 8px;
   }
 }
-@media (max-width: 576px) {
-  .burgerimg {
-    display: none; 
-  }
 }
-}
-@media (max-width: 340px){
-.signupform {
-    width: 100% !important;
- text-align: center;
-    justify-content: center ;
-  }
-  .input{
-    width: auto;
-  }
-}
-  

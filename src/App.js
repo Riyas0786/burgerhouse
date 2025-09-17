@@ -17,6 +17,9 @@ import Cart from './Components/Cart';
 import Login from './Components/login';
 import { CartProvider } from './Components/Cartprovider';
 import Loading from './Components/Loading';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 
@@ -27,6 +30,7 @@ function AppContent() {
   const hideFooterRoutes = ["/account", "/cart", "/login"];
   const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
     const [loading, setLoading] = useState(true);
+    
 
   useEffect(() => {
     // simulate API or page load
@@ -60,15 +64,18 @@ function AppContent() {
 
 
       {!shouldHideFooter && <Footer />}
+      
     </>
   );
 }
 
+
 function App() {
   return (
-    
+              <>
       <AppContent />
-
+       <ToastContainer position="top-center" autoClose={2000} />
+      </>
   );
 }
 

@@ -52,17 +52,17 @@ const Career = () => {
               </Carousel.Item>
 
               <Carousel.Item>
-              <div className="rounded shadow p-4 w-50 mx-auto">
+              <div className="card rounded shadow  mx-auto mb-5" style={{width:'500px', height:'600px'}}>
                 <h3 className="mx-3">FRANCHISE ENQUIRY</h3>
                 <form  onSubmit={handlesubmit}>
-                  <label htmlFor="name">
-                    <h4>Name</h4>
+                  <label htmlFor="name mx-auto">
+                    <h4 className="mx-auto">Name</h4>
                   </label>
                   <input
                     type="text"
                     placeholder="Enter your name"
                     required
-                    className="form-control mx-auto"
+                    className="form-control mx-auto "
                     value={Name}
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -74,7 +74,7 @@ const Career = () => {
                     type="text"
                     placeholder="Enter your number"
                     required
-                    className="form-control mx-auto"
+                    className="form-control mx-auto "
                     value={Mobilenumber}
                     onChange={(e) => setMobilenumber(e.target.value)}
                   />

@@ -1,138 +1,114 @@
 import React, { useState } from "react";
-import BurgerImg from "../Assets/Account/burgerimg.png"; 
+import BurgerImg from "../Assets/Account/burgerimg.png";
 import logo from "../Assets/Home/Logo.png";
-const SignUp = () => {
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
+const Account = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const google = () => window.location.href = "https://accounts.google.com/v3/signin/";
+  const apple = () => window.location.href = "https://support.apple.com/en-in/apple-account";
+  const microsoft = () => window.location.href = "https://login.microsoftonline.com/";
 
   const handleSignUp = (e) => {
     e.preventDefault();
     if (!name || !email || !password) {
-      alert("⚠️ Please fill in all fields.");
+      toast.error("⚠️ Please fill in all fields.");
       return;
     }
-    alert("✅ Account created successfully at Burger House!");
+    const emailRegex = /\S+@\S+\.\S+/;
+    if (!emailRegex.test(email)) {
+      toast.error("⚠️ Please enter a valid email.");
+      return;
+    }
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{6,}$/;
+    if (!passwordRegex.test(password)) {
+      toast.error("⚠️ Password must be 6+ chars, include uppercase, number & special char.");
+      return;
+    }
+    toast.success("✅ Account created successfully at Burger House!");
     setName("");
     setEmail("");
     setPassword("");
+    setTimeout(() => navigate("/menu"), 2000);
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-        background: "#fff7e6",
-        padding: "20px",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          width: "950px",
-          background: "#fffaf0",
-          borderRadius: "10px",
-          overflow: "hidden",
-          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.15)",
-        }}
-      >
-        {/* Left Side - Form */}
-        <div style={{ flex: 1, padding: "40px" }}>
-          <img src={logo} alt="logo" width={200}/>
-          <h3
-            style={{
-              marginTop: "15px",
-              marginBottom: "20px",
-              fontSize: "22px",
-              fontWeight: "bold",
-              color: "#ffb300",
-            }}
-          >
-            SIGN UP
-          </h3>
+    <div className="d-flex justify-content-center align-items-center min-vh-100 bg-warning-subtle">
+      <div className="d-flex flex-wrap shadow rounded-3 overflow-hidden bg-white" style={{ maxWidth: "800px" }}>
+        
+        {/* Left Side */}
+        <div className="p-4 flex-fill">
+          <img src={logo} alt="logo" width={180} className="mb-3" />
+          <h3 className="text-warning fw-bold">SIGN UP</h3>
 
-          <form
-            onSubmit={handleSignUp} className="signupform"
-            style={{ display: "flex", flexDirection: "column", gap: "15px" }}
-          >
+          <form onSubmit={handleSignUp} className="d-flex flex-column gap-3 mt-3">
             <input
               type="text"
               placeholder="Full Name"
+              aria-label="Full Name"
+              className="form-control"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              style={{
-                padding: "12px",
-                border: "1px solid #ddd",
-                borderRadius: "6px",
-                outline: "none",
-              }}
             />
             <input
               type="email"
               placeholder="Email Address"
+              aria-label="Email Address"
+              className="form-control"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{
-                padding: "12px",
-                border: "1px solid #ddd",
-                borderRadius: "6px",
-                outline: "none",
-              }}
             />
             <input
               type="password"
               placeholder="Password"
+              aria-label="Password"
+              className="form-control"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              style={{
-                padding: "12px",
-                border: "1px solid #ddd",
-                borderRadius: "6px",
-                outline: "none",
-              }}
             />
-            <button
-              type="submit"
-              style={{
-                padding: "12px",
-                background: "#ffb300",
-                border: "none",
-                borderRadius: "6px",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-            >
+            <button type="submit" className="btn btn-warning fw-bold text-white">
               SIGN UP
             </button>
           </form>
 
-          <h6 className="my-2">
+          <p className="mt-3">
             Already have an account?{" "}
-            <a href="/login" style={{ color: "#b22222", fontWeight: "bold" }}>
+            <a href="/login" className="fw-bold text-danger">
               SIGN IN
             </a>
+          </p>
+
+          <p className="fw-semibold">Or Continue with</p>
+          <div className="d-flex gap-2">
+            <button className="btn btn-outline-primary flex-fill" onClick={google}>
+              <i className="bi bi-google"></i> Google
+            </button>
+            <button className="btn btn-outline-dark flex-fill" onClick={apple}>
+              <i className="bi bi-apple"></i> Apple
+            </button>
+            <button className="btn btn-outline-success flex-fill" onClick={microsoft}>
+              <i className="bi bi-microsoft"></i> Microsoft
+            </button>
+          </div>
+
+          <h6 className="text-muted small text-center mt-3">
+            © Burger House. All rights reserved.
           </h6>
-          <h5 className="">Or Continue with</h5>
-          <button className="btn btn-primary"><span className="bi bi-google"></span></button>
-          <button className="btn btn-dark mx-2"><span className="bi bi-apple"></span></button>
-          <button className="btn btn-success"><span className="bi bi-microsoft"></span></button>
-          <h6 className="text-center ">All rights reserved</h6>
         </div>
 
-        {/* Right Side - Image with Caption */}
-        <div style={{ position:"relative",   }}>
-          <img
-            src={BurgerImg}
-            alt="Burger House" className="burgerimg"
-            style={{ width: "400px", height: "550px", marginTop:'13px' }}/>
-          </div>
+        {/* Right Side */}
+        <div className="d-none d-md-block">
+          <img src={BurgerImg} alt="Burger House" style={{ width: "350px", height: "100%", objectFit: "cover" }} />
         </div>
       </div>
-
+    </div>
+    
   );
 };
 
-export default SignUp;
+export default Account;
