@@ -10,7 +10,7 @@ const Account = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const google = () => window.location.href = "https://accounts.google.com/v3/signin/";
+  const google = () => window.location.href = "https://accounts.google.com/";
   const apple = () => window.location.href = "https://support.apple.com/en-in/apple-account";
   const microsoft = () => window.location.href = "https://login.microsoftonline.com/";
 
@@ -85,14 +85,14 @@ const Account = () => {
 
           <p className="fw-semibold">Or Continue with</p>
           <div className="d-flex gap-2">
-            <button className="btn btn-outline-primary flex-fill" onClick={google}>
-              <i className="bi bi-google"></i> Google
+            <button className="btn btn-primary flex-fill" onClick={google}>
+              <i className="bi bi-google"></i> 
             </button>
-            <button className="btn btn-outline-dark flex-fill" onClick={apple}>
-              <i className="bi bi-apple"></i> Apple
+            <button className="btn btn-dark flex-fill" onClick={apple}>
+              <i className="bi bi-apple"></i>
             </button>
-            <button className="btn btn-outline-success flex-fill" onClick={microsoft}>
-              <i className="bi bi-microsoft"></i> Microsoft
+            <button className="btn btn-success flex-fill" onClick={microsoft}>
+              <i className="bi bi-microsoft"></i> 
             </button>
           </div>
 

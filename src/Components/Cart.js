@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 // Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import VegNonVegIcon from "./VegNonVegIcon";
 const Cart = () => {
   const { cartItem, increaseQty, decreaseQty, removeItem, setCartItem } = useContext(CartContext);
   const navigate =useNavigate();
@@ -49,9 +48,9 @@ const Cart = () => {
               <div className="row">
                 {cartItem.map((item) => (
                   <div key={item.id} className="col-12 col-sm-6 col-md-4 py-3">
-                    <div className=" rounded shadow h-100 text-center" style={{position:'relative'}}>
-                  <div style={{ position: "absolute", top: "8px", right: "8px" }}>
-                  <VegNonVegIcon type={item.isVeg ? "veg" : "non-veg"} size={24}  /></div>
+                    <div className=" rounded shadow text-center p-5" style={{position:'relative',height:'350px'}}>
+                  <div style={{ position: "absolute", top: "8px", right: "8px"  }}>
+                  <img src={item.image1} alt='' width={20}/><img src={item.image2} alt='' width={20}/></div>
                       <img
                         src={item.image}
                         alt={item.name}
@@ -60,7 +59,7 @@ const Cart = () => {
                         height={150}
                       />
                       <div className="card-body">
-                        <h5 className="card-title">{item.name}</h5>
+                        <h5 className="card-title bg-warning ">{item.name}</h5>
                         <h6 className="text-danger">₹{item.price}</h6>
 
                         <div className="d-flex justify-content-center align-items-center gap-2 mt-3">

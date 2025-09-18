@@ -171,8 +171,8 @@ const navigate = useNavigate();
             <img src={sliceimage} alt='sliceimg' width={200} />
          </div>
          <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
-            <h5 className='text-center text-primary'>RESERVATION</h5>
-            <h3 className='text-center text-primary'>BOOK YOUR TABLE</h3>
+            <h4 className='text-center text-primary '>RESERVATION</h4>
+            <h2 className='text-center text-primary fw-bold'>BOOK YOUR TABLE</h2>
          </div>
         </div>
        </div>
