@@ -29,9 +29,8 @@ const Career = () => {
 
   return (
     <section className="header">
-      <h1 className="text-center fw-bold mb-4">
-        WELCOME TO INDIA'S MOST <br /> ADMIRED AND AFFORDABLE FRANCHISE
-      </h1>
+      <h1 className="text-center fw-bold mb-2">WELCOME TO INDIA'S MOST  ADMIRED</h1>
+      <h1 className="text-center fw-bold text-warning">  AND AFFORDABLE FRANCHISE</h1>
 
       {/* ✅ Carousel only for images */}
       <Carousel interval={2000} pause="hover" controls={true} indicators={true}>

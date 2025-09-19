@@ -19,6 +19,7 @@ import { CartContext } from './Cartprovider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import nonveg from '../Assets/Menu/nonveg.jpg';
+import broasted from '../Assets/Menu/chickenbroasted.jpg';
 
 
 const products = [
@@ -31,12 +32,13 @@ const products = [
   { id: 7, name: 'HOTDOG BURGER', category: 'Food', subtitle: 'Hotdog style burger', price: 180, image: Burger_7,image2:nonveg },
   { id: 8, name: 'CHICKEN WINGS', category: 'Food', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8,image2:nonveg },
   { id: 9, name: 'BROASTED BURGER', category: 'Food', subtitle: 'Crispy broasted burger', price: 160, image: Burger_9,image2:nonveg },
-  { id: 10, name: 'MOJITO', category: 'Drink', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1,image1:vegpng  },
-  { id: 11, name: 'LIME', category: 'Drink', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2,image1:vegpng },
-  { id: 12, name: 'GINGER LIME', category: 'Drink', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3,image1:vegpng },
-  { id: 13, name: 'ORANGE', category: 'Drink', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4,image1:vegpng },
-  { id: 14, name: 'COCKTAIL', category: 'Drink', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5,image1:vegpng },
-  { id: 15, name: 'GRAPE LIME', category: 'Drink', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6,image1:vegpng },
+  { id: 10, name: ' CHICKEN BROASTED FRENCH FRIES', category: 'Food', subtitle: 'Crispy broasted chicken and french fries', price: 280, image: broasted,image2:nonveg },
+  { id: 11, name: 'MOJITO', category: 'Drink', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1,image1:vegpng  },
+  { id: 12, name: 'LIME', category: 'Drink', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2,image1:vegpng },
+  { id: 13, name: 'GINGER LIME', category: 'Drink', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3,image1:vegpng },
+  { id: 14, name: 'ORANGE', category: 'Drink', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4,image1:vegpng },
+  { id: 15, name: 'COCKTAIL', category: 'Drink', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5,image1:vegpng },
+  { id: 16, name: 'GRAPE LIME', category: 'Drink', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6,image1:vegpng },
 ];
 const MenuPage = () => {
   const navigate = useNavigate();
@@ -113,7 +115,7 @@ const MenuPage = () => {
           ) : (
             filteredProducts.map((product) => (
               <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
-                <div className=" rounded shadow  p-5 mb-3 mx-2" style={{textAlign:'center',position:'relative'}}>
+                <div className=" rounded shadow  p-4 mx-2" style={{textAlign:'center',position:'relative', width:'350px',height:'400px'}}>
                   <div style={{ position: "absolute", top: "8px", right: "8px" }}>
                     <img src={product.image1} alt=''  width={20}/>
                     <img src={product.image2} alt='' width={20}/></div>

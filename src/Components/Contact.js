@@ -28,16 +28,16 @@ const Contact = () => {
   return (
     <>
       <section className="header">
-        <h3 className="text-center">
+        <h2 className="text-center">
           IF YOU NEED ENQUIRY/HELP <br /> WE ARE HERE TO HELP YOU
-        </h3>
+        </h2>
         <div className="container-fluid">
           <div className="row ">
             <div className="col-12 col-sm-7 col-md-6 col-lg-4  text-center my-4">
               <div className="contactcard mx-auto"  >
                <span className="fa-solid fa-clock-rotate-left" style={{fontSize:'80px',marginTop:'10px'}}></span></div>
-               <h4 className="text-dark fw-bold text-center my-2">24/7<br/>CUSTOMER SUPPORT</h4>
-               <h4 className=" text-center fw-bold "> ALL REGIONAL LANGUAGE SUPPORT </h4>
+               <h4 className="text-dark fw-bold text-center my-2">24/7<br/>CUSTOMER SUPPORT <br/>+</h4>
+               <h4 className=" text-center fw-bold "> ALL REGIONAL LANGUAGE  </h4>
                <div className=" text-center ">
                <h5> TAMIL</h5>
                <h5>TELUGU</h5>

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "./Cartprovider";
 import { useNavigate } from "react-router-dom";
+import cuppng from '../Assets/BRANCH/cup png.png';
 // Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -32,14 +33,14 @@ const Cart = () => {
 
   return (
     <>
-      <section className="header">
+      <section className="header ">
         <div className="container">
           {cartItem.length === 0 ? (
             <div className="text-center py-5">
-              <i className="bi bi-cart-x display-1 text-muted"></i>
-              <h3 className="mt-3">Your cart is empty</h3>
-              <p className="text-muted">Start shopping to add items!</p>
-              <button className="btn btn-warning" onClick={()=>{navigate('/menu') }}>make order</button>
+              <h2 className="mt-3 fw-bold text-warning">YOUR CART IS EMPTY</h2>
+              <h2 className="mt-2 fw-bold ">LET'S MAKE AN ORDER</h2>
+              <button className="btn btn-warning rounded-pill mt-3 fs-3" onClick={()=>{navigate('/menu') }}>make order</button>
+              <img src={cuppng} alt="cup" width={300} className="mt-5 mx-auto"/>
             </div>
           ) : (
             <>

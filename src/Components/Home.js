@@ -195,7 +195,7 @@ const navigate = useNavigate();
                  
           </div>
           <div className='col-lg-3'>
-             <input type='time'   placeholder='TIME' required className='form-control w-100 '
+             <input type='time'   placeholder='Time' required className='form-control w-100 '
              value={time} onChange={(e) => setTime(e.target.value)}/>
               <input type='text'  placeholder='PEOPLE'className='form-control w-100 my-3'
               value={people} onChange={(e) => setPeople(e.target.value)}></input>

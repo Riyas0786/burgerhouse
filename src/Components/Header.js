@@ -46,12 +46,12 @@ const Header = () => {
             <ul className="iconlinks d-flex list-unstyled mb-0">
               <li className="position-relative">
                 <Link className="navicon me-3" to="/account">
-                  <i className="bi bi-person-fill"></i>
+                  <i className="bi bi-person-fill fs-3"></i>
                 </Link>
               </li>
               <li className="position-relative">
                 <Link className="navicon" to="/cart">
-                  <i className="bi bi-bag-fill"></i>
+                  <i className="bi bi-bag-fill fs-3"></i>
                   {/* ✅ Show total quantity in badge */}
                   {totalQty > 0 && (
                     <span
