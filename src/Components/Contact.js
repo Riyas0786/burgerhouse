@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import customer from '../Assets/CONTACT/Customer support.png';
+import service from '../Assets/CONTACT/24.png';
+import email from '../Assets/CONTACT/Email .png';
 
 
 // Toastify
@@ -34,8 +37,8 @@ const Contact = () => {
         <div className="container-fluid">
           <div className="row ">
             <div className="col-12 col-sm-7 col-md-6 col-lg-4  text-center my-4">
-              <div className="contactcard mx-auto"  >
-               <span className="fa-solid fa-clock-rotate-left" style={{fontSize:'80px',marginTop:'10px'}}></span></div>
+              
+               <img src={service} alt="service" className="mx-auto" width={200}/>
                <h4 className="text-dark fw-bold text-center my-2">24/7<br/>CUSTOMER SUPPORT <br/>+</h4>
                <h4 className=" text-center fw-bold "> ALL REGIONAL LANGUAGE  </h4>
                <div className=" text-center ">
@@ -48,8 +51,8 @@ const Contact = () => {
 
             {/* Customer Support */}
             <div className="col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
-              <div className="contactcard mx-auto my-4">
-                <span className="bi bi-chat-left-text" style={{fontSize:'80px'}}></span>
+              <div className=" img-fluid my-3">
+                <img src={email} alt="email" className="mx-auto" width={150}/>
                 </div>
               
               <h4 className="text-dark fw-bold text-center">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
@@ -84,9 +87,9 @@ const Contact = () => {
             </div>
 
             {/* Call Support */}
-            <div className=" col-12 col-sm-7 col-md-6 col-lg-4 mx-auto text-center">
-            <div className="contactcard mx-auto my-4">
-             <span className="bi bi-headset "style={{fontSize:'80px', marginBottom:'20px'}}></span></div>
+            <div className=" col-12 col-sm-7 col-md-6 col-lg-4  text-center">
+            <div className="img-fluid my-3 ">
+             <img src={customer} alt='customer' className="mx-auto" width={150} /></div>
               <h4 className="fw-bold text-dark">TALK TO OUR <br/> SUPPORT TEAM</h4>
               <button className="btn btn-danger my-5 mb-3" onClick={()=>(window.location.href='tel:9159658882')}>
                 CALL NOW <span className="fw-bold"></span>
