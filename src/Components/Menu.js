@@ -23,22 +23,22 @@ import broasted from '../Assets/Menu/chickenbroasted.jpg';
 import noproduct from '../Assets/Menu/NoProducts_found.mp4';
 
 const products = [
-  { id: 1, name: 'VEG BURGER', category: 'Food', subtitle: 'Fresh and tasty veg burger', price: 150, image: Burger_1, image1: vegpng },
-  { id: 2, name: 'MUTTON BURGER', category: 'Food', subtitle: 'Delicious mutton burger', price: 220, image: Burger_2, image2: nonveg },
-  { id: 3, name: 'PRAWN BURGER', category: 'Food', subtitle: 'Crispy prawn delight', price: 200, image: Burger_3, image2: nonveg },
-  { id: 4, name: 'BEEF BURGER', category: 'Food', subtitle: 'Juicy beef patty burger', price: 140, image: Burger_4, image2: nonveg },
-  { id: 5, name: 'CHICKEN BURGER', category: 'Food', subtitle: 'Classic chicken burger', price: 130, image: Burger_5, image2: nonveg },
-  { id: 6, name: 'CHEESE BURGER', category: 'Food', subtitle: 'Cheesy goodness burger', price: 110, image: Burger_6, image1: vegpng },
-  { id: 7, name: 'HOTDOG BURGER', category: 'Food', subtitle: 'Hotdog style burger', price: 180, image: Burger_7, image2: nonveg },
-  { id: 8, name: 'CHICKEN WINGS', category: 'Food', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8, image2: nonveg },
-  { id: 9, name: 'BROASTED BURGER', category: 'Food', subtitle: 'Crispy broasted burger', price: 160, image: Burger_9, image2: nonveg },
-  { id: 10, name: 'CHICKEN BROASTED FRENCH FRIES', category: 'Food', subtitle: 'Crispy broasted chicken and french fries', price: 280, image: broasted, image2: nonveg },
-  { id: 11, name: 'MOJITO', category: 'Drink', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1, image1: vegpng },
-  { id: 12, name: 'LIME', category: 'Drink', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2, image1: vegpng },
-  { id: 13, name: 'GINGER LIME', category: 'Drink', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3, image1: vegpng },
-  { id: 14, name: 'ORANGE', category: 'Drink', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4, image1: vegpng },
-  { id: 15, name: 'COCKTAIL', category: 'Drink', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5, image1: vegpng },
-  { id: 16, name: 'GRAPE LIME', category: 'Drink', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6, image1: vegpng },
+  { id: 1, name: 'VEG BURGER', category: 'Food',group:'veg', subtitle: 'Fresh and tasty veg burger', price: 150, image: Burger_1, image1: vegpng },
+  { id: 2, name: 'MUTTON BURGER', category: 'Food',group:'nonveg', subtitle: 'Delicious mutton burger', price: 220, image: Burger_2, image2: nonveg },
+  { id: 3, name: 'PRAWN BURGER', category: 'Food',group:'nonveg', subtitle: 'Crispy prawn delight', price: 200, image: Burger_3, image2: nonveg },
+  { id: 4, name: 'BEEF BURGER', category: 'Food',group:'nonveg', subtitle: 'Juicy beef patty burger', price: 140, image: Burger_4, image2: nonveg },
+  { id: 5, name: 'CHICKEN BURGER', category: 'Food',group:'nonveg', subtitle: 'Classic chicken burger', price: 130, image: Burger_5, image2: nonveg },
+  { id: 6, name: 'CHEESE BURGER', category: 'Food',group:'veg', subtitle: 'Cheesy goodness burger', price: 110, image: Burger_6, image1: vegpng },
+  { id: 7, name: 'HOTDOG BURGER', category: 'Food',group:'nonveg', subtitle: 'Hotdog style burger', price: 180, image: Burger_7, image2: nonveg },
+  { id: 8, name: 'CHICKEN WINGS', category: 'Food',group:'nonveg', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8, image2: nonveg },
+  { id: 9, name: 'BROASTED BURGER', category: 'Food',group:'nonveg', subtitle: 'Crispy broasted burger', price: 160, image: Burger_9, image2: nonveg },
+  { id: 10, name: 'CHICKEN BROASTED FRENCH FRIES',group:'nonveg', category: 'Food', subtitle: 'Crispy broasted chicken and french fries', price: 280, image: broasted, image2: nonveg },
+  { id: 11, name: 'MOJITO', category: 'Drink',group:'veg', subtitle: 'Refreshing mint drink', price: 90, image: Drinks_1, image1: vegpng },
+  { id: 12, name: 'LIME', category: 'Drink',group:'veg', subtitle: 'Fresh lime juice', price: 50, image: Drinks_2, image1: vegpng },
+  { id: 13, name: 'GINGER LIME', category: 'Drink',group:'veg', subtitle: 'Spicy ginger lime', price: 60, image: Drinks_3, image1: vegpng },
+  { id: 14, name: 'ORANGE', category: 'Drink',group:'veg', subtitle: 'Fresh orange juice', price: 40, image: Drinks_4, image1: vegpng },
+  { id: 15, name: 'COCKTAIL', category: 'Drink',group:'veg', subtitle: 'Fruity cocktail mix', price: 110, image: Drinks_5, image1: vegpng },
+  { id: 16, name: 'GRAPE LIME', category: 'Drink',group:'veg', subtitle: 'Tangy grape lime', price: 80, image: Drinks_6, image1: vegpng },
 ];
 
 const MenuPage = () => {
@@ -46,12 +46,14 @@ const MenuPage = () => {
   const { addToCart } = useContext(CartContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('All');
+  const [group,setGroup]=useState('default');
   const [sortOrder, setSortOrder] = useState('default');
 
   let filteredProducts = products.filter((product) => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = category === 'All' || product.category === category;
-    return matchesSearch && matchesCategory;
+    const matchesGroup =group==='All'||product.group===group||group==='default';
+    return matchesSearch && matchesCategory&&matchesGroup;
   });
 
   if (sortOrder === 'lowToHigh') {
@@ -83,6 +85,12 @@ const MenuPage = () => {
           <option value="All">All</option>
           <option value="Food">Burgers</option>
           <option value="Drink">Drinks</option>
+         </select>
+          <select className='form-select'value={group}
+          onChange={(e)=>setGroup(e.target.value)} style={{ maxWidth: "200px" }}>
+            <option value="All">All</option>
+          <option value="veg">veg</option>
+          <option value="nonveg">Nonveg</option>
         </select>
 
         {/* Sort Option */}
@@ -108,8 +116,8 @@ const MenuPage = () => {
         {filteredProducts.length === 0 ? (
          <div className="text-center">
   <video
-    className="mx-auto d-block rounded"
-    width="400"autoPlay  playsInline>
+    className=" rounded w-100 h-100 " style={{ maxWidth: "500px", margin: " auto" }} 
+    autoPlay  playsInline>
     <source src={noproduct} type="video/mp4" />
   </video>
 </div>
