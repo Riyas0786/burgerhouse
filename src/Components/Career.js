@@ -6,6 +6,7 @@ import trustableimg from "../Assets/CAREER/trustableimg.png";
 import Branch from "../Assets/CAREER/branches.png";
 import { toast } from "react-toastify";
 
+
 const Career = () => {
   const [Name, setName] = useState("");
   const [number, setnumber] = useState("");
@@ -78,8 +79,7 @@ const Career = () => {
       {/* ✅ Franchise Form BELOW carousel */}
       <div
         className="careercard shadow mx-auto my-5 p-4 w-100"
-        style={{ maxWidth: "500px", borderRadius: "20px" }}
-      >
+        style={{ maxWidth: "500px", borderRadius: "20px" }}>
         <h4 className="text-center bg-danger text-white p-2 rounded">
           FRANCHISE ENQUIRY
         </h4>

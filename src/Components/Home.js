@@ -9,6 +9,7 @@ import FlexImage1 from '../Assets/Home/Container_Img.png';
 import sliceimage from '../Assets/Home/Slice_Img.png';
 import sliceimage1 from '../Assets/Home/Slice_Img_1.png';
 import sliceimage2 from '../Assets/Home/Slice_Img_2.png';
+import account from '../Assets/Home/acc.png.png';
 import table from '../Assets/Home/Table.mp4';
 import { Carousel } from 'react-bootstrap';
 import {  useNavigate } from 'react-router-dom';
@@ -100,7 +101,7 @@ const navigate = useNavigate();
         </div>
     </section>
 
-   <section className='landing py-5'>
+   <section className='landing py-5' >
   <div className='container'>
     <h5 className='text-center text-primary mx-auto bg-warning w-50'>
     ALWAYS TASTY
@@ -209,7 +210,7 @@ const navigate = useNavigate();
     </section>
 
      {/* Table Reservation */}
-         <section className='header'>
+         <section className='header'  >
           <div className='container'> 
              <div className='row'>
                <div className='col-lg-3 '>
@@ -239,6 +240,12 @@ const navigate = useNavigate();
                </div>     
               </div>        
       </section>
+      <section className=' d-flex flex-column justify-content-center align-items-center '>
+        <img src={account} alt='account' width={150}/>
+        <h2 className='text-center bg-light'>Create Your Account</h2>
+        <button className='btn btn-danger rounded-pill my-5 fs-2 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
+      </section>
+
       <ToastContainer
    hideProgressBar
   icon={false}

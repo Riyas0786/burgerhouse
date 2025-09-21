@@ -1,8 +1,27 @@
 import React, { useState } from "react";
 import BurgerImg from "../Assets/Account/burgerimg.png";
+import tick from "../Assets/CONTACT/tick.mp4";
 import logo from "../Assets/Home/Logo.png";
-import { toast } from "react-toastify";
+import {ToastContainer,toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+
+const VideoToast = ({ src,text }) => (
+   <video
+      src={src}
+      autoPlay
+      muted
+      playsInline
+      loop
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "block",
+        margin: "0 auto",
+      }}
+
+    />);
+
+
 
 const Account = () => {
   const [name, setName] = useState("");
@@ -30,7 +49,19 @@ const Account = () => {
       toast.error("⚠️ Password must be 6+ chars, include uppercase, number & special char.");
       return;
     }
-    toast.success("✅ Account created successfully at Burger House!");
+    toast.success(<VideoToast src={tick}text="Account created successfull"  />, {
+         position: "top-center mb-2",
+         autoClose: 1000,
+         closeOnClick: false,
+         pauseOnHover: false,
+         draggable: false,
+          style: {
+            background: "transparent",
+            boxShadow: "none",
+            padding: 0,
+            border: "none",
+          },
+       });
     setName("");
     setEmail("");
     setPassword("");
@@ -107,8 +138,21 @@ const Account = () => {
         </div>
       </div>
     </div>
-    
+
   );
 };
+    <ToastContainer
+   hideProgressBar
+  icon={false}
+   closeButton={false}
+  draggable={false}
+  pauseOnHover={false}
+  style={{
+    background: "transparent",
+    boxShadow: "none",
+    padding: 0,
+    position: "top-center",
+  }}
+/>
 
 export default Account;

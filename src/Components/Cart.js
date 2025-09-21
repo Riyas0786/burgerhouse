@@ -52,7 +52,7 @@ const Cart = () => {
 
     setTimeout(() => {
       setCartItem([]); // clear cart
-      navigate("/menu"); // redirect instead of reload
+       navigate("/menu"); // redirect instead of reload
     }, 2000);
   };
 
