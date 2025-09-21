@@ -4,7 +4,6 @@ import BannerImage1 from '../Assets/Home/Header_Img_1.png';
 import BannerImage2 from '../Assets/Home/Header_Img_2.png';
 import BannerImage3 from '../Assets/Home/Header_Img_3.png';
 import LandImage1 from '../Assets/Home/Landing_Img_1.png';
-import LandImage2 from '../Assets/Home/Landing_Img_2.png';
 import LandImage3 from '../Assets/Home/Landing_Img_3.png';
 import FlexImage1 from '../Assets/Home/Container_Img.png';
 import sliceimage from '../Assets/Home/Slice_Img.png';
@@ -13,7 +12,7 @@ import sliceimage2 from '../Assets/Home/Slice_Img_2.png';
 import table from '../Assets/Home/Table.mp4';
 import { Carousel } from 'react-bootstrap';
 import {  useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast,ToastContainer } from 'react-toastify';
 
 
 const VideoToast = ({ src }) => (
@@ -41,10 +40,10 @@ const navigate = useNavigate();
   const tablebtn = (e) => {
     e.preventDefault();
   if(!name||!email||!date||!time||!people){
-    toast.error("!!Please input all fields");
+    toast.error("!!Please input all fields");  
     return;}
     toast.success(<VideoToast src={table}   />, {
-     position: "top-center",
+     position: "top-center mb-2",
      autoClose: 3000,
      closeOnClick: false,
      pauseOnHover: false,
@@ -125,7 +124,7 @@ const navigate = useNavigate();
         <div className='text-center'>
           <img src={LandImage1} alt="LandImage1" width="300px" className='mx-auto ' />
           <h4 className='text-primary'>Tandoor Chicken Burger</h4>
-          <p className='text-primary py-3'>
+          <p className='text-primary'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.
           </p>
@@ -138,7 +137,7 @@ const navigate = useNavigate();
       {/* Slide 2 */}
       <Carousel.Item>
         <div className='text-center '>
-          <img src={LandImage2} alt="LandImage2" width="263px" className='mx-auto ' />
+          <img src={LandImage1} alt="LandImage2" width="300px" className='mx-auto ' />
           <h4 className='text-primary'>Classic Veggie Burger</h4>
           <p className='text-primary '>
             Delicious veggie burger made with fresh ingredients and special sauce.
@@ -154,7 +153,7 @@ const navigate = useNavigate();
         <div className='text-center'>
           <img src={LandImage3} alt="LandImage3" width="300px" className='mx-auto ' />
           <h4 className='text-primary'>Cheese Overload Burger</h4>
-          <p className='text-primary py-3'>
+          <p className='text-primary'>
             A juicy burger with double cheese, perfect for cheese lovers.
           </p>
           <button className='btn btn-danger' style={{ backgroundColor: 'red' }} onClick={()=>navigate("/menu")}>
@@ -224,6 +223,7 @@ const navigate = useNavigate();
                  <input type='date'  placeholder='DATE' required className='form-control w-100  my-3'
                  value={date} onChange={(e) => setDate(e.target.value)}/> 
                  
+
           </div>
           <div className='col-lg-3'>
              <input type='time'   placeholder='Time' required className='form-control w-100 '
@@ -239,6 +239,20 @@ const navigate = useNavigate();
                </div>     
               </div>        
       </section>
+      <ToastContainer
+   hideProgressBar
+  icon={false}
+   closeButton={false}
+  draggable={false}
+  pauseOnHover={false}
+  style={{
+    background: "transparent",
+    boxShadow: "none",
+    padding: 0,
+    position: "top-center",
+  }}
+/>
+
     </>
   )
 }

@@ -19,15 +19,10 @@ const VideoToast = ({ src }) => (
       src={src}
       autoPlay
       muted
-      playsInline
       loop
-      style={{
-        marginTop: "10px",
-        width: "100%",
-        height: "100%",
-        display: "block",
-      }}
+      style={{width:"100%", height: "100%", display: "block", margin: "0 auto"}}
     />
+
   </div>
 );
 
@@ -53,14 +48,6 @@ const Cart = () => {
     toast.success(<VideoToast src={burgervid}  />, {
       position: "top-center my-5",
       autoClose: 1500,
-      pauseOnHover: false,
-      draggable: false,
-      style: {
-        background: "transparent",
-        boxShadow: "none",
-        padding: 0,
-        border: "none",
-      },
     });
 
     setTimeout(() => {
@@ -76,7 +63,7 @@ const Cart = () => {
           {cartItem.length === 0 ? (
             <div className="text-center py-5">
               <h2 className="mt-3 fw-bold text-warning fs-2">YOUR CART IS EMPTY</h2>
-              <h2 className="mt-2 fw-bold">LET'S MAKE AN ORDER</h2>
+              <h2 className="mt-2 fw-bold fs-1">LET'S MAKE AN ORDER</h2>
               <button
                 className="btn btn-warning btn-lg rounded-pill mt-3"
                 onClick={() => navigate("/menu")}
@@ -184,13 +171,25 @@ const Cart = () => {
             <i className="fa-brands fa-cc-visa mx-2"></i>
             <i className="fa-brands fa-cc-mastercard mx-2"></i>
             <i className="fa-brands fa-cc-paypal mx-2"></i>
-          </div>
+\          </div>
 
           <div className="h4 pb-2 mb-4 text-danger border-bottom border-white"></div>
         </div>
       </section>
 
-      <ToastContainer />
+     <ToastContainer
+  hideProgressBar
+  icon={false}
+  closeButton={false}
+  draggable={false}
+  pauseOnHover={false}
+  style={{
+    background: "transparent",
+    boxShadow: "none",
+    padding: 0,
+  }}
+/>
+
     </>
   );
 };
