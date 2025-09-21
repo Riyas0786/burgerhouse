@@ -10,10 +10,26 @@ import FlexImage1 from '../Assets/Home/Container_Img.png';
 import sliceimage from '../Assets/Home/Slice_Img.png';
 import sliceimage1 from '../Assets/Home/Slice_Img_1.png';
 import sliceimage2 from '../Assets/Home/Slice_Img_2.png';
+import table from '../Assets/Home/Table.mp4';
 import { Carousel } from 'react-bootstrap';
 import {  useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+
+const VideoToast = ({ src }) => (
+   <video
+      src={src}
+      autoPlay
+      muted
+      playsInline
+      loop
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "block",
+        margin: "0 auto",
+      }}
+    />);
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -27,7 +43,22 @@ const navigate = useNavigate();
   if(!name||!email||!date||!time||!people){
     toast.error("!!Please input all fields");
     return;}
-    toast.success("Your table has been reserved successfully!");
+    toast.success(<VideoToast src={table}   />, {
+     position: "top-center",
+     autoClose: 3000,
+     closeOnClick: false,
+     pauseOnHover: false,
+     draggable: false,
+      style: {
+        background: "transparent",
+        boxShadow: "none",
+        padding: 0,
+        border: "none",
+      },
+   });
+   setTimeout(() => navigate("/menu"), 2000);
+  
+   
     setName();
     setEmail();
     setDate();

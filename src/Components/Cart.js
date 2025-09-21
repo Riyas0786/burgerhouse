@@ -7,17 +7,11 @@ import burgervid from "../Assets/CONTACT/burgervid.mp4";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// ✅ Custom component for video toast
-const VideoToast = ({ src, text }) => (
+// ✅ Custom component for video toast with overlay text
+const VideoToast = ({ src }) => (
   <div
     style={{
-      position: "relative",     // 👈 needed
-      width: "300px",
-      height: "300px",
-      marginTop: "10px",
-      borderRadius: "10px",
-      overflow: "hidden",
-      backgroundColor: "#000",  // fallback
+      position: "relative",
     }}
   >
     {/* Video */}
@@ -28,39 +22,14 @@ const VideoToast = ({ src, text }) => (
       playsInline
       loop
       style={{
+        marginTop: "10px",
         width: "100%",
         height: "100%",
-        objectFit: "cover",
         display: "block",
       }}
     />
-
-    {/* Overlay Text */}
-    <div
-      style={{
-        position: "absolute",
-        top: "7%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        color: "#fff",
-        fontWeight: "bold",
-        fontSize: "20px",
-        textAlign: "Center",
-        backgroundColor: "rgba(235, 92, 26, 0.88)",
-        padding: "6px 12px",
-        marginTop: "4px",
-        borderRadius: "6px",
-        zIndex: 9999,           // 👈 forces above
-        pointerEvents: "none",
-      }}
-    >
-      {text}
-    </div>
   </div>
 );
-
-
-
 
 const Cart = () => {
   const { cartItem, increaseQty, decreaseQty, removeItem, setCartItem } =
@@ -81,19 +50,23 @@ const Cart = () => {
       return;
     }
 
-  toast.success(<VideoToast src={burgervid}  text="Order Placed 🎉" />, {
-  position: "top-center",
-  autoClose: 3000,
-  closeOnClick: false,
-  pauseOnHover: false,
-  draggable: false,
-});
-
+    toast.success(<VideoToast src={burgervid}  />, {
+      position: "top-center my-5",
+      autoClose: 1500,
+      pauseOnHover: false,
+      draggable: false,
+      style: {
+        background: "transparent",
+        boxShadow: "none",
+        padding: 0,
+        border: "none",
+      },
+    });
 
     setTimeout(() => {
       setCartItem([]); // clear cart
       navigate("/menu"); // redirect instead of reload
-    }, 3000);
+    }, 2000);
   };
 
   return (
@@ -102,7 +75,7 @@ const Cart = () => {
         <div className="container">
           {cartItem.length === 0 ? (
             <div className="text-center py-5">
-              <h2 className="mt-3 fw-bold text-warning">YOUR CART IS EMPTY</h2>
+              <h2 className="mt-3 fw-bold text-warning fs-2">YOUR CART IS EMPTY</h2>
               <h2 className="mt-2 fw-bold">LET'S MAKE AN ORDER</h2>
               <button
                 className="btn btn-warning btn-lg rounded-pill mt-3"
