@@ -19,6 +19,7 @@ import { CartProvider } from './Components/Cartprovider';
 import Loading from './Components/Loading';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import About from './Components/About';
 
 
 
@@ -56,6 +57,7 @@ function AppContent() {
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
         </Routes>
