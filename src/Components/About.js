@@ -45,7 +45,7 @@ function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              BETTER FOOD FOR ALL PEOPLE
+              BETTER FOOD FOR ALL PEOPLE<br/> <span className='text-secondary'>SINCE 2017</span>
             </motion.h2>
           </div>
 

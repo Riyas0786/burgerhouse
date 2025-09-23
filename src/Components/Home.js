@@ -126,8 +126,7 @@ const navigate = useNavigate();
           <img src={LandImage1} alt="LandImage1" width="300px" className='mx-auto ' />
           <h4 className='text-primary'>Tandoor Chicken Burger</h4>
           <p className='text-primary'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Ipsum iure voluptatum explicabo, quae reprehenderit perferendis nihil.
+            Lorem ipsum dolor sit amet, consectetur adipisicing 
           </p>
           <button className='btn btn-danger' style={{ backgroundColor: 'red' }}onClick={()=>navigate("/menu")}>
             Order Now
@@ -171,7 +170,7 @@ const navigate = useNavigate();
     <section className="container my-5">
   <div className="row align-items-center rounded shadow p-4 ">
     {/* Text Section */}
-    <div className="col-12 col-md-6">
+    <div className="col-12 col-sm-6">
       <h5 className="text-muted">Discover</h5>
       <h2 className="fw-bold">UPCOMING EVENTS</h2>
       <h6>
@@ -183,7 +182,7 @@ const navigate = useNavigate();
     </div>
 
     {/* Image Section */}
-    <div className="col-12 col-md-6 text-center">
+    <div className="col-12 col-sm-6 text-center">
       <img
         src={FlexImage1}
         alt="Upcoming Event"
@@ -195,13 +194,13 @@ const navigate = useNavigate();
 
     
     {/* Slice Section */}
-    <section className='slice'>
-       <div className='container '>
-        <div className='row '>
-          <div className='col-12 col-sm-7 col-md-6 col-lg-4 '>
-            <img src={sliceimage} alt='sliceimg' width={200} />
+    <section className='d-flex flex-column justify-content-start'>
+       <div className='container-fluid '>
+        <div className='row align-items-center '>
+          <div className='col-12 col-md-6 col-lg-4 text-start' >
+            <img src={sliceimage} alt='sliceimg'  width={400}  />
          </div>
-         <div className='col-12 col-sm-7 col-md-6 col-lg-4'>
+         <div className='col-12 col-md-6 col-lg-4 text-center' >
             <h4 className='text-center text-primary '>RESERVATION</h4>
             <h2 className='text-center text-primary fw-bold'>BOOK YOUR TABLE</h2>
          </div>
@@ -211,10 +210,10 @@ const navigate = useNavigate();
 
      {/* Table Reservation */}
          <section className='header'  >
-          <div className='container'> 
+          <div className='container d-flex'> 
              <div className='row'>
                <div className='col-lg-3 '>
-                 <img src={sliceimage1} alt='sliceimage' width={120}/>
+                 <img src={sliceimage1} alt='sliceimage' className='mx-5'  width={120}/>
               </div>
               <div className='col-lg-3' >
              <input type='text'  placeholder='NAME' required className='form-control w-100  '
@@ -235,15 +234,16 @@ const navigate = useNavigate();
              
               </div>
               <div className='col-lg-3 '>
-              <img src={sliceimage2} alt='sliceimage2' width={400} />
+              <img src={sliceimage2} alt='sliceimage2' width={500} className='mx-5'/>
               </div>
                </div>     
               </div>        
       </section>
-      <section className=' d-flex flex-column justify-content-center align-items-center '>
+      {/* Account Creation Section */}
+      <section className=' d-flex flex-column justify-content-start align-items-center mb-5 '>
         <img src={account} alt='account' width={150}/>
         <h2 className='text-center bg-light'>Create Your Account</h2>
-        <button className='btn btn-danger rounded-pill my-5 fs-2 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
+        <button className='btn btn-danger rounded-pill my-2 fs-2 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
       </section>
 
       <ToastContainer
