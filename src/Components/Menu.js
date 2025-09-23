@@ -96,7 +96,7 @@ const MenuPage = () => {
           style={{ maxWidth: "200px" }}
         >
           <option value="All">All</option>
-          <option value="Food">Burgers</option>
+          <option value="Food">Food</option>
           <option value="Drink">Drinks</option>
         </select>
 
@@ -151,8 +151,8 @@ const MenuPage = () => {
                 style={{ textAlign: 'center', position: 'relative' }}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
+                transition={{ duration: 1.0, delay: 0.01 }}
+                whileHover={{ scale: 1.07, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
               >
                 {/* Veg/Non-Veg icons */}
                 <div style={{ position: "absolute", top: "8px", right: "8px" }}>
@@ -171,9 +171,9 @@ const MenuPage = () => {
 
                 {/* Product Details */}
                 <div className="flex-grow-1 d-flex flex-column justify-content-between mt-2">
-                  <h5 className="card-title bg-warning py-1">{product.name}</h5>
-                  <p className="card-text">{product.subtitle}</p>
-                  <h5 className="text-danger">₹{product.price}</h5>
+                  <h5 className="card-title mx-auto bg-warning w-35 fs-4 py-1">{product.name}</h5>
+                  <h5 className="card-text bg-light my-2">{product.subtitle}</h5>
+                  <h4 className="text-danger">₹{product.price}</h4>
                 </div>
 
                 {/* Buttons */}

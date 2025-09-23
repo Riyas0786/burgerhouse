@@ -26,7 +26,7 @@ const Header = () => {
           </div>
 
           <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
+            aria-controls="navbar"
             className="menuicon"
             onClick={toggleMenu}
           />

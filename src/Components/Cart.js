@@ -171,9 +171,13 @@ const Cart = () => {
             <i className="fa-brands fa-cc-visa mx-2"></i>
             <i className="fa-brands fa-cc-mastercard mx-2"></i>
             <i className="fa-brands fa-cc-paypal mx-2"></i>
-\          </div>
+          </div>
 
-          <div className="h4 pb-2 mb-4 text-danger border-bottom border-white"></div>
+          <div className="h4 pb-2 mb-4 text-danger border-bottom border-white">
+            <h6 className="text-white  text-center mt-3">
+            © Burger House. All rights reserved.
+          </h6>
+          </div>
         </div>
       </section>
 

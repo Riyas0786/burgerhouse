@@ -20,20 +20,20 @@ const Account = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
     if (!name || !email || !password) {
-      toast.error("⚠️ Please fill in all fields.");
+      toast.error("⚠️ Please fill in all fields.",{className:'bg-danger text-white'});
       return;
     }
     const emailRegex = /\S+@\S+\.\S+/;
     if (!emailRegex.test(email)) {
-      toast.error("⚠️ Please enter a valid email.");
+      toast.error("⚠️ Please enter a valid email.",{className:'bg-danger text-white'});
       return;
     }
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{6,}$/;
     if (!passwordRegex.test(password)) {
-      toast.error("⚠️ Password must be 6+ chars, include uppercase, number & special char.");
+      toast.error("⚠️ Password must be 6+ chars, include uppercase, number & special char.",{className:'bg-danger text-white'});
       return;
     }
-    toast.success('Account created successfull')
+    toast.success('Account created successfull',{className:'bg-success  text-white'})
     setName("");
     setEmail("");
     setPassword("");

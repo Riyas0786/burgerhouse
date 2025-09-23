@@ -2,18 +2,16 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;}
-
+  overflow-x: hidden;
+ }
   section, div {
   margin: 0;
   padding: 0;  
   }
-
-html {
+  html {
   scroll-behavior: smooth;
-}
-
- .navlinks {
+  }
+.navlinks {
   display: flex;
   gap: 2.5rem;
   list-style: none;
@@ -56,17 +54,18 @@ html {
 
 @media (max-width: 768px) {
   .navlinks {
-    list-style: none;
-    flex-direction: column;
+    list-style:none;
+    flex-direction:column-reverse;
     max-width: 500px;
-    position: relative;
-    top: 40px; /* below navbar */
-    left: -30px;
+    position:static;
+    top:50px; /* below navbar */
+    left: 30px;
+    gap: 7px;
     width: 100%;
     /* start hidden */
     max-height:0;
     overflow:hidden;
-    transition:  0.7s ease-in-out;
+    transition:  0.7s ease-in-out ;
   }
   .menuicon{
      display: block;
@@ -80,16 +79,12 @@ html {
 
 
 @media (max-width: 576px) {
-  .signupform {
-    width: 100% !important;
-    justify-content: center;
-  }
+  
 }
 @media (max-width: 576px) {
   .navbar-icons i {
     font-size: 1.5rem;
     margin: 0 8px;
-  }
-  
+  } 
 }
 }

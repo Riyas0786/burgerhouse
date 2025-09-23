@@ -93,7 +93,11 @@
     font-size: 30px;
    
 }
-
+.carousel-img {
+  height: 300px;        /* adjust as needed */
+  width: auto;
+  object-fit: cover;
+}
 
 
 

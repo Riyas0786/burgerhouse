@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import burgerimg from '../Assets/Menu/Burger13.webp';
 import burger2 from '../Assets/Menu/Burger14.webp';
-import burger3 from '../Assets/Menu/Burger_6.png';
+import burger3 from '../Assets/Menu/Burger_12.webp';
 
 function About() {
   return (
@@ -18,7 +18,7 @@ function About() {
               className="d-block mx-auto"
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1,delay:0.01 }}
             />
           </div>
 
@@ -29,7 +29,6 @@ function About() {
               alt="burger"
               width={200}
               className="d-block mx-auto"
-              style={{ transform: "rotate(10deg)" }}
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
@@ -45,7 +44,7 @@ function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              BETTER FOOD FOR ALL PEOPLE<br/> <span className='text-secondary'>SINCE 2017</span>
+              BETTER FOOD FOR ALL PEOPLE<br/> <span className='text-dark'>SINCE 2017</span>
             </motion.h2>
           </div>
 
@@ -54,9 +53,9 @@ function About() {
             <motion.img
               src={burger3}
               alt="burger"
-              width={250}
+              width={500}
               className="d-block mx-auto"
-              style={{ transform: "rotate(-20deg)" }}
+              style={{ transform: "rotate(50deg)" }}
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
@@ -66,7 +65,7 @@ function About() {
 
         {/* About Content */}
         <motion.h2
-          className="mt-5 bg-warning w-50 mx-auto"
+          className="mt-5 fw-bold fs-1 mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -113,10 +112,11 @@ function About() {
           our mission: to serve happiness, one burger at a time, while building
           trust and long-lasting connections with our community.
         </motion.p>
-        <motion.h4 className='bg-light w-50 mx-auto mb-5'
+        <motion.h4 className='bg-light fs-4 w-25 mx-auto mb-5'
          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}> THINK BURGER,<br/>THINK BURGER HOUSE</motion.h4>
+          transition={{ duration: 1 }}>
+            <span className='bi bi-emoji-smile fs-1 '></span> THINK BURGER,<br/>THINK BURGER HOUSE</motion.h4>
       </div>
     </section>
   );

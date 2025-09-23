@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
 
     if (!email || !password) {
-      toast.error("⚠️ Please fill in all fields.");
+      toast.error("⚠️ Please fill in all fields.",{className:'bg-danger text-white'});
       return;
     }
 
@@ -31,16 +31,16 @@ const Login = () => {
     const phoneRegex = /^[0-9]{10}$/;
 
     if (!emailRegex.test(email) && !phoneRegex.test(email)) {
-      toast.error("⚠️ Enter a valid email or 10-digit phone number.");
+      toast.error("⚠️ Enter a valid email or 10-digit phone number.",{className:'bg-danger text-white'});
       return;
     }
 
     if (password.length < 6) {
-      toast.error("⚠️ Password must be at least 6 characters.");
+      toast.error("⚠️ Password must be at least 6 characters.",{className:'bg-danger text-white'});
       return;
     }
 
-    toast.success("✅ Welcome back to Burger House!");
+    toast.success("✅ Welcome back to Burger House!",{className:'bg-success text-white'});
      setTimeout(() => navigate("/menu"), 2000);
     setEmail("");
     setPassword("");

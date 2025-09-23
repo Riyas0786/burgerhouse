@@ -3,12 +3,14 @@ import HeaderImage from '../Assets/Home/Banner_Img.png';
 import BannerImage1 from '../Assets/Home/Header_Img_1.png';
 import BannerImage2 from '../Assets/Home/Header_Img_2.png';
 import BannerImage3 from '../Assets/Home/Header_Img_3.png';
-import LandImage1 from '../Assets/Home/Landing_Img_1.png';
-import LandImage3 from '../Assets/Home/Landing_Img_3.png';
+import carouselimg1 from '../Assets/Home/Landing_Img_1.png';
+import carouselimg2 from '../Assets/Menu/Burger16.webp';
+import carouselimg3 from'../Assets/Menu/Burger15.webp'
 import FlexImage1 from '../Assets/Home/Container_Img.png';
 import sliceimage from '../Assets/Home/Slice_Img.png';
 import sliceimage1 from '../Assets/Home/Slice_Img_1.png';
 import sliceimage2 from '../Assets/Home/Slice_Img_2.png';
+import deliveryimg from '../Assets/Home/delivery.png';
 import account from '../Assets/Home/acc.png.png';
 import table from '../Assets/Home/Table.mp4';
 import { Carousel } from 'react-bootstrap';
@@ -41,7 +43,7 @@ const navigate = useNavigate();
   const tablebtn = (e) => {
     e.preventDefault();
   if(!name||!email||!date||!time||!people){
-    toast.error("!!Please input all fields");  
+    toast.warn("⚠️!!Please input all fields",{position:'top-center',className:'fw-bold text-dark bg-warning'});
     return;}
     toast.success(<VideoToast src={table}   />, {
      position: "top-center mb-2",
@@ -103,9 +105,9 @@ const navigate = useNavigate();
 
    <section className='landing py-5' >
   <div className='container'>
-    <h5 className='text-center text-primary mx-auto bg-warning w-50'>
+    <h6 className='text-center text-primary fw-bold mx-auto bg-warning w-25 fs-4'>
     ALWAYS TASTY
-    </h5>
+    </h6>
     <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
     <p className='text-center text-primary py-2'>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut corporis earum.
@@ -117,62 +119,86 @@ const navigate = useNavigate();
     </section>
 
     {/* Slideshow Carousel */}
-    <section className='carousel burger'>
-    <Carousel interval={1550}
-    pause='hover' controls={false} indicators={false}  >
-      {/* Slide 1 */}
-      <Carousel.Item>
-        <div className='text-center'>
-          <img src={LandImage1} alt="LandImage1" width="300px" className='mx-auto ' />
-          <h4 className='text-primary'>Tandoor Chicken Burger</h4>
-          <p className='text-primary'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing 
-          </p>
-          <button className='btn btn-danger' style={{ backgroundColor: 'red' }}onClick={()=>navigate("/menu")}>
-            Order Now
-          </button>
-        </div>
-      </Carousel.Item>
+    <section className="carousel burger mb-5">
+  <Carousel
+    interval={1550}
+    pause="hover"
+    controls={false}
+    indicators={false}
+  >
+    {/* Slide 1 */}
+    <Carousel.Item>
+      <div className="text-center">
+        <img
+          src={carouselimg1}
+          alt="LandImage1"
+          className="mx-auto d-block carousel-img"
+        />
+        <h4 className="text-primary">Tandoor Chicken Burger</h4>
+        <p className="text-primary">
+          Lorem ipsum dolor sit amet, consectetur adipisicing
+        </p>
+        <button
+          className="btn btn-danger"
+          onClick={() => navigate("/menu")}
+        >
+          Order Now
+        </button>
+      </div>
+    </Carousel.Item>
 
-      {/* Slide 2 */}
-      <Carousel.Item>
-        <div className='text-center '>
-          <img src={LandImage1} alt="LandImage2" width="300px" className='mx-auto ' />
-          <h4 className='text-primary'>Classic Veggie Burger</h4>
-          <p className='text-primary '>
-            Delicious veggie burger made with fresh ingredients and special sauce.
-          </p>
-          <button className='btn btn-danger' style={{ backgroundColor: 'red' }}onClick={()=>navigate("/menu")}>
-            Order Now
-          </button>
-        </div>
-      </Carousel.Item>
+    {/* Slide 2 */}
+    <Carousel.Item>
+      <div className="text-center">
+        <img
+          src={carouselimg2}
+          alt="LandImage2"
+          className="mx-auto d-block carousel-img"
+        />
+        <h4 className="tex\t-primary">Classic Veggie Burger</h4>
+        <p className="text-primary">
+          Delicious veggie burger made with fresh ingredients and
+          special sauce.
+        </p>
+        <button
+          className="btn btn-danger"
+          onClick={() => navigate("/menu")}
+        >
+          Order Now
+        </button>
+      </div>
+    </Carousel.Item>
 
-      {/* Slide 3 */}
-      <Carousel.Item>
-        <div className='text-center'>
-          <img src={LandImage3} alt="LandImage3" width="300px" className='mx-auto ' />
-          <h4 className='text-primary'>Cheese Overload Burger</h4>
-          <p className='text-primary'>
-            A juicy burger with double cheese, perfect for cheese lovers.
-          </p>
-          <button className='btn btn-danger' style={{ backgroundColor: 'red' }} onClick={()=>navigate("/menu")}>
-            Order Now
-          </button>
-        </div>
-      </Carousel.Item>
-    </Carousel>
-  
+    {/* Slide 3 */}
+    <Carousel.Item>
+      <div className="text-center">
+        <img
+          src={carouselimg3}
+          alt="LandImage3"
+          className="mx-auto d-block carousel-img"
+        />
+        <h4 className="text-primary">Cheese Overload Burger</h4>
+        <p className="text-primary">
+          A juicy burger with double cheese, perfect for cheese lovers.
+        </p>
+        <button
+          className="btn btn-danger"
+          onClick={() => navigate("/menu")}
+        >
+          Order Now
+        </button>
+      </div>
+    </Carousel.Item>
+  </Carousel>
 </section>
 
-
-    {/* Flex card Section */}
-    <section className="container my-5">
-  <div className="row align-items-center rounded shadow p-4 ">
+{/* Flex card Section */}
+<section className="container my-5">
+  <div className="row g-4 align-items-stretch rounded shadow p-4">
     {/* Text Section */}
-    <div className="col-12 col-sm-6">
-      <h5 className="text-muted">Discover</h5>
-      <h2 className="fw-bold">UPCOMING EVENTS</h2>
+    <div className="col-12 col-sm-6 d-flex flex-column justify-content-center">
+      <h5 className="text-muted fs-3 text-primary">Discover</h5>
+      <h2 className="fw-bold text-primary">UPCOMING EVENTS</h2>
       <h6>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
         perspiciatis amet necessitatibus velit vitae inventore quae iusto
@@ -180,9 +206,8 @@ const navigate = useNavigate();
         Recusandae exercitationem perferendis quibusdam quos?
       </h6>
     </div>
-
     {/* Image Section */}
-    <div className="col-12 col-sm-6 text-center">
+    <div className="col-12 col-sm-6 d-flex align-items-center justify-content-center">
       <img
         src={FlexImage1}
         alt="Upcoming Event"
@@ -216,43 +241,54 @@ const navigate = useNavigate();
                  <img src={sliceimage1} alt='sliceimage' className='mx-5'  width={120}/>
               </div>
               <div className='col-lg-3' >
-             <input type='text'  placeholder='NAME' required className='form-control w-100  '
+             <input type='text'  placeholder='Name' required className='form-control w-100 fs-4 '
              value={name} onChange={(e) => setName(e.target.value)}/>
-               <input type='Email'  placeholder='EMAIL' required className='form-control w-100 my-3 '
-               value={email} onChange={(e) => setEmail(e.target.value)}></input>
-                 <input type='date'  placeholder='DATE' required className='form-control w-100  my-3'
-                 value={date} onChange={(e) => setDate(e.target.value)}/> 
+             <input type='Email'  placeholder='Email' required className='form-control w-100 fs-4 my-3 '
+             value={email} onChange={(e) => setEmail(e.target.value)}></input>
+             <input type='date'  placeholder='Date' required className='form-control w-100 fs-4 my-3'
+             value={date} onChange={(e) => setDate(e.target.value)}/> 
                  
 
           </div>
-          <div className='col-lg-3'>
-             <input type='time'   placeholder='Time' required className='form-control w-100 '
-             value={time} onChange={(e) => setTime(e.target.value)}/>
-              <input type='text'  placeholder='PEOPLE'className='form-control w-100 my-3'
+              <div className='col-lg-3'>
+              <input type='time'   placeholder='Time' className='form-control w-100 fs-4 '
+              value={time} onChange={(e) => setTime(e.target.value)}/>
+              <input type='text'  placeholder='People'className='form-control w-100 my-3 fs-4'
               value={people} onChange={(e) => setPeople(e.target.value)}></input>
-               <button className='btn btn-danger w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >FIND A TABLE</button>
+               <button className='btn btn-danger fs-4 w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >FIND A TABLE</button>
              
               </div>
-              <div className='col-lg-3 '>
-              <img src={sliceimage2} alt='sliceimage2' width={500} className='mx-5'/>
+              <div className='col-lg-3 d-flex'>
+              <img src={sliceimage2} alt='sliceimage2' width={500}  className='d-flex mx-5'/>
               </div>
                </div>     
               </div>        
       </section>
       {/* Account Creation Section */}
-      <section className=' d-flex flex-column justify-content-start align-items-center mb-5 '>
-        <img src={account} alt='account' width={150}/>
-        <h2 className='text-center bg-light'>Create Your Account</h2>
-        <button className='btn btn-danger rounded-pill my-2 fs-2 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
+      <section className= 'd-flex justify-content-center align-items-center mb-4 '>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <img src={deliveryimg}alt='delivery' className='img-fluid rounded shadow '
+              width={500}/>
+            </div>
+       
+        <div className='col-lg-6  '>
+           <img src={account} alt='account'className='mx-auto' width={150}/>
+        <h2 className='text-center bg-light fs-2 w-50 mx-auto my-3'>Create Your Account</h2>
+        <button className='btn btn-danger rounded-pill my-4 d-flex mx-auto fs-4 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
+        </div>
+        </div>
+        </div>
       </section>
 
       <ToastContainer
    hideProgressBar
-  icon={false}
+   icon={false}
    closeButton={false}
-  draggable={false}
-  pauseOnHover={false}
-  style={{
+   draggable={false}
+   pauseOnHover={false}
+   style={{
     background: "transparent",
     boxShadow: "none",
     padding: 0,

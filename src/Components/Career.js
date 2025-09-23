@@ -17,10 +17,10 @@ const Career = () => {
   const handlesubmit = (e) => {
     e.preventDefault();
     if (!Name || !number || !email || !location || !description) {
-      toast.error("Please input all fields");
+      toast.error("Please input all fields",{className:'bg-danger text-white'});
       return;
     }
-    toast.success("Thanks! Our customer support will call you.");
+    toast.success("Thanks! Our customer support will call you.",{className:'bg-success text-white'});
     setEmail("");
     setName("");
     setnumber("");

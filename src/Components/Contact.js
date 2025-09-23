@@ -15,13 +15,13 @@ const Contact = () => {
   const handleSubmit = () => {
     if (!issueType || !message.trim()) {
       toast.warn("⚠️ Please select an issue type and enter your concern.", {
-        position: "top-center",
+        position: "top-center",className:'bg-warning text-white'
       });
       return;
     }
 
     toast.success(`✅ Your concern about "${issueType}" has been submitted!`, {
-      position: "top-center",
+      position: "top-center",className:'bg-success text-white'
     });
 
     setIssueType("");
