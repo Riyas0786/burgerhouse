@@ -82,7 +82,7 @@ const navigate = useNavigate();
                 </div>
 
                 <div className=' col-lg-6 ' >
-                    <img src={HeaderImage} alt="CompoImage" className='justify-content-right' />
+                  <img src={HeaderImage} alt="CompoImage" className='justify-content-right image' />
                 </div>
             </div>
         </div>
@@ -93,11 +93,11 @@ const navigate = useNavigate();
         <div className='container'>
             <div className='row'>
                 <div className='col-lg-6 px-3 py-5'>
-                <img src={BannerImage1} alt='BannerImage' />
+                <img src={BannerImage1} alt='BannerImage' className='image' />
                 </div>
                 <div className='col-lg-6 px-3 py-5'>
-                    <img src={BannerImage2} alt='BannerImage' />
-                    <img src={BannerImage3} alt='BannerImage' className='py-3' />
+                    <img src={BannerImage2} alt='BannerImage' className='image' />
+                    <img src={BannerImage3} alt='BannerImage' className='py-3 image' />
                 </div>
             </div>
         </div>
@@ -175,7 +175,7 @@ const navigate = useNavigate();
         <img
           src={carouselimg3}
           alt="LandImage3"
-          className="mx-auto d-block carousel-img"
+          className="mx-auto d-block carousel-img "
         />
         <h4 className="text-primary">Cheese Overload Burger</h4>
         <p className="text-primary">
@@ -193,8 +193,8 @@ const navigate = useNavigate();
 </section>
 
 {/* Flex card Section */}
-<section className="container my-5">
-  <div className="row g-4 align-items-stretch rounded shadow p-4">
+<section className="container my-5  ">
+  <div className="row g-4 align-items-stretch  flex-card p-4" >
     {/* Text Section */}
     <div className="col-12 col-sm-6 d-flex flex-column justify-content-center">
       <h5 className="text-muted fs-3 text-primary">Discover</h5>
@@ -211,7 +211,7 @@ const navigate = useNavigate();
       <img
         src={FlexImage1}
         alt="Upcoming Event"
-        className="img-fluid rounded shadow"
+        className="img-fluid rounded shadow image"
       />
     </div>
   </div>
@@ -223,7 +223,7 @@ const navigate = useNavigate();
        <div className='container-fluid '>
         <div className='row align-items-center '>
           <div className='col-12 col-md-6 col-lg-4 text-start' >
-            <img src={sliceimage} alt='sliceimg'  width={400}  />
+            <img src={sliceimage} alt='sliceimg' className='image' width={400}  />
          </div>
          <div className='col-12 col-md-6 col-lg-4 text-center' >
             <h4 className='text-center text-primary '>RESERVATION</h4>
@@ -238,7 +238,7 @@ const navigate = useNavigate();
           <div className='container d-flex'> 
              <div className='row'>
                <div className='col-lg-3 '>
-                 <img src={sliceimage1} alt='sliceimage' className='mx-5'  width={120}/>
+                 <img src={sliceimage1} alt='sliceimage' className='mx-5 image'  width={120}/>
               </div>
               <div className='col-lg-3' >
              <input type='text'  placeholder='Name' required className='form-control w-100 fs-4 '
@@ -259,7 +259,7 @@ const navigate = useNavigate();
              
               </div>
               <div className='col-lg-3 d-flex'>
-              <img src={sliceimage2} alt='sliceimage2' width={500}  className='d-flex mx-5'/>
+              <img src={sliceimage2} alt='sliceimage2' width={500}  className='d-flex mx-5 image'/>
               </div>
                </div>     
               </div>        
@@ -269,7 +269,7 @@ const navigate = useNavigate();
         <div className='container'>
           <div className='row'>
             <div className='col-lg-6'>
-              <img src={deliveryimg}alt='delivery' className='img-fluid rounded shadow '
+              <img src={deliveryimg}alt='delivery' className='img-fluid rounded shadow image'
               width={500}/>
             </div>
        

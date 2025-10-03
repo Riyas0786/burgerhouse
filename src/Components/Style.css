@@ -78,6 +78,23 @@
     border: none;
     border-radius: 20px;
 }
+.flex-card{
+    box-shadow: 0px 2px 4px 3px rgba(255, 203, 14, 0.275);
+    border-radius: 20px;
+     transition: transform 0.3s ease-in-out;
+}
+.flex-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 2px 4px 3px rgba(255, 203, 14, 0.493);
+}
+.image{
+      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in;
+}
+.image:hover{
+transform: translateY(6px);
+transform: translateX(6px);
+}
 
 
 /* home page find a table */
