@@ -23,15 +23,31 @@
   color: white;
 }
 .navlinks .link {
-  text-decoration: none ; 
+  position: relative;
+  text-decoration: none; 
   font-size: 20px;
   font-weight: bold;
-  color: rgba(114, 34, 22, 0.932);
+  padding: 5px 10px;
+  color: rgb(117, 52, 12);
 }
-.navlinks .link:hover {
-  color: rgb(255, 255, 255);
-  transition: 0.3s;
+
+.navlinks .link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;               
+  height: 2px;
+  background-color: rgb(255, 255, 254);
+  transform: scaleX(0);       
+  transform-origin: center;   
+  transition: transform 0.3s ease-in-out;
 }
+
+.navlinks .link:hover::after {
+  transform: scaleX(1);       
+}
+
 
 .menuicon {
   color: rgb(95, 42, 22);
@@ -59,7 +75,7 @@
 @media (max-width: 768px) {
   .navlinks {
     list-style:none;
-    flex-direction:column-reverse;
+    flex-direction:column;
     max-width: 500px;
     position:static;
     top:50px; /* below navbar */
