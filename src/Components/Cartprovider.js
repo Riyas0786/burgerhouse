@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
 
   const decreaseQty = (id) => {
     setCartItem((prev) =>
-      prev.map((item) =>
+      prev.reduce((item) =>
         item.id === id && item.qty > 1
           ? { ...item, qty: item.qty - 1 }
           : item

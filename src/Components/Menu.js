@@ -171,7 +171,7 @@ const MenuPage = () => {
 
                 {/* Product Details */}
                 <div className="flex-grow-1 d-flex flex-column justify-content-between mt-2">
-                  <h5 className="card-title mx-auto bg-warning w-35 fs-4 py-1">{product.name}</h5>
+                  <h5 className="card-title mx-auto bg-warning w-35 fs-3 py-1">{product.name}</h5>
                   <h5 className="card-text bg-light my-2">{product.subtitle}</h5>
                   <h4 className="text-danger">₹{product.price}</h4>
                 </div>

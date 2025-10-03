@@ -3,7 +3,7 @@ import HeaderImage from '../Assets/Home/Banner_Img.png';
 import BannerImage1 from '../Assets/Home/Header_Img_1.png';
 import BannerImage2 from '../Assets/Home/Header_Img_2.png';
 import BannerImage3 from '../Assets/Home/Header_Img_3.png';
-import carouselimg1 from '../Assets/Home/Landing_Img_1.png';
+import carouselimg1 from '../Assets/Menu/Burger14.webp';
 import carouselimg2 from '../Assets/Menu/Burger16.webp';
 import carouselimg3 from'../Assets/Menu/Burger15.webp'
 import FlexImage1 from '../Assets/Home/Container_Img.png';
@@ -132,7 +132,7 @@ const navigate = useNavigate();
         <img
           src={carouselimg1}
           alt="LandImage1"
-          className="mx-auto d-block carousel-img"
+          className="mx-auto d-block carousel-img " width={300}
         />
         <h4 className="text-primary">Tandoor Chicken Burger</h4>
         <p className="text-primary">
@@ -153,9 +153,9 @@ const navigate = useNavigate();
         <img
           src={carouselimg2}
           alt="LandImage2"
-          className="mx-auto d-block carousel-img"
+          className="mx-auto d-block carousel-img" 
         />
-        <h4 className="tex\t-primary">Classic Veggie Burger</h4>
+        <h4 className="text-primary">Classic Veggie Burger</h4>
         <p className="text-primary">
           Delicious veggie burger made with fresh ingredients and
           special sauce.
@@ -255,7 +255,7 @@ const navigate = useNavigate();
               value={time} onChange={(e) => setTime(e.target.value)}/>
               <input type='text'  placeholder='People'className='form-control w-100 my-3 fs-4'
               value={people} onChange={(e) => setPeople(e.target.value)}></input>
-               <button className='btn btn-danger fs-4 w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >FIND A TABLE</button>
+          <button className='btn btn-danger fs-4 w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >Book Table</button>
              
               </div>
               <div className='col-lg-3 d-flex'>

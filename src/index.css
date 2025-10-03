@@ -19,6 +19,9 @@
 .navicon{
   color: rgb(95, 42, 22);
 }
+.navicon:hover{
+  color: white;
+}
 .navlinks .link {
   text-decoration: none ; 
   font-size: 20px;
@@ -27,15 +30,16 @@
 }
 .navlinks .link:hover {
   color: rgb(255, 255, 255);
-  text-decoration:dashed!important;
   transition: 0.3s;
 }
+
 .menuicon {
   color: rgb(95, 42, 22);
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
 }
+
 .container.row .container-fluid {
   display: flex;
   flex-direction: column;

@@ -12,9 +12,6 @@
     background-attachment: scroll;
     background-size: cover;
     max-width: 100%;
-
-    
-    
 }
 /* home footer bg */
 .footerfixed-background2{
@@ -94,9 +91,9 @@
    
 }
 .carousel-img {
-  height: 300px;        /* adjust as needed */
-  width: auto;
-  object-fit: cover;
+  height: 200px;        /* adjust as needed */
+  width: 200px;
+  
 }
 
 

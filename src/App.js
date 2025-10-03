@@ -15,7 +15,6 @@ import Account from './Components/Account';
 import Contact from './Components/Contact';
 import Cart from './Components/Cart';
 import Login from './Components/login';
-import { CartProvider } from './Components/Cartprovider';
 import Loading from './Components/Loading';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -47,7 +46,7 @@ function AppContent() {
   return (
     <>
 
-      <CartProvider>
+      
         
         <Header />
         <Routes>
@@ -61,7 +60,7 @@ function AppContent() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
         </Routes>
-      </CartProvider>
+      
       
 
 
