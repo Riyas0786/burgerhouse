@@ -70,7 +70,8 @@ const Header = () => {
                 About
               </NavLink>
             </li>
-             {/* Cart + Account Icons */}
+          </ul>
+                {/* Cart + Account Icons */}
           <div className="d-flex">
             <ul className="iconlinks d-flex list-unstyled mb-0  " style={{marginLeft:'100px'}}>
               <li className="position-relative">
@@ -91,9 +92,6 @@ const Header = () => {
               </li>
             </ul>
           </div>
-        
-          </ul>
-
          </div>
       </div>
     </section>

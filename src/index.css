@@ -27,7 +27,9 @@
 
 .navlinks .link {
   position: relative;
-  text-decoration: none; 
+  text-decoration: none;
+  left: -95px;
+  top: 10px; 
   font-size: 20px;
   font-weight: bold;
   padding: 5px 10px;
@@ -62,8 +64,8 @@
   }
 .iconlinks{
   position: absolute;
-  right: -60px;
-  top: 64px;
+  right: -90px;
+  top: 20px;
   }
 
 .menuicon {
@@ -99,9 +101,9 @@
     flex-direction:column;
     max-width: 500px;
     position:relative;
-    top: 8px;
-    left: 10px;
-    align-items: start;
+    top: 1px;
+    left: 0px;
+    align-items: center;
     gap: 7px;
     width: 100%;
     max-height:0;
@@ -116,11 +118,10 @@
   }
    .iconlinks {
     position: absolute;
-    left: 300px;
+    left: 100px;
     top: 20px;
    }
- 
-  
+         
   .headertext{
     position: relative;
     bottom: 110px;
@@ -140,7 +141,8 @@
   
   }
   .icons-2{
-    margin-right: 50px;
+    
     margin-top: 30px;
+    width: 250px;
   }
 }
