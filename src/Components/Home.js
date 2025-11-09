@@ -78,7 +78,11 @@ const navigate = useNavigate();
                     <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',}}>BURGER</h1>
                         <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
                     
-                    <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur minima corrupti distinctio perferendis totam illo est quam laboriosam dignissimos? Aperiam officia fugit atque sunt rerum provident voluptate adipisci quos? Fuga asperiores facere perferendis debitis eligendi aut omnis itaque nam corrupti optio explicabo, inventore quas soluta placeat magnam provident odit?</p>
+                    <p >Welcome to Burger House, the ultimate destination for burger lovers! Our homepage introduces visitors to a mouthwatering world of freshly grilled burgers, crispy fries, and chilled beverages — all made with love and the freshest ingredients.
+                      Visitors are greeted with a hero banner showcasing signature burgers and an easy “Order Now” or “Book Your Table” button for quick access. 
+                      Below, there’s a menu highlights section showing popular items like the Classic Cheeseburger, 
+                      Spicy Chicken Burger, and Veggie Delight.
+                    </p>
                 </div>
 
                 <div className=' col-lg-6 ' >

@@ -74,12 +74,12 @@ const Header = () => {
           <div className="d-flex">
             <ul className="iconlinks d-flex list-unstyled mb-0  " style={{marginLeft:'100px'}}>
               <li className="position-relative">
-                <Link className="navicon me-3 " to="/account">
+                <NavLink className="navicon me-3 " to="/account">
                   <i className="bi bi-person-fill fs-3"></i>
-                </Link>
+                </NavLink>
               </li>
               <li className="position-relative">
-                <Link className="navicon me-3" to="/cart">
+                <NavLink className="navicon me-3" to="/cart">
                   <i className="bi bi-bag-fill fs-3"></i>
                   {totalQty > 0 && (
                     <span
@@ -87,7 +87,7 @@ const Header = () => {
                       {totalQty}
                     </span>
                   )}
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

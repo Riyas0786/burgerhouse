@@ -36,7 +36,7 @@ const Footer = () => {
             <span className='bi bi-shop-window text-white'> SATURDAY-SUNDAY: 10AM-12AM</span>          
           </div>
           </div>
-          <div className='col-lg-4 text-center ' style={{marginTop:'70px'}}>
+          <div className='col-lg-4 text-center ' style={{marginTop:'30px'}}>
           <h5 className="text-white customtext ">DOWNLOAD APP ON</h5>
           <div className="icons-2  " >
            {/* Playstore */}
@@ -46,30 +46,30 @@ const Footer = () => {
           <a href="https://www.apple.com/in/app-store/" target="blank" rel="noopener noreferrer"  >
           <img src={apple} alt='playstoreimg' width={180} /></a>
           </div>
-           <p className="py-3 my-3 text-white mb-1">ALL RIGHTS RESERVED</p>
-          <span className="bi bi-c-circle text-white">
-            BURGERHOUSE 2025 ALL RIGHTS RESERVED
-          </span>
-        </div>
-      
-
-      {/* Right Column */}
-      <div className="col-lg-4 text-lg-end text-center text-white mt-3">
-          <h5>LEGAL</h5> 
-          <p>Terms & Conditions<br/> Privacy Policy<br/>Promotional</p>
-          <h5 > LIFE AT BURGERHOUSE</h5>
-          <p>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</p>
-          
           <h5 className="text-white  fs-4">DESIGNED & DEVELOPED BY </h5>
-            <p className='fs-5'>RIYAS KHAN</p> 
-
+            <p className='fs-5 text-white'>RIYAS KHAN</p> 
+            
           <h5 className="text-white">FOLLOW US ON</h5>
   
           <i className="bi bi-instagram text-white mx-2 fs-4"></i>
           <i className="bi bi-facebook text-white mx-2 fs-4"></i>
           <i className="bi bi-twitter text-white mx-2 fs-4"></i>
           <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>
-          
+        </div>
+      
+
+      {/* Right Column */}
+      <div className="col-lg-4 text-lg-end text-center text-white  ">
+        <div className='customtext'>
+          <h5>LEGAL</h5> 
+          <p>Terms & Conditions<br/> Privacy Policy<br/>Promotional</p>
+          <h5 > LIFE AT BURGERHOUSE</h5>
+          <p>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</p>
+</div>
+          <p className="py-3 my-3 text-white mb-1 customtext">ALL RIGHTS RESERVED</p>
+          <span className="bi bi-c-circle text-white customtext">
+            BURGERHOUSE 2025 ALL RIGHTS RESERVED
+          </span>
       </div>
      </div>
    </div>
