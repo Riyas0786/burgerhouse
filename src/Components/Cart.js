@@ -38,12 +38,7 @@ const Cart = () => {
   );
 
   const handleOrder = () => {
-    if (cartItem.length === 0) {
-      toast.warn("⚠️ Your cart is empty. Please add some items.", {
-        position: "top-center",
-      });
-      return;
-    }
+    if (cartItem.length === 0) 
 
     toast.success(<VideoToast src={burgervid}  />, {
       position: "top-center my-5",
@@ -107,7 +102,7 @@ const Cart = () => {
 
                         <div className="d-flex justify-content-center align-items-center gap-2 mt-3">
                           <button
-                            className="btn btn-outline-warning"
+                            className="btn btn-outline-warning btn-"
                             onClick={() => item.qty > 1 && decreaseQty(item.id)}
                           >
                             -
@@ -123,7 +118,7 @@ const Cart = () => {
                             className="btn btn-sm btn-outline-danger"
                             onClick={() => removeItem(item.id)}
                           >
-                            <i className="bi bi-trash"></i>
+                            <i >X</i>
                           </button>
                         </div>
                       </div>

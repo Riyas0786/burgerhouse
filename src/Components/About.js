@@ -38,13 +38,13 @@ function About() {
           {/* Center Text */}
           <div className="col-sm-7 col-md-4 col-lg-4 my-4">
             <motion.h2
-              className="text-warning fw-bold"
-              style={{ fontSize: "60px" }}
+              className="text-warning fw-bold "
+              style={{ fontSize: "50px" }}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              BETTER FOOD FOR ALL PEOPLE<br/> <span className='text-dark'>SINCE 2017</span>
+              BETTER FOOD FOR ALL PEOPLE<br/> <span className='text-dark '>SINCE 2017</span>
             </motion.h2>
           </div>
 
@@ -112,11 +112,13 @@ function About() {
           our mission: to serve happiness, one burger at a time, while building
           trust and long-lasting connections with our community.
         </motion.p>
-        <motion.h4 className='bg-light fs-4 w-25 mx-auto mb-5'
+        <motion.h4 className=' fs-4 w-25 mx-auto mb-5 '
          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}>
-            <span className='bi bi-emoji-smile fs-1 '></span> THINK BURGER,<br/>THINK BURGER HOUSE</motion.h4>
+            <div className='abouttext'>
+            <span className='bi bi-emoji-smile   '>Think Burger,<br/>Think Burger House</span>
+            </div></motion.h4>
       </div>
     </section>
   );

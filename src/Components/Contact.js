@@ -31,20 +31,21 @@ const Contact = () => {
   return (
     <>
       <section className="header">
-        <h2 className="mx-auto text-center fs-2 fw-bold my-4 bg-light rounded w-50">
-          IF YOU NEED ENQUIRY / HELP  WE ARE HERE TO HELP YOU
+        <h2 className="mx-auto text-center fs-2 fw-bold rounded w-50">
+          IF YOU NEED ENQUIRY </h2> 
+          <h2 className="mx-auto text-center fs-2 text-warning fw-bold rounded w-50">HELP  WE ARE HERE TO HELP YOU
         </h2>
         <div className="container-fluid">
           <div className="row ">
             <div className="col-12 col-sm-7 col-md-6 col-lg-4  text-center my-4">
               
                <img src={service} alt="service" className="mx-auto " width={200}/>
-               <h4 className="text-dark fw-bold text-center  fs-4 bg-light">24/7<br/>CUSTOMER SUPPORT <br/>+</h4>
-               <h4 className=" text-center fw-bold fs-4 bg-light"> ALL REGIONAL LANGUAGE  </h4>
-               <h4> TAMIL</h4>
-               <h4>TELUGU</h4>
-               <h4>MALAYALAM</h4>
-               <h4>KANNADA</h4>
+               <h4 className="text-dark  text-center  fs-4 bg-light">24/7<br/>CUSTOMER SUPPORT <br/>+</h4>
+               <h4 className=" text-center  fs-4 bg-light"> ALL REGIONAL LANGUAGE  </h4>
+               <h5> TAMIL</h5>
+               <h5>TELUGU</h5>
+               <h5>MALAYALAM</h5>
+               <h5>KANNADA</h5>
               </div>
 
             {/* Customer Support */}
@@ -53,7 +54,7 @@ const Contact = () => {
                 <img src={email} alt="email" className="mx-auto" width={150}/>
                 </div>
               
-              <h4 className="text-dark fw-bold text-center bg-light fs-4">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
+              <h4 className="text-dark  text-center bg-light fs-4">MAIL TO US: SUPPORT@BURGERHOUSE</h4>
 
               {/* Dropdown */}
               <select
@@ -88,7 +89,7 @@ const Contact = () => {
             <div className=" col-12 col-sm-7 col-md-6 col-lg-4  text-center">
             <div className="img-fluid my-3 ">
              <img src={customer} alt='customer' className="mx-auto" width={150} /></div>
-              <h4 className="fw-bold text-dark bg-light fs-4">TALK TO OUR <br/> SUPPORT TEAM</h4>
+              <h4 className=" text-dark bg-light fs-4">TALK TO OUR <br/> SUPPORT TEAM</h4>
               <button className="btn btn-danger my-5 mb-3" onClick={()=>(window.location.href='tel:9159658882')}>
                 CALL NOW <span className="fw-bold"></span>
               </button>

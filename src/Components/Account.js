@@ -3,6 +3,7 @@ import BurgerImg from "../Assets/Account/burgerimg.png";
 import logo from "../Assets/Home/Logo.png";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { FaEnvelope, FaLock,FaUser } from "react-icons/fa";
 
 
 
@@ -13,10 +14,7 @@ const Account = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const google = () => window.location.href = "https://accounts.google.com/";
-  const apple = () => window.location.href = "https://support.apple.com/en-in/apple-account";
-  const microsoft = () => window.location.href = "https://login.microsoftonline.com/";
-
+ 
   const handleSignUp = (e) => {
     e.preventDefault();
     if (!name || !email || !password) {
@@ -41,8 +39,8 @@ const Account = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100 ">
-      <div className="d-flex flex-wrap shadow rounded-3 overflow-hidden bg-white" style={{ maxWidth: "800px" }}>
+    <div className="d-flex justify-content-center align-items-center min-vh-100  ">
+      <div className="d-flex flex-wrap  rounded-5 overflow-hidden bg-white acc-card " style={{ maxWidth: "800px" }}>
         
         {/* Left Side */}
         <div className="p-4 flex-fill">
@@ -50,6 +48,10 @@ const Account = () => {
           <h3 className="text-warning fw-bold">SIGN UP</h3>
 
           <form onSubmit={handleSignUp} className="d-flex flex-column gap-3 mt-3">
+             <div className="input-group mb-3" style={{ width: "250px" }}>
+                  <span className="input-group-text">
+                    <FaUser />
+                  </span>
             <input
               type="text"
               placeholder="Full Name"
@@ -58,6 +60,11 @@ const Account = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
+            </div>
+             <div className="input-group mb-3" style={{ width: "250px" }}>
+                  <span className="input-group-text">
+                    <FaEnvelope />
+                  </span>
             <input
               type="email"
               placeholder="Email Address"
@@ -65,7 +72,11 @@ const Account = () => {
               className="form-control"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />
+            /></div>
+             <div className="input-group mb-3" style={{ width: "250px" }}>
+                  <span className="input-group-text">
+                    <FaLock />
+                  </span>
             <input
               type="password"
               placeholder="Password"
@@ -73,7 +84,7 @@ const Account = () => {
               className="form-control"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-            />
+            /></div>
             <button type="submit" className="btn btn-warning fw-bold text-white">
               SIGN UP
             </button>
@@ -88,15 +99,15 @@ const Account = () => {
 
           <p className="fw-semibold">Or Continue with</p>
           <div className="d-flex gap-2">
-            <button className="btn btn-primary flex-fill" onClick={google}>
+            <a href="https://accounts.google.co.in/" target="blank" rel="noopener noreferrer"className="btn btn-primary flex-fill" >
               <i className="bi bi-google"></i> 
-            </button>
-            <button className="btn btn-dark flex-fill" onClick={apple}>
+            </a>
+            <a href="https://account.apple.com/" target="blank" rel="noopener noreferrer" className="btn btn-dark flex-fill" >
               <i className="bi bi-apple"></i>
-            </button>
-            <button className="btn btn-success flex-fill" onClick={microsoft}>
+            </a>
+            <a href="https://login.microsoftonline.com/" target="blank" rel="noopener noreferrer" className="btn btn-success flex-fill" >
               <i className="bi bi-microsoft"></i> 
-            </button>
+            </a>
           </div>
 
           <h6 className="text-muted small text-center mt-3">

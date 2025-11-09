@@ -8,8 +8,9 @@ import bangaloreimage from '../Assets/BRANCH/bangalore.png';
 const Branch = () => {
   return (
     <section className="header">
-      <h2 className="text-center bg-light mt-4 p-3">
-        WE HAVE MULTIPLE BRANCHES IN TOP CITIES OF INDIA
+      <h2 className="text-center fw-bold  mt-2 my-3 fs-2">
+        WE HAVE MULTIPLE BRANCHES </h2>
+        <h2 className='text-center fw-bold text-warning  fs-2'>IN TOP CITIES OF INDIA
       </h2>
       <div className="container text-center">
         <div className="row py-5">

@@ -1,15 +1,10 @@
 import footerlogo from '../Assets/Home/Footer_Logo.png';
+import playstore from '../Assets/CAREER/playstorepng.png'
+import apple from '../Assets/CAREER/applepng.png'
 
 const Footer = () => {
  
-  const Google = () => {
-    window.location.href = "https://play.google.com/store/games?hl=hi&pli=1"; // external site
-  };
-  const Apple = () => {
-    window.location.href = "https://www.apple.com/in/app-store/"; // external site
-  };
-
-
+  
   return (
     <section className="footerfixed-background2">
   <div className="container-fluid">
@@ -41,45 +36,40 @@ const Footer = () => {
             <span className='bi bi-shop-window text-white'> SATURDAY-SUNDAY: 10AM-12AM</span>          
           </div>
           </div>
-          <div className='col-lg-4 mt-auto text-center '>
-            
-        <div className="icons-2 my-3  " >
-          <h5 className="text-white">DOWNLOAD APP ON</h5>
-          <button className="btn btn my-2 text-white" style={{backgroundColor:' rgba(255, 7, 7, 1)'}} onClick={Google}>
-            <span className="fa-brands fa-google-play text-white mx-1"></span>GET IT ON <br/>
-            GOOGLE PLAY
-          </button>
-          
-          <button className="btn btn my-2 mx-3 text-white"onClick={Apple} style={{width:'127px',backgroundColor:'blue'}}>
-            <span className="bi bi-apple text-white mx-auto"></span>
-            GET IT ON<br/>APP STORE
-          </button>
+          <div className='col-lg-4 text-center ' style={{marginTop:'70px'}}>
+          <h5 className="text-white customtext ">DOWNLOAD APP ON</h5>
+          <div className="icons-2  " >
+           {/* Playstore */}
+         <a href="https://play.google.com/store/games?hl=hi&pli=1" target="blank" rel="noopener noreferrer"  >
+          <img src={playstore} alt='playstoreimg' width={180} /></a>
+           {/* App store */}
+          <a href="https://www.apple.com/in/app-store/" target="blank" rel="noopener noreferrer"  >
+          <img src={apple} alt='playstoreimg' width={180} /></a>
           </div>
+           <p className="py-3 my-3 text-white mb-1">ALL RIGHTS RESERVED</p>
+          <span className="bi bi-c-circle text-white">
+            BURGERHOUSE 2025 ALL RIGHTS RESERVED
+          </span>
         </div>
       
 
       {/* Right Column */}
       <div className="col-lg-4 text-lg-end text-center text-white mt-3">
           <h5>LEGAL</h5> 
-          <h6>Terms & Conditions<br/> Privacy Policy<br/>Promotional</h6>
+          <p>Terms & Conditions<br/> Privacy Policy<br/>Promotional</p>
           <h5 > LIFE AT BURGERHOUSE</h5>
-          <h6>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</h6>
+          <p>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</p>
           
-          <h6 className="text-white py-3">DESIGNED & DEVELOPED BY <br /> RIYAS KHAN</h6>
+          <h5 className="text-white  fs-4">DESIGNED & DEVELOPED BY </h5>
+            <p className='fs-5'>RIYAS KHAN</p> 
 
-          <h6 className="text-white">FOLLOW US ON</h6>
+          <h5 className="text-white">FOLLOW US ON</h5>
   
           <i className="bi bi-instagram text-white mx-2 fs-4"></i>
           <i className="bi bi-facebook text-white mx-2 fs-4"></i>
           <i className="bi bi-twitter text-white mx-2 fs-4"></i>
           <i className="bi bi-whatsapp text-white mx-2 fs-4"></i>
           
-        <div className="copyright my-3">
-          <h6 className="py-3 my-3 text-white mb-1">ALL RIGHTS RESERVED</h6>
-          <span className="bi bi-c-circle text-white">
-            BURGERHOUSE 2025 ALL RIGHTS RESERVED
-          </span>
-        </div>
       </div>
      </div>
    </div>

@@ -3,21 +3,13 @@ import BurgerImg from "../Assets/Account/burgerimg.png";
 import logo from "../Assets/Home/Logo.png";
 import { toast } from "react-toastify";
 import {  useNavigate } from "react-router-dom";
+import { FaEnvelope, FaLock } from "react-icons/fa";
+
 
 const Login = () => {
   const navigate=useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const google = () => {
-    window.location.href = "https://accounts.google.com/" // external site
-  };
-  const apple =()=>{
-    window.location.href="https://support.apple.com/en-in/apple-account"
-  };
-  const microsoft =()=>{
-    window.location.href="https://login.microsoftonline.com/"
-  };
-
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -48,7 +40,7 @@ const Login = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100 ">
-      <div className="d-flex flex-wrap shadow rounded-3 overflow-hidden bg-white" style={{ maxWidth: "800px" }}>
+      <div className="d-flex flex-wrap  rounded-5 overflow-hidden bg-white acc-card" style={{ maxWidth: "800px" }}>
         
         {/* Left Side - Form */}
         <div className="p-4 flex-fill">
@@ -56,16 +48,24 @@ const Login = () => {
           <h3 className="text-warning fw-bold">SIGN IN</h3>
 
           <form onSubmit={handleLogin} className="d-flex flex-column gap-3 mt-3">
-            <input
-              type="text" placeholder="Email or Phone Number"
+             <div className="input-group mb-3" style={{ width: "250px" }}>
+      <span className="input-group-text">
+        <FaEnvelope />
+      </span>
+            <input type="text" placeholder="Email or PhoneNumber"
               className="form-control"value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />
+             /></div>
+             <div className="input-group mb-3" style={{ width: "250px" }}>
+      <span className="input-group-text">
+        <FaLock />
+      </span>
             <input
               type="password"  placeholder="Password"
               className="form-control"value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            </div>
             <button type="submit" className="btn btn-warning fw-bold text-white">
               SIGN IN
             </button>
@@ -78,25 +78,23 @@ const Login = () => {
             </a>
           </p>
 
-          <p className="fw-semibold">Or Continue with</p>
-                    <div className="d-flex gap-2">
-            <button className="btn btn-primary flex-fill" onClick={google}>
+         <p className="fw-semibold">Or Continue with</p>
+          <div className="d-flex gap-2">
+            <a href="https://accounts.google.co.in/" target="blank" rel="noopener noreferrer"className="btn btn-primary flex-fill" >
               <i className="bi bi-google"></i> 
-            </button>
-            <button className="btn btn-dark flex-fill" onClick={apple}>
+            </a>
+            <a href="https://account.apple.com/" target="blank" rel="noopener noreferrer" className="btn btn-dark flex-fill" >
               <i className="bi bi-apple"></i>
-            </button>
-            <button className="btn btn-success flex-fill" onClick={microsoft}>
+            </a>
+            <a href="https://login.microsoftonline.com/" target="blank" rel="noopener noreferrer" className="btn btn-success flex-fill" >
               <i className="bi bi-microsoft"></i> 
-            </button>
+            </a>
           </div>
-
 
           <h6 className="text-muted small text-center mt-3">
             © Burger House. All rights reserved.
           </h6>
         </div>
-
         {/* Right Side - Image */}
         <div className="d-none d-md-block">
           <img

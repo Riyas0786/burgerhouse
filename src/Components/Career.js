@@ -30,8 +30,8 @@ const Career = () => {
 
   return (
     <section className="header">
-      <h1 className="text-center fw-bold mb-2 fs-1">WELCOME TO INDIA'S  </h1>
-      <h1 className="text-center fw-bold text-warning fs-1">  ADMIRED AND AFFORDABLE FRANCHISE</h1>
+      <h1 className="text-center fw-bold mb-2 fs-2">WELCOME TO INDIA'S  </h1>
+      <h1 className="text-center fw-bold text-warning fs-2">  ADMIRED AND AFFORDABLE FRANCHISE</h1>
 
       {/* ✅ Carousel only for images */}
       <Carousel interval={2000} pause="hover" controls={true} indicators={true}>

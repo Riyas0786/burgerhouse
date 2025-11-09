@@ -12,7 +12,18 @@
     background-attachment: scroll;
     background-size: cover;
     max-width: 100%;
+    height: 500px;
 }
+.fixed-background2{
+  background-image: url('../Assets/Home/Background_Img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    max-width: 100%;
+
+}   
+
 /* home footer bg */
 .footerfixed-background2{
     background-image: url('../Assets/Home/Footer_BGImg.png ');
@@ -59,7 +70,7 @@
 .p,p{
     font-weight: 100;
     font-size: 15px;
-    font-family: none;
+
 }
 .text-primary{
     color: rgb(95, 42, 22)!important;
@@ -96,7 +107,6 @@ transform: translateY(6px);
 transform: translateX(6px);
 }
 
-
 /* home page find a table */
  
    .icons{
@@ -104,16 +114,30 @@ transform: translateX(6px);
     color: white;
    }
    .icons-2{
-    font-size: 30px;
-   
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-left: 30px;
+}
+.customtext{
+    position: relative;
+    top: 50px;
+    left: -7px;
 }
 .carousel-img {
   height: 200px;        /* adjust as needed */
   width: 200px;
   
 }
-
-
+.acc-card{
+     transition: transform 0.3s ease-in-out;
+     box-shadow: 0px 2px 4px 3px rgba(255, 201, 6, 0.232);
+     
+}
+.acc-card:hover{
+     transform: translateY(-6px);
+  box-shadow: 0px 2px 4px 3px rgba(255, 201, 6, 0.37);
+}
 
 
  

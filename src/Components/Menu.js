@@ -146,6 +146,7 @@ const MenuPage = () => {
         ) : (
           filteredProducts.map((product) => (
             <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
+              {/* Product card */}
               <motion.div
                 className="rounded shadow p-4 mx-2 h-100 d-flex flex-column justify-content-between"
                 style={{ textAlign: 'center', position: 'relative' }}
@@ -155,7 +156,7 @@ const MenuPage = () => {
                 whileHover={{ scale: 1.07, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
               >
                 {/* Veg/Non-Veg icons */}
-                <div style={{ position: "absolute", top: "8px", right: "8px" }}>
+                <div style={{ position: "absolute", top: "7px", right: "7px" }}>
                   {product.image1 && <img src={product.image1} alt="veg" width={20} />}
                   {product.image2 && <img src={product.image2} alt="non-veg" width={20} />}
                 </div>

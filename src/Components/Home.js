@@ -74,16 +74,17 @@ const navigate = useNavigate();
     <section className='fixed-background '>
         <div className='container'>
             <div className='row'>
-                <div className='col-lg-6  my-5 '>
-                    <h1 style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',}}>BURGER</h1>
-                        <h1 style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
+                <div className='col-lg-6  my-5 py-5 headertext'>
+                    <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',}}>BURGER</h1>
+                        <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
                     
                     <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur minima corrupti distinctio perferendis totam illo est quam laboriosam dignissimos? Aperiam officia fugit atque sunt rerum provident voluptate adipisci quos? Fuga asperiores facere perferendis debitis eligendi aut omnis itaque nam corrupti optio explicabo, inventore quas soluta placeat magnam provident odit?</p>
                 </div>
 
                 <div className=' col-lg-6 ' >
-                  <img src={HeaderImage} alt="CompoImage" className='justify-content-right image' />
+                  <img src={HeaderImage} alt="CompoImage" className='justify-content-end my-5 mx-5 headerimg' />
                 </div>
+                
             </div>
         </div>
     </section>
@@ -241,21 +242,21 @@ const navigate = useNavigate();
                  <img src={sliceimage1} alt='sliceimage' className='mx-5 image'  width={120}/>
               </div>
               <div className='col-lg-3' >
-             <input type='text'  placeholder='Name' required className='form-control w-100 fs-4 '
+             <input type='text'  placeholder='Name' required className='form-control w-100 fs-5 '
              value={name} onChange={(e) => setName(e.target.value)}/>
-             <input type='Email'  placeholder='Email' required className='form-control w-100 fs-4 my-3 '
+             <input type='Email'  placeholder='Email' required className='form-control w-100 fs-5 my-3 '
              value={email} onChange={(e) => setEmail(e.target.value)}></input>
-             <input type='date'  placeholder='Date' required className='form-control w-100 fs-4 my-3'
+             <input type='date'  placeholder='Date' required className='form-control w-100 fs-5 my-3'
              value={date} onChange={(e) => setDate(e.target.value)}/> 
                  
 
           </div>
               <div className='col-lg-3'>
-              <input type='time'   placeholder='Time' className='form-control w-100 fs-4 '
+              <input type='time'   placeholder='Time' className='form-control w-100 fs-5 '
               value={time} onChange={(e) => setTime(e.target.value)}/>
-              <input type='text'  placeholder='People'className='form-control w-100 my-3 fs-4'
+              <input type='text'  placeholder='People'className='form-control w-100 my-3 fs-5'
               value={people} onChange={(e) => setPeople(e.target.value)}></input>
-          <button className='btn btn-danger fs-4 w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >Book Table</button>
+          <button className='btn btn-danger fs-5 w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >Book Table</button>
              
               </div>
               <div className='col-lg-3 d-flex'>
@@ -274,9 +275,9 @@ const navigate = useNavigate();
             </div>
        
         <div className='col-lg-6  '>
-           <img src={account} alt='account'className='mx-auto' width={150}/>
+           <img src={account} alt='account'className='mx-auto' width={140}/>
         <h2 className='text-center bg-light fs-2 w-50 mx-auto my-3'>Create Your Account</h2>
-        <button className='btn btn-danger rounded-pill my-4 d-flex mx-auto fs-4 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
+        <button className='btn btn-danger rounded-pill my-4 d-flex mx-auto fs-6 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
         </div>
         </div>
         </div>

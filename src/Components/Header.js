@@ -1,68 +1,89 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../Components/Style.css";
 import Logo from "../Assets/Home/Logo.png";
-import { Navbar } from "react-bootstrap";
-import { CartContext } from "./Cartprovider"; // ✅ import context
+import { CartContext } from "./Cartprovider";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { cartItem } = useContext(CartContext); // ✅ get cart
+  const { cartItem } = useContext(CartContext);
 
-  // ✅ total quantity of items in cart
   const totalQty = cartItem.reduce((sum, item) => sum + item.qty, 0);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <section className="fixed-background  d-flex justify-content-center">
+    <section className="fixed-background2  d-flex justify-content-center  ">
       <div className="container">
-        <nav className="navbar   d-flex align-items-end justify-content-between">
+        <div className="navbar">
           {/* Logo */}
-          <div className="logo">
+          <div className="logo" style={{position:"relative"}} >
+            
             <Link to="/">
-              <img src={Logo} alt="logo" />
+              <img src={Logo} alt="logo"    />
             </Link>
+            
           </div>
 
-          <Navbar.Toggle
-            aria-controls="navbar"
-            className="menuicon"
-            onClick={toggleMenu}
-          />
+          {/* ✅ Menu Toggle Icon */}
+          <div className="menuicon" onClick={toggleMenu}>
+            {isOpen ? < RiCloseLine/> : <RiMenu3Line />}
+          </div>
 
-          {/* Navigation Links */}
-          <ul className={`navlinks ${isOpen ? "open" : ""}`}>
-            <li><Link className="link" to="/">HOME</Link></li>
-            <li><Link className="link" to="/menu">MENU</Link></li>
-            <li><Link className="link" to="/career">CAREER</Link></li>
-            <li><Link className="link" to="/contact">CONTACT</Link></li>
-            <li><Link className="link" to="/branch">BRANCH</Link></li>
-            <li><Link className="link" to="/about">ABOUT</Link></li>
-            <li><Link className="link" to="/login"></Link></li>
-          </ul>
-
-          {/* Icons */}
+          {/* ✅ Navigation Links */}
+          <ul className={`navlinks ${isOpen ? "open" : ""}`} >
+            <li>
+              <NavLink className="link " to="/">
+                <span className="bi bi-house-fill p-1" ></span>Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="link" to="/menu">
+                <span className="bi bi-card-checklist p-1 " ></span>
+                Menu
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="link" to="/career">
+                <span className="bi bi-briefcase-fill p-1" ></span>
+                Career
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="link" to="/contact">
+                <span className="bi bi-person-square p-1" ></span>
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="link" to="/branch">
+                <span className="bi bi-shop p-1" ></span>Branch
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="link" to="/about">
+                <span
+                  className="bi bi-info-square-fill p-1"
+                  id="navicon"
+                ></span>
+                About
+              </NavLink>
+            </li>
+             {/* Cart + Account Icons */}
           <div className="d-flex">
-            <ul className="iconlinks d-flex list-unstyled mb-0">
+            <ul className="iconlinks d-flex list-unstyled mb-0  " style={{marginLeft:'100px'}}>
               <li className="position-relative">
-                <Link className="navicon me-3" to="/account">
+                <Link className="navicon me-3 " to="/account">
                   <i className="bi bi-person-fill fs-3"></i>
                 </Link>
               </li>
               <li className="position-relative">
-                <Link className="navicon" to="/cart">
+                <Link className="navicon me-3" to="/cart">
                   <i className="bi bi-bag-fill fs-3"></i>
-                  {/* ✅ Show total quantity in badge */}
                   {totalQty > 0 && (
                     <span
-                      className="badge bg-danger position-absolute top-0 start-100 translate-middle"
-                      style={{
-                        borderRadius: "50%",
-                        fontSize: "0.7rem",
-                        padding: "4px 6px",
-                      }}
-                    >
+                      className="badge bg-danger position-absolute top-60 start-70 p-1 translate-middle" >
                       {totalQty}
                     </span>
                   )}
@@ -70,11 +91,11 @@ const Header = () => {
               </li>
             </ul>
           </div>
-        </nav>
-      </div>
+        
+          </ul>
 
-      {/* Dark Overlay */}
-      {isOpen && <div className="overlay"></div>}
+         </div>
+      </div>
     </section>
   );
 };
