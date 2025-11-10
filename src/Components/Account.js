@@ -40,7 +40,7 @@ const Account = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100  ">
-      <div className="d-flex flex-wrap  rounded-5 overflow-hidden bg-white acc-card " style={{ maxWidth: "800px" }}>
+      <div className="d-flex flex-wrap  rounded-5 overflow-hidden bg-white flex-card " style={{ maxWidth: "800px" }}>
         
         {/* Left Side */}
         <div className="p-4 flex-fill">

@@ -6,16 +6,16 @@ const Footer = () => {
  
   
   return (
-    <section className="footerfixed-background2">
-  <div className="container-fluid">
+    <section className="footerfixed-background2 footer">
+<div className="container-fluid">
     <div className="row "> {/* ✅ makes both columns level */}
       
       {/* Left Column */}
-      <div className="col-lg-4 text-lg-start text-center ">
+      <div className="col-lg-4 text-lg-start text-center">
         <img
           src={footerlogo}
           alt="footerlogo"
-          className=" d-block mt-3 mx-3"
+          className=" d-block my-2 "
           width={250}
         />
         <p className="text-white py-3 mt-3">
@@ -36,6 +36,7 @@ const Footer = () => {
             <span className='bi bi-shop-window text-white'> SATURDAY-SUNDAY: 10AM-12AM</span>          
           </div>
           </div>
+          {/*center column  */}
           <div className='col-lg-4 text-center ' style={{marginTop:'30px'}}>
           <h5 className="text-white customtext ">DOWNLOAD APP ON</h5>
           <div className="icons-2  " >
@@ -66,7 +67,7 @@ const Footer = () => {
           <h5 > LIFE AT BURGERHOUSE</h5>
           <p>Explore with BurgreHouse<br/>BurgerHouse News<br/>Snackables</p>
 </div>
-          <p className="py-3 my-3 text-white mb-1 customtext">ALL RIGHTS RESERVED</p>
+          <p className="py-3 my-3 text-white  customtext">ALL RIGHTS RESERVED</p>
           <span className="bi bi-c-circle text-white customtext">
             BURGERHOUSE 2025 ALL RIGHTS RESERVED
           </span>

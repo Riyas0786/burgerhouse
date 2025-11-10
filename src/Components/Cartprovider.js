@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
 
   const removeItem = (id) => {
     setCartItem((prev) => prev.filter((item) => item.id !== id));
-  };
+    };
 
   const increaseQty = (id) => {
     setCartItem((prev) =>

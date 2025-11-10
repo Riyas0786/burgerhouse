@@ -32,16 +32,15 @@ const Header = () => {
           </div>
 
           {/* ✅ Navigation Links */}
-          <ul className={`navlinks ${isOpen ? "open" : ""}`} >
+          <ul className={`navlinks ${isOpen ? "open" : ""}`}  >
             <li>
               <NavLink className="link " to="/">
-                <span className="bi bi-house-fill p-1" ></span>Home
+                <span className="bi bi-house-fill p-1 " >Home</span>
               </NavLink>
             </li>
             <li>
               <NavLink className="link" to="/menu">
-                <span className="bi bi-card-checklist p-1 " ></span>
-                Menu
+                <span className="bi bi-card-checklist">Menu</span>
               </NavLink>
             </li>
             <li>
@@ -65,7 +64,6 @@ const Header = () => {
               <NavLink className="link" to="/about">
                 <span
                   className="bi bi-info-square-fill p-1"
-                  id="navicon"
                 ></span>
                 About
               </NavLink>

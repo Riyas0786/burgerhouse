@@ -7,7 +7,7 @@ import burgervid from "../Assets/CONTACT/burgervid.mp4";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// ✅ Custom component for video toast with overlay text
+
 const VideoToast = ({ src }) => (
   <div
     style={{
@@ -29,7 +29,7 @@ const VideoToast = ({ src }) => (
 const Cart = () => {
   const { cartItem, increaseQty, decreaseQty, removeItem, setCartItem } =
     useContext(CartContext);
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
   const totalQty = cartItem.reduce((acc, product) => acc + (product.qty || 1), 0);
   const totalPrice = cartItem.reduce(
@@ -79,46 +79,50 @@ const Cart = () => {
               <div className="row">
                 {cartItem.map((item) => (
                   <div key={item.id} className="col-12 col-sm-6 col-md-4 py-3">
-                    <div
-                      className="rounded shadow text-center p-4 h-100 position-relative"
+                    {/* Cartpage card */}
+                    <div className="rounded shadow text-center p-4 h-100 position-relative"
                       style={{ minHeight: "350px" }}
                     >
+                      
+                          <div style={{ position: "absolute", top: "8px", right: "8px" }}>
+                          <button
+                            className="btn btn-sm btn-outline-danger"
+                            onClick={() => removeItem(item.id)}
+                          >
+                            <i className="bi bi-x-lg"></i>
+                          </button>
+                          </div>
                       {/* Veg/Non-Veg icons */}
-                      <div style={{ position: "absolute", top: "8px", right: "8px" }}>
+                      <div style={{ position: "absolute", top: "8px", left: "8px" }}>
                         <img src={item.image1} alt="" width={20} />
                         <img src={item.image2} alt="" width={20} />
                       </div>
-
+                        {/* card image */}
                       <img
                         src={item.image}
                         alt={item.name}
                         className="img-fluid mx-auto my-3"
                         style={{ maxHeight: "150px", objectFit: "contain" }}
                       />
-
+                      {/* card price name */}
                       <div className="card-body">
                         <h5 className="card-title bg-warning">{item.name}</h5>
-                        <h6 className="text-danger">₹{item.price}</h6>
-
-                        <div className="d-flex justify-content-center align-items-center gap-2 mt-3">
-                          <button
-                            className="btn btn-outline-warning btn-"
+                        <h5 className="text-danger fw-bold">₹{item.price}</h5>
+                        
+                        <div className="d-block justify-content-center align-items-center gap-2 mt-3">
+                          {/* decrement */}
+                          <button className="btn btn-outline-warning btn-"
                             onClick={() => item.qty > 1 && decreaseQty(item.id)}
                           >
                             -
                           </button>
+                          {/* Increment */}
                           <span className="fw-bold">{item.qty || 1}</span>
                           <button
                             className="btn btn-outline-warning"
                             onClick={() => increaseQty(item.id)}
                           >
                             +
-                          </button>
-                          <button
-                            className="btn btn-sm btn-outline-danger"
-                            onClick={() => removeItem(item.id)}
-                          >
-                            <i >X</i>
                           </button>
                         </div>
                       </div>

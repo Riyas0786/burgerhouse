@@ -239,36 +239,75 @@ const navigate = useNavigate();
     </section>
 
      {/* Table Reservation */}
-         <section className='header'  >
-          <div className='container d-flex'> 
-             <div className='row'>
-               <div className='col-lg-3 '>
-                 <img src={sliceimage1} alt='sliceimage' className='mx-5 image'  width={120}/>
-              </div>
-              <div className='col-lg-3' >
-             <input type='text'  placeholder='Name' required className='form-control w-100 fs-5 '
-             value={name} onChange={(e) => setName(e.target.value)}/>
-             <input type='Email'  placeholder='Email' required className='form-control w-100 fs-5 my-3 '
-             value={email} onChange={(e) => setEmail(e.target.value)}></input>
-             <input type='date'  placeholder='Date' required className='form-control w-100 fs-5 my-3'
-             value={date} onChange={(e) => setDate(e.target.value)}/> 
-                 
+<section className="mb-5 ">
+  <div className="container text-center">
+    <div className="row align-items-start justify-content-center">
 
+      {/* Left image */}
+      <div className="col-lg-3">
+        <img src={sliceimage1} alt="sliceimage1" className="img-fluid" width={120} />
+      </div>
+
+      {/* Form with background only around it */}
+      <div className="col-lg-6 p-1 image">
+        <div className="form-box bg-light p-4  rounded-4 shadow-sm">
+          <div className="form-grid">
+            <div>
+              <input
+                type="text"
+                placeholder="Name"
+                className="form-control mb-2"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="form-control mb-2"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="date"
+                className="form-control"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="time"
+                className="form-control mb-2"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="People"
+                className="form-control mb-2"
+                value={people}
+                onChange={(e) => setPeople(e.target.value)}
+              />
+              <button
+                className="btn btn-danger form-control  "
+                style={{ backgroundColor: 'red' }}
+                onClick={tablebtn}
+              >
+                Book Table
+              </button>
+            </div>
           </div>
-              <div className='col-lg-3'>
-              <input type='time'   placeholder='Time' className='form-control w-100 fs-5 '
-              value={time} onChange={(e) => setTime(e.target.value)}/>
-              <input type='text'  placeholder='People'className='form-control w-100 my-3 fs-5'
-              value={people} onChange={(e) => setPeople(e.target.value)}></input>
-          <button className='btn btn-danger fs-5 w-100 'onClick={tablebtn}style={{backgroundColor:'red'}} >Book Table</button>
-             
-              </div>
-              <div className='col-lg-3 d-flex'>
-              <img src={sliceimage2} alt='sliceimage2' width={500}  className='d-flex mx-5 image'/>
-              </div>
-               </div>     
-              </div>        
-      </section>
+        </div>
+      </div>
+
+      {/* Right image */}
+      <div className="col-lg-3 text-end">
+        <img src={sliceimage2} alt="sliceimage2" className="img-fluid image mx-5" width={450} />
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Account Creation Section */}
       <section className= 'd-flex justify-content-center align-items-center mb-4 '>
         <div className='container'>
