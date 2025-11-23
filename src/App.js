@@ -3,6 +3,8 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {  Route, Routes, useLocation } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import Header from './Components/Header';
@@ -10,15 +12,16 @@ import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Menu from './Components/Menu';
 import Branch from './Components/Branch';
-import Career from './Components/Career';
+import Career from './Components/Career'; 
 import Account from './Components/Account';
 import Contact from './Components/Contact';
 import Cart from './Components/Cart';
 import Login from './Components/login';
 import Loading from './Components/Loading';
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import About from './Components/About';
+
+
+
 
 
 

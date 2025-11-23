@@ -48,10 +48,8 @@ const Account = () => {
           <h3 className="text-warning fw-bold">SIGN UP</h3>
 
           <form onSubmit={handleSignUp} className="d-flex flex-column gap-3 mt-3">
-             <div className="input-group mb-3" style={{ width: "250px" }}>
-                  <span className="input-group-text">
-                    <FaUser />
-                  </span>
+             <div className="relative">
+               <FaUser className="absolute right-3 top-3  text-gray-800  "/>   
             <input
               type="text"
               placeholder="Full Name"
@@ -61,10 +59,8 @@ const Account = () => {
               onChange={(e) => setName(e.target.value)}
             />
             </div>
-             <div className="input-group mb-3" style={{ width: "250px" }}>
-                  <span className="input-group-text">
-                    <FaEnvelope />
-                  </span>
+             <div className="relative">
+             <FaEnvelope className="absolute right-3 top-3  text-gray-800  "/>
             <input
               type="email"
               placeholder="Email Address"
@@ -73,10 +69,8 @@ const Account = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             /></div>
-             <div className="input-group mb-3" style={{ width: "250px" }}>
-                  <span className="input-group-text">
-                    <FaLock />
-                  </span>
+             <div className="relative">
+              <FaLock className="absolute right-3 top-3  text-gray-800  "/>
             <input
               type="password"
               placeholder="Password"

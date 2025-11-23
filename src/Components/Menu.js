@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { motion } from 'framer-motion';  // ⬅️ Added this
+import { motion } from 'framer-motion';  
+import { FaSearch } from "react-icons/fa";
 import Burger_1 from '../Assets/Menu/Burger_1.png';
 import Burger_2 from '../Assets/Menu/Burger_2.png';
 import Burger_3 from '../Assets/Menu/Burger_3.png';
@@ -77,15 +78,17 @@ const MenuPage = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container ">
       {/* 🔍 Search bar */}
+      <div className='relative '>
+      <FaSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"/>
       <input
         type="search"
         className="form-control mb-3 my-3"
         value={searchTerm}
         placeholder="Search for products..."
         onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      /></div>
 
       {/* Filters Row */}
       <div className="d-flex flex-wrap gap-2 mb-3">

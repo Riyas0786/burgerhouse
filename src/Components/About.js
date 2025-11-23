@@ -3,12 +3,31 @@ import { motion } from 'framer-motion';
 import burgerimg from '../Assets/Menu/Burger13.webp';
 import burger2 from '../Assets/Menu/Burger14.webp';
 import burger3 from '../Assets/Menu/Burger_12.webp';
+import { useNavigate } from 'react-router-dom';
+
 
 function About() {
+  const navigate = useNavigate();
   return (
     <section className="about">
       <div className="container text-center">
         <div className="row">
+          <div className='d-block justify-content-between  gap-3 my-4'>
+          <div className='aboutcard'>card-1</div>
+          <h1>CARDS</h1>
+          
+          <div className='aboutcard' onClick={() => navigate("/menu")}>card-2</div>
+          <h1>CARDS</h1>
+          <div className=' bg-blue-600 w-20 h-20 rounded'>card-1</div>
+          <h1>CARDS</h1>
+          <div className='aboutcard'>card-1</div>
+          <div className='aboutcard'>card-1</div>
+          <div className='aboutcard'>card-1</div>
+          <div className='aboutcard'>card-1</div>
+          <div className='aboutcard'>card-1</div>
+          <div className='aboutcard'>card-1</div>
+
+          </div>
           {/* Main Image */}
           <div className="col-12 my-4">
             <motion.img

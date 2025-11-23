@@ -204,7 +204,7 @@ const navigate = useNavigate();
     <div className="col-12 col-sm-6 d-flex flex-column justify-content-center">
       <h5 className="text-muted fs-3 text-primary">Discover</h5>
       <h2 className="fw-bold text-primary">UPCOMING EVENTS</h2>
-      <h6>
+      <h6 className='text-black-900 '>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
         perspiciatis amet necessitatibus velit vitae inventore quae iusto
         repellendus ullam libero voluptates, numquam cum cumque atque.
@@ -249,27 +249,27 @@ const navigate = useNavigate();
       </div>
 
       {/* Form with background only around it */}
-      <div className="col-lg-6 p-1 image">
-        <div className="form-box bg-light p-4  rounded-4 shadow-sm">
-          <div className="form-grid">
+      <div className="col-lg-6  image">
+        <div className="form-box bg-zinc-100 p-4 rounded-3">
+          <div className="form-grid  ">
             <div>
               <input
                 type="text"
                 placeholder="Name"
-                className="form-control mb-2"
+                className="form-control mb-2 fs-5"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="form-control mb-2"
+                className="form-control mb-2 fs-5"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="date"
-                className="form-control"
+                className="form-control fs-5"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
               />
@@ -277,19 +277,19 @@ const navigate = useNavigate();
             <div>
               <input
                 type="time"
-                className="form-control mb-2"
+                className="form-control mb-2 fs-5"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="People"
-                className="form-control mb-2"
+                className="form-control mb-2 fs-5"
                 value={people}
                 onChange={(e) => setPeople(e.target.value)}
               />
               <button
-                className="btn btn-danger form-control  "
+                className="btn btn-danger form-control fs-5   "
                 style={{ backgroundColor: 'red' }}
                 onClick={tablebtn}
               >
@@ -297,7 +297,7 @@ const navigate = useNavigate();
               </button>
             </div>
           </div>
-        </div>
+          </div>
       </div>
 
       {/* Right image */}
@@ -308,37 +308,37 @@ const navigate = useNavigate();
   </div>
 </section>
 
-      {/* Account Creation Section */}
-      <section className= 'd-flex justify-content-center align-items-center mb-4 '>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-6'>
-              <img src={deliveryimg}alt='delivery' className='img-fluid rounded shadow image'
-              width={500}/>
+          {/* Account Creation Section */}
+          <section className= 'd-flex justify-content-center align-items-center mb-4 '>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-lg-6'>
+                  <img src={deliveryimg}alt='delivery' className='img-fluid rounded shadow image'
+                  width={500}/>
+                </div>
+            
+            <div className='col-lg-6  '>
+                <img src={account} alt='account'className='mx-auto' width={140}/>
+            <h2 className='text-center bg-light fs-2 w-50 mx-auto my-3'>Create Your Account</h2>
+            <button className='btn btn-danger rounded-pill my-4 d-flex mx-auto fs-6 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
             </div>
-       
-        <div className='col-lg-6  '>
-           <img src={account} alt='account'className='mx-auto' width={140}/>
-        <h2 className='text-center bg-light fs-2 w-50 mx-auto my-3'>Create Your Account</h2>
-        <button className='btn btn-danger rounded-pill my-4 d-flex mx-auto fs-6 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
-        </div>
-        </div>
-        </div>
-      </section>
+            </div>
+            </div>
+          </section>
 
-      <ToastContainer
-   hideProgressBar
-   icon={false}
-   closeButton={false}
-   draggable={false}
-   pauseOnHover={false}
-   style={{
-    background: "transparent",
-    boxShadow: "none",
-    padding: 0,
-    position: "top-center",
-  }}
-/>
+            <ToastContainer
+          hideProgressBar
+          icon={false}
+          closeButton={false}
+          draggable={false}
+          pauseOnHover={false}
+          style={{
+          background: "transparent",
+          boxShadow: "none",
+          padding: 0,
+          position: "top-center",
+        }}
+        />
 
     </>
   )

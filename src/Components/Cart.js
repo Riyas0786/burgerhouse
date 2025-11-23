@@ -41,7 +41,7 @@ const Cart = () => {
     if (cartItem.length === 0) 
 
     toast.success(<VideoToast src={burgervid}  />, {
-      position: "top-center my-5",
+      position: "top-center my-5 rounded",
       autoClose: 1500,
     });
 
@@ -155,8 +155,8 @@ const Cart = () => {
       </section>
 
       {/* Footer Section */}
-      <section className="footer bg-black text-center text-white py-5 mt-5">
-        <div className="container">
+      <section className="footer bg-black text-center text-white py-2 ">
+        <div className="container my-5">
           <h4>WE ACCEPT ALL CARDS & UPI Payments</h4>
 
           <div className="my-3">

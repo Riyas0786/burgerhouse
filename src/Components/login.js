@@ -47,25 +47,21 @@ const Login = () => {
           <img src={logo} alt="logo" width={180} className="mb-3" />
           <h3 className="text-warning fw-bold">SIGN IN</h3>
 
-          <form onSubmit={handleLogin} className="d-flex flex-column gap-3 mt-3">
-             <div className="input-group mb-3" style={{ width: "250px" }}>
-      <span className="input-group-text">
-        <FaEnvelope />
-      </span>
+          <form onSubmit={handleLogin} className="d-flex  flex-column gap-3 ">
+             <div className="relative" >
+           <FaEnvelope className="absolute right-3 top-3  text-gray-800  "/>
             <input type="text" placeholder="Email or PhoneNumber"
               className="form-control"value={email}
               onChange={(e) => setEmail(e.target.value)}
              /></div>
-             <div className="input-group mb-3" style={{ width: "250px" }}>
-      <span className="input-group-text">
-        <FaLock />
-      </span>
+             <div className="relative">
+           <FaLock className="absolute right-3 top-3 text-gray-800 "/>
             <input
               type="password"  placeholder="Password"
               className="form-control"value={password}
               onChange={(e) => setPassword(e.target.value)}
-            />
-            </div>
+            /></div>
+          
             <button type="submit" className="btn btn-warning fw-bold text-white">
               SIGN IN
             </button>

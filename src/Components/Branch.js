@@ -18,12 +18,12 @@ const Branch = () => {
           {/* Chennai */}
           <div className="col-12 col-sm-7 col-md-6 col-lg-4 my-4">
             <motion.div
-              className="rounded shadow p-4"
-              style={{ height: '350px' }}
+              className=" rounded p-4"
+              style={{ height: '350px',boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)"  }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)" }}
             >
               <motion.img
                 src={chennaiimage}
@@ -40,12 +40,12 @@ const Branch = () => {
           {/* Hyderabad */}
           <div className="col-12 col-sm-7 col-md-6 col-lg-4 my-4">
             <motion.div
-              className="rounded shadow p-4"
-              style={{ height: '350px' }}
+              className="rounded  p-4"
+              style={{ height: '350px',boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)"  }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)" }}
             >
               <motion.img
                 src={hyderabadimage}
@@ -62,12 +62,12 @@ const Branch = () => {
           {/* Madurai */}
           <div className="col-12 col-sm-7 col-md-6 col-lg-4 my-4">
             <motion.div
-              className="rounded shadow p-4"
-              style={{ height: '350px' }}
+              className="rounded p-4"
+              style={{ height: '350px',boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)" }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)" }}
             >
               <motion.img
                 src={maduraiimage}
@@ -84,12 +84,12 @@ const Branch = () => {
           {/* Bangalore */}
           <div className="col-12 col-sm-7 col-md-6 col-lg-4 my-4">
             <motion.div
-              className="rounded shadow p-4"
-              style={{ height: '350px' }}
+              className="rounded  p-4"
+              style={{ height: '350px',boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)"  }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(255, 174, 0, 0.39)"  }}
             >
               <motion.img
                 src={bangaloreimage}
