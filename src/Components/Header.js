@@ -82,7 +82,7 @@ const Header = () => {
                   <i className="bi bi-bag-fill fs-3"></i>
                   {totalQty > 0 && (
                     <span
-                      className="badge bg-danger position-absolute top-60 start-70 p-1 translate-middle" >
+                      className="badge bg-danger position-absolute top-1 start-63 w-4 p-1 translate-middle" >
                       {totalQty}
                     </span>
                   )}

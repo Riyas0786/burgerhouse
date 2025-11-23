@@ -110,7 +110,7 @@ const navigate = useNavigate();
 
    <section className='landing py-5' >
   <div className='container'>
-    <h6 className='text-center text-primary fw-bold mx-auto bg-warning w-25 fs-4'>
+    <h6 className='text-center text-primary fw-bold mx-auto bg-yellow-400 w-25 fs-5'>
     ALWAYS TASTY
     </h6>
     <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
@@ -250,7 +250,7 @@ const navigate = useNavigate();
 
       {/* Form with background only around it */}
       <div className="col-lg-6  image">
-        <div className="form-box bg-zinc-100 p-4 rounded-3">
+        <div className="form-box bg-zinc-50 p-4 rounded-3">
           <div className="form-grid  ">
             <div>
               <input
