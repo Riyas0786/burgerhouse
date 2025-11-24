@@ -4,16 +4,7 @@
     box-sizing: border-box;
 
 }
-/* home navbar bg*/
-.fixed-background{
-    background-image: url('../Assets/Home/Background_Img.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    max-width: 100%;
-    max-height: 630px;
-}
+
 .fixed-background2{
   background-image: url('../Assets/Home/Background_Img.png');
     background-position: center;

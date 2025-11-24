@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import HeaderImage from '../Assets/Home/Banner_Img.png';
 import BannerImage1 from '../Assets/Home/Header_Img_1.png';
 import BannerImage2 from '../Assets/Home/Header_Img_2.png';
 import BannerImage3 from '../Assets/Home/Header_Img_3.png';
@@ -70,29 +69,7 @@ const navigate = useNavigate();
   };  
   return (
     <>
-    {/* Header Section */}
-    <section className='fixed-background '>
-        <div className='container'>
-            <div className='row'>
-                <div className='col-lg-6  my-5 py-5 headertext'>
-                    <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',}}>BURGER</h1>
-                        <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
-                    
-                    <p >Welcome to Burger House, the ultimate destination for burger lovers! Our homepage introduces visitors to a mouthwatering world of freshly grilled burgers, crispy fries, and chilled beverages — all made with love and the freshest ingredients.
-                      Visitors are greeted with a hero banner showcasing signature burgers and an easy “Order Now” or “Book Your Table” button for quick access. 
-                      Below, there’s a menu highlights section showing popular items like the Classic Cheeseburger, 
-                      Spicy Chicken Burger, and Veggie Delight.
-                    </p>
-                </div>
-
-                <div className=' col-lg-6 ' >
-                  <img src={HeaderImage} alt="CompoImage" className='justify-content-end my-5 mx-5 headerimg' />
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
+    
     {/* Banner */}
     <section className='banner'>
         <div className='container'>
@@ -289,8 +266,8 @@ const navigate = useNavigate();
                 onChange={(e) => setPeople(e.target.value)}
               />
               <button
-                className="btn btn-danger form-control fs-5   "
-                style={{ backgroundColor: 'red' }}
+                 className="px-4 py-2 bg-red-600 w-100 text-white rounded"
+                
                 onClick={tablebtn}
               >
                 Book Table

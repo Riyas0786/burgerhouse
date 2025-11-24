@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../Components/Style.css";
 import Logo from "../Assets/Home/Logo.png";
+import HeaderImage from "../Assets/Home/Banner_Img.png";
 import { CartContext } from "./Cartprovider";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
@@ -33,41 +34,31 @@ const Header = () => {
 
           {/* ✅ Navigation Links */}
           <ul className={`navlinks ${isOpen ? "open" : ""}`}  >
-            <li>
-              <NavLink className="link " to="/">
-                <span className="bi bi-house-fill p-1 " >Home</span>
+            
+              <NavLink className="link bi bi-house-fill " to="/">
+                Home
               </NavLink>
-            </li>
-            <li>
-              <NavLink className="link" to="/menu">
-                <span className="bi bi-card-checklist">Menu</span>
+          
+
+              <NavLink className="link bi bi-card-checklist " to="/menu">
+                Menu
               </NavLink>
-            </li>
-            <li>
-              <NavLink className="link" to="/career">
-                <span className="bi bi-briefcase-fill p-1" ></span>
+            
+              <NavLink className="link bi bi-briefcase-fill" to="/career">
                 Career
               </NavLink>
-            </li>
-            <li>
-              <NavLink className="link" to="/contact">
-                <span className="bi bi-person-square p-1" ></span>
+            
+              <NavLink className="link bi bi-person-square " to="/contact">
                 Contact
               </NavLink>
-            </li>
-            <li>
-              <NavLink className="link" to="/branch">
-                <span className="bi bi-shop p-1" ></span>Branch
+              
+              <NavLink className="link bi bi-shop " to="/branch">
+                Branch
               </NavLink>
-            </li>
-            <li>
-              <NavLink className="link" to="/about">
-                <span
-                  className="bi bi-info-square-fill p-1"
-                ></span>
+          
+              <NavLink className="link bi bi-info-square-fill" to="/about">
                 About
               </NavLink>
-            </li>
           </ul>
                 {/* Cart + Account Icons */}
           <div className="d-flex">
@@ -90,9 +81,25 @@ const Header = () => {
               </li>
             </ul>
           </div>
-         </div>
-      </div>
-    </section>
+          <div className="col-lg-6 ">
+        <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',}}>BURGER</h1>
+         <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
+                  
+                  <p >Welcome to Burger House, the ultimate destination for burger lovers! Our homepage introduces visitors to a mouthwatering world of freshly grilled burgers, crispy fries, and chilled beverages — all made with love and the freshest ingredients.
+                    Visitors are greeted with a hero banner showcasing signature burgers and an easy “Order Now” or “Book Your Table” button for quick access. 
+                    Below, there’s a menu highlights section showing popular items like the Classic Cheeseburger, 
+                    Spicy Chicken Burger, and Veggie Delight.
+                  </p>
+                  </div>
+            
+
+              <div className=' col-lg-6 ' >
+                <img src={HeaderImage} alt="CompoImage" className=' headerimg' width={500}/>
+              </div>
+              </div>
+        </div>
+    
+  </section>
   );
 };
 
