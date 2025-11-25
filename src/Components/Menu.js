@@ -81,7 +81,7 @@ const MenuPage = () => {
     <div className="container ">
       {/* 🔍 Search bar */}
       <div className='relative '>
-      <FaSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"/>
+      <FaSearch className="absolute right-10 top-1/2 -translate-y-1/2 text-gray-500"/>
       <input
         type="search"
         className="form-control mb-3 my-3"
@@ -127,8 +127,8 @@ const MenuPage = () => {
       </div>
 
       {/* Flash news */}
-      <div className="text-center text-white bg-danger p-2 mb-3 rounded">
-        <p className="mb-0">🔥 BUY ONE GET ONE FREE FOR LIMITED TIME ONLY !!!! 🔥</p>
+      <div className="text-center text-white bg-amber-400 p-2 mb-3 rounded">
+        <h5 className="mb-0 text-black">🔥 Buy One Get One Free For Limited Time Only !!!! 🔥</h5>
       </div>
 
       {/* Products Grid */}
@@ -151,12 +151,12 @@ const MenuPage = () => {
             <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
               {/* Product card */}
               <motion.div
-                className="rounded shadow p-4 mx-2 h-100 d-flex flex-column justify-content-between"
+                className="rounded-4 shadow-xl  p-4 mx-2 h-100 d-flex flex-column justify-between"
                 style={{ textAlign: 'center', position: 'relative' }}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, delay: 0.01 }}
-                whileHover={{ scale: 1.07, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" }}
+                whileHover={{ scale: 1.07, boxShadow: "0px 3px 6px rgba(0,0,0,0.2)" }}
               >
                 {/* Veg/Non-Veg icons */}
                 <div style={{ position: "absolute", top: "7px", right: "7px" }}>
@@ -175,24 +175,24 @@ const MenuPage = () => {
 
                 {/* Product Details */}
                 <div className="flex-grow-1 d-flex flex-column justify-content-between mt-2">
-                  <h5 className="card-title mx-auto bg-warning w-35 fs-3 py-1">{product.name}</h5>
+                  <h5 className="card-title mx-auto bg-amber-400 w-35 fs-3 py-1">{product.name}</h5>
                   <h5 className="card-text bg-light my-2">{product.subtitle}</h5>
-                  <h4 className="text-danger">₹{product.price}</h4>
+                  <h4 className="text-red-600">₹{product.price}</h4>
                 </div>
 
                 {/* Buttons */}
-                <div className="d-flex justify-content-center gap-2 mt-3">
+                <div className="flex justify-center gap-2 mt-3">
                   <button
-                    className="btn btn-danger"
+                     className="bg-red-600 rounded w-50 hover:bg-red-700 ... text-white" 
                     onClick={() => {
                       addToCart(product);
                       navigate('/cart');
                     }}
-                  >
-                    BUY NOW
+                  ><span className='Text-white'>
+                    BuyNow</span>
                   </button>
                   <button
-                    className="btn btn-warning"
+                    className="bg-amber-400 w-10 h-10 rounded hover:bg-amber-500 ... text-black"
                     onClick={() => addToCart(product)}
                   >
                     <i className="bi bi-bag-fill"></i>

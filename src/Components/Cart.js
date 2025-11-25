@@ -60,7 +60,7 @@ const Cart = () => {
               <h2 className="mt-3 fw-bold text-warning fs-2">YOUR CART IS EMPTY</h2>
               <h2 className="mt-2 fw-bold fs-1">LET'S MAKE AN ORDER</h2>
               <button
-                className="btn btn-warning btn-lg rounded-pill mt-3"
+                className="bg-amber-400 w-40 rounded-pill h-10 fs-4 text-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-400 ..."
                 onClick={() => navigate("/menu")}
               >
                 Make Order
@@ -80,7 +80,7 @@ const Cart = () => {
                 {cartItem.map((item) => (
                   <div key={item.id} className="col-12 col-sm-6 col-md-4 py-3">
                     {/* Cartpage card */}
-                    <div className="rounded shadow text-center p-4 h-100 position-relative"
+                    <div className="rounded shadow text-center bg-light p-4 h-100 position-relative"
                       style={{ minHeight: "350px" }}
                     >
                       
@@ -106,7 +106,7 @@ const Cart = () => {
                       />
                       {/* card price name */}
                       <div className="card-body">
-                        <h5 className="card-title bg-warning">{item.name}</h5>
+                        <h5 className="card-title bg-amber-400">{item.name}</h5>
                         <h5 className="text-danger fw-bold">₹{item.price}</h5>
                         
                         <div className="d-block justify-content-center align-items-center gap-2 mt-3">
@@ -139,10 +139,10 @@ const Cart = () => {
                 </h3>
               </div>
 
-              <div className="text-center">
+              <div className="text-center pb-3">
                 <button
                   type="button"
-                  className="btn btn-danger px-5"
+                  className="bg-red-600 w-40 h-10  rounded hover:bg-red-700 ... text-white"
                   onClick={handleOrder}
                   disabled={cartItem.length === 0}
                 >

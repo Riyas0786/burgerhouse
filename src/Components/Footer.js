@@ -41,10 +41,10 @@ const Footer = () => {
           <h5 className="text-white customtext ">DOWNLOAD APP ON</h5>
           <div className="icons-2  " >
            {/* Playstore */}
-         <a href="https://play.google.com/store/games?hl=hi&pli=1" target="blank" rel="noopener noreferrer"  >
+         <a href="https://play.google.com/store/games?hl=hi&pli=1" target="blank" rel="noopener noreferrer" className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ' >
           <img src={playstore} alt='playstoreimg' width={180} /></a>
            {/* App store */}
-          <a href="https://www.apple.com/in/app-store/" target="blank" rel="noopener noreferrer"  >
+          <a href="https://www.apple.com/in/app-store/" target="blank" rel="noopener noreferrer" className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ' >
           <img src={apple} alt='playstoreimg' width={180} /></a>
           </div>
           <h5 className="text-white  fs-4">DESIGNED & DEVELOPED BY </h5>

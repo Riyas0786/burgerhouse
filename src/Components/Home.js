@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import HeaderImage from "../Assets/Home/Banner_Img.png";
 import BannerImage1 from '../Assets/Home/Header_Img_1.png';
 import BannerImage2 from '../Assets/Home/Header_Img_2.png';
 import BannerImage3 from '../Assets/Home/Header_Img_3.png';
@@ -68,8 +69,27 @@ const navigate = useNavigate();
 
   };  
   return (
-    <>
-    
+        <>
+        <section className='fixed-background2'>
+          <div className='container '>
+            <div className='row'>
+          <div className="col-lg-6 ">
+        <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',}}>BURGER</h1>
+         <h1  style={{color:'#6E260E',textShadow: '3px 2px 2px rgba(255, 255, 255, 1)',fontSize:'30px'}}>WEEK</h1>
+                  
+                  <p >Welcome to Burger House, the ultimate destination for burger lovers! Our homepage introduces visitors to a mouthwatering world of freshly grilled burgers, crispy fries, and chilled beverages — all made with love and the freshest ingredients.
+                    Visitors are greeted with a hero banner showcasing signature burgers and an easy “Order Now” or “Book Your Table” button for quick access. 
+                    Below, there’s a menu highlights section showing popular items like the Classic Cheeseburger, 
+                    Spicy Chicken Burger, and Veggie Delight.
+                  </p>
+                  </div>
+            
+                <div className=' col-lg-6 ' >
+                <img src={HeaderImage} alt="CompoImage" className=' headerimg' width={500}/>
+              </div>
+              </div>
+              </div>
+              </section>
     {/* Banner */}
     <section className='banner'>
         <div className='container'>
@@ -87,7 +107,7 @@ const navigate = useNavigate();
 
    <section className='landing py-5' >
   <div className='container'>
-    <h6 className='text-center text-primary fw-bold mx-auto bg-yellow-400 w-25 fs-5'>
+    <h6 className='text-center text-primary fw-bold mx-auto bg-amber-400 w-25 fs-5'>
     ALWAYS TASTY
     </h6>
     <h2 className='text-center text-primary py-2'>CHOOSE & ENJOY</h2>
@@ -121,7 +141,7 @@ const navigate = useNavigate();
           Lorem ipsum dolor sit amet, consectetur adipisicing
         </p>
         <button
-          className="btn btn-danger"
+          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  "  style={{backgroundColor:'red',}}
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -143,7 +163,7 @@ const navigate = useNavigate();
           special sauce.
         </p>
         <button
-          className="btn btn-danger"
+          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  "  style={{backgroundColor:'red',}}
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -164,7 +184,7 @@ const navigate = useNavigate();
           A juicy burger with double cheese, perfect for cheese lovers.
         </p>
         <button
-          className="btn btn-danger"
+          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  "  style={{backgroundColor:'red',}}
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -175,8 +195,8 @@ const navigate = useNavigate();
 </section>
 
 {/* Flex card Section */}
-<section className="container my-5  ">
-  <div className="row g-4 align-items-stretch  flex-card p-4" >
+<section className="container my-5 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105  ">
+  <div className="row g-4 align-items-stretch  flex-card p-4  " >
     {/* Text Section */}
     <div className="col-12 col-sm-6 d-flex flex-column justify-content-center">
       <h5 className="text-muted fs-3 text-primary">Discover</h5>
@@ -217,7 +237,7 @@ const navigate = useNavigate();
 
      {/* Table Reservation */}
 <section className="mb-5 ">
-  <div className="container text-center">
+  <div className="container text-center ">
     <div className="row align-items-start justify-content-center">
 
       {/* Left image */}
@@ -226,8 +246,8 @@ const navigate = useNavigate();
       </div>
 
       {/* Form with background only around it */}
-      <div className="col-lg-6  image">
-        <div className="form-box bg-zinc-50 p-4 rounded-3">
+      <div className="col-lg-6  image  ">
+        <div className="form-box bg-zinc-50 p-4 rounded-3 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
           <div className="form-grid  ">
             <div>
               <input
@@ -297,7 +317,7 @@ const navigate = useNavigate();
             <div className='col-lg-6  '>
                 <img src={account} alt='account'className='mx-auto' width={140}/>
             <h2 className='text-center bg-light fs-2 w-50 mx-auto my-3'>Create Your Account</h2>
-            <button className='btn btn-danger rounded-pill my-4 d-flex mx-auto fs-6 ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>JOIN NOW</button>
+            <button className=' w-20 rounded-pill fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110   ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>Join</button>
             </div>
             </div>
             </div>

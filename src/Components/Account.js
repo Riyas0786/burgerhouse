@@ -79,7 +79,7 @@ const Account = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             /></div>
-            <button type="submit" className="btn btn-warning fw-bold text-white">
+            <button type="submit" className="bg-amber-400 rounded h-10 fw-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-400 ...">
               SIGN UP
             </button>
           </form>
@@ -93,14 +93,17 @@ const Account = () => {
 
           <p className="fw-semibold">Or Continue with</p>
           <div className="d-flex gap-2">
-            <a href="https://accounts.google.co.in/" target="blank" rel="noopener noreferrer"className="btn btn-primary flex-fill" >
-              <i className="bi bi-google"></i> 
+          <a href="https://accounts.google.co.in/" target="blank" rel="noopener noreferrer"
+              className="bg-blue-600 w-20 rounded h-10 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ... 
+               bi bi-google text-white items-center justify-center flex " >
+              
             </a>
-            <a href="https://account.apple.com/" target="blank" rel="noopener noreferrer" className="btn btn-dark flex-fill" >
-              <i className="bi bi-apple"></i>
+            <a href="https://account.apple.com/" target="blank" rel="noopener noreferrer" className="bg-gray-950 w-20 rounded h-10 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ...
+            bi bi-apple text-white items-center justify-center d-flex " >
             </a>
-            <a href="https://login.microsoftonline.com/" target="blank" rel="noopener noreferrer" className="btn btn-success flex-fill" >
-              <i className="bi bi-microsoft"></i> 
+            <a href="https://login.microsoftonline.com/" target="blank" rel="noopener noreferrer" className="bg-green-700 w-20 rounded h-10 text-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ...
+            bi bi-microsoft text-white items-center justify-center d-flex " >
+              
             </a>
           </div>
 
