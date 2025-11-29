@@ -103,7 +103,6 @@ const Account = () => {
             </a>
             <a href="https://login.microsoftonline.com/" target="blank" rel="noopener noreferrer" className="bg-green-700 w-20 rounded h-10 text-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ...
             bi bi-microsoft text-white items-center justify-center d-flex " >
-              
             </a>
           </div>
 

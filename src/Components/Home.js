@@ -3,7 +3,6 @@ import HeaderImage from "../Assets/Home/Banner_Img.png";
 import BannerImage1 from '../Assets/Home/Header_Img_1.png';
 import BannerImage2 from '../Assets/Home/Header_Img_2.png';
 import BannerImage3 from '../Assets/Home/Header_Img_3.png';
-import carouselimg1 from '../Assets/Menu/Burger14.webp';
 import carouselimg2 from '../Assets/Menu/Burger16.webp';
 import carouselimg3 from'../Assets/Menu/Burger15.webp'
 import FlexImage1 from '../Assets/Home/Container_Img.png';
@@ -121,7 +120,7 @@ const navigate = useNavigate();
     </section>
 
     {/* Slideshow Carousel */}
-    <section className="carousel burger mb-5">
+    <section className="carousel burger  ">
   <Carousel
     interval={1550}
     pause="hover"
@@ -132,16 +131,16 @@ const navigate = useNavigate();
     <Carousel.Item>
       <div className="text-center">
         <img
-          src={carouselimg1}
+          src={carouselimg3}
           alt="LandImage1"
-          className="mx-auto d-block carousel-img " width={300}
+          className="mx-auto d-block carousel-img " width={200}
         />
         <h4 className="text-primary">Tandoor Chicken Burger</h4>
         <p className="text-primary">
           Lorem ipsum dolor sit amet, consectetur adipisicing
         </p>
         <button
-          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  "  style={{backgroundColor:'red',}}
+          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-500 " 
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -155,6 +154,7 @@ const navigate = useNavigate();
         <img
           src={carouselimg2}
           alt="LandImage2"
+          width={200}
           className="mx-auto d-block carousel-img" 
         />
         <h4 className="text-primary">Classic Veggie Burger</h4>
@@ -163,7 +163,7 @@ const navigate = useNavigate();
           special sauce.
         </p>
         <button
-          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  "  style={{backgroundColor:'red',}}
+          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-500 "  
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -177,6 +177,7 @@ const navigate = useNavigate();
         <img
           src={carouselimg3}
           alt="LandImage3"
+          width={200}
           className="mx-auto d-block carousel-img "
         />
         <h4 className="text-primary">Cheese Overload Burger</h4>
@@ -184,7 +185,7 @@ const navigate = useNavigate();
           A juicy burger with double cheese, perfect for cheese lovers.
         </p>
         <button
-          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  "  style={{backgroundColor:'red',}}
+          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-500 " 
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -195,7 +196,7 @@ const navigate = useNavigate();
 </section>
 
 {/* Flex card Section */}
-<section className="container my-5 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105  ">
+<section className="container my-5 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
   <div className="row g-4 align-items-stretch  flex-card p-4  " >
     {/* Text Section */}
     <div className="col-12 col-sm-6 d-flex flex-column justify-content-center">
@@ -286,9 +287,8 @@ const navigate = useNavigate();
                 onChange={(e) => setPeople(e.target.value)}
               />
               <button
-                 className="px-4 py-2 bg-red-600 w-100 text-white rounded"
-                
-                onClick={tablebtn}
+                 className="px-4 py-2 bg-red-600 w-100 text-white rounded transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
+                 onClick={tablebtn}
               >
                 Book Table
               </button>
@@ -314,10 +314,10 @@ const navigate = useNavigate();
                   width={500}/>
                 </div>
             
-            <div className='col-lg-6  '>
+            <div className='col-lg-6   '>
                 <img src={account} alt='account'className='mx-auto' width={140}/>
             <h2 className='text-center bg-light fs-2 w-50 mx-auto my-3'>Create Your Account</h2>
-            <button className=' w-20 rounded-pill fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110   ' style={{backgroundColor:'red',}} onClick={()=>navigate("/account")}>Join</button>
+            <button className=' w-20 block mx-auto rounded-pill fs-4 h-10  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-600 text-white '  onClick={()=>navigate("/account")}>Join</button>
             </div>
             </div>
             </div>

@@ -84,16 +84,16 @@ const MenuPage = () => {
       <FaSearch className="absolute right-10 top-1/2 -translate-y-1/2 text-gray-500"/>
       <input
         type="search"
-        className="form-control mb-3 my-3"
+        className="glassSelect mb-3 my-3"
         value={searchTerm}
         placeholder="Search for products..."
         onChange={(e) => setSearchTerm(e.target.value)}
       /></div>
 
       {/* Filters Row */}
-      <div className="d-flex flex-wrap gap-2 mb-3">
+      <div className="d-flex flex-wrap gap-2 mb-3 ">
         <select
-          className="form-select"
+          className="glassSelect"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           style={{ maxWidth: "200px" }}
@@ -104,7 +104,7 @@ const MenuPage = () => {
         </select>
 
         <select
-          className="form-select"
+          className="glassSelect"
           value={group}
           onChange={(e) => setGroup(e.target.value)}
           style={{ maxWidth: "200px" }}
@@ -115,7 +115,7 @@ const MenuPage = () => {
         </select>
 
         <select
-          className="form-select"
+          className="glassSelect"
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
           style={{ maxWidth: "180px" }}
@@ -127,8 +127,8 @@ const MenuPage = () => {
       </div>
 
       {/* Flash news */}
-      <div className="text-center text-white bg-amber-400 p-2 mb-3 rounded">
-        <h5 className="mb-0 text-black">🔥 Buy One Get One Free For Limited Time Only !!!! 🔥</h5>
+      <div className="text-center text-white bg-amber-300 p-1 mb-3 rounded">
+        <h5 className="mb-0 text-black"> 🔥Buy One Get One Free For Limited Time Only🔥</h5>
       </div>
 
       {/* Products Grid */}
@@ -151,11 +151,11 @@ const MenuPage = () => {
             <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
               {/* Product card */}
               <motion.div
-                className="rounded-4 shadow-xl  p-4 mx-2 h-100 d-flex flex-column justify-between"
+                className="rounded-4 shadow  p-4 mx-2 h-100 flex flex-column  justify-center"
                 style={{ textAlign: 'center', position: 'relative' }}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, delay: 0.01 }}
+                transition={{ duration: 1.0, delay: 0.04 }}
                 whileHover={{ scale: 1.07, boxShadow: "0px 3px 6px rgba(0,0,0,0.2)" }}
               >
                 {/* Veg/Non-Veg icons */}

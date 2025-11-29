@@ -65,13 +65,14 @@ const Cart = () => {
               >
                 Make Order
               </button>
+              
               <img
                 src={cuppng}
                 alt="cup"
-                className="img-fluid mt-5 mx-auto d-block"
+                className="img-fluid mt-5 flex mx-auto cupimg"
                 style={{ maxWidth: "300px" }}
-              />
-            </div>
+              /></div>
+           
           ) : (
             <>
               <h3 className="mb-4">{totalQty} item(s) in cart</h3>

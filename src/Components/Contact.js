@@ -58,7 +58,7 @@ const Contact = () => {
 
               {/* Dropdown */}
               <select
-                className="form-select my-3"
+                className="glassSelect my-3"
                 value={issueType}
                 onChange={(e) => setIssueType(e.target.value)}
               >
@@ -73,7 +73,7 @@ const Contact = () => {
               {/* Message box */}
               <textarea
                 placeholder="Write your concern"
-                className="form-control my-3"
+                className="glassSelect my-3"
                 rows="4"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
