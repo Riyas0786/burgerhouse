@@ -140,7 +140,7 @@ const navigate = useNavigate();
           Lorem ipsum dolor sit amet, consectetur adipisicing
         </p>
         <button
-          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-500 " 
+          className="btn-amber" 
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -163,7 +163,7 @@ const navigate = useNavigate();
           special sauce.
         </p>
         <button
-          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-500 "  
+          className="btn-amber "  
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -185,7 +185,7 @@ const navigate = useNavigate();
           A juicy burger with double cheese, perfect for cheese lovers.
         </p>
         <button
-          className="w-30 rounded text-white fs-4 h-10 mx-auto flex justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-500 " 
+          className="btn-amber " 
           onClick={() => navigate("/menu")}
         >
           Order Now
@@ -247,7 +247,7 @@ const navigate = useNavigate();
       </div>
 
       {/* Form with background only around it */}
-      <div className="col-lg-6  image  ">
+      <div className="col-lg-6  ">
         <div className="form-box bg-zinc-50 p-4 rounded-3 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
           <div className="form-grid  ">
             <div>
@@ -287,7 +287,7 @@ const navigate = useNavigate();
                 onChange={(e) => setPeople(e.target.value)}
               />
               <button
-                 className="px-4 py-2 bg-red-600 w-100 text-white rounded transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
+                 className="btn-amber w-100 h-10"
                  onClick={tablebtn}
               >
                 Book Table
@@ -317,7 +317,7 @@ const navigate = useNavigate();
             <div className='col-lg-6   '>
                 <img src={account} alt='account'className='mx-auto' width={140}/>
             <h2 className='text-center bg-light fs-2 w-50 mx-auto my-3'>Create Your Account</h2>
-            <button className=' w-20 block mx-auto rounded-pill fs-4 h-10  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-red-600 text-white '  onClick={()=>navigate("/account")}>Join</button>
+            <button className='btn-amber mx-auto flex '  onClick={()=>navigate("/account")}>Join</button>
             </div>
             </div>
             </div>

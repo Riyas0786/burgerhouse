@@ -34,28 +34,28 @@ const Header = () => {
           {/* ✅ Navigation Links */}
           <ul className={`navlinks ${isOpen ? "open" : ""}`}  >
             
-              <NavLink className="link bi bi-house-fill " to="/">
+              <NavLink className="link bi bi-house-fill navbtn" to="/">
                 Home
               </NavLink>
           
 
-              <NavLink className="link bi bi-card-checklist " to="/menu">
+              <NavLink className="link bi bi-card-checklist navbtn " to="/menu">
                 Menu
               </NavLink>
             
-              <NavLink className="link bi bi-briefcase-fill" to="/career">
+              <NavLink className="link bi bi-briefcase-fill navbtn" to="/career">
                 Career
               </NavLink>
             
-              <NavLink className="link bi bi-person-square " to="/contact">
+              <NavLink className="link bi bi-person-square navbtn " to="/contact">
                 Contact
               </NavLink>
               
-              <NavLink className="link bi bi-shop " to="/branch">
+              <NavLink className="link bi bi-shop navbtn " to="/branch">
                 Branch
               </NavLink>
           
-              <NavLink className="link bi bi-info-square-fill" to="/about">
+              <NavLink className="link bi bi-info-square-fill navbtn" to="/about">
                 About
               </NavLink>
           </ul>
@@ -63,7 +63,7 @@ const Header = () => {
           <div className="d-flex">
             <ul className="iconlinks d-flex list-unstyled mb-0  " style={{marginLeft:'100px'}}>
               <li className="position-relative">
-                <NavLink className="navicon me-3 " to="/account">
+                <NavLink className="navicon me-3   " to="/account">
                   <i className="bi bi-person-fill fs-3"></i>
                 </NavLink>
               </li>

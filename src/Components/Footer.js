@@ -15,7 +15,7 @@ const Footer = () => {
         <img
           src={footerlogo}
           alt="footerlogo"
-          className="  my-2 "
+          className="footerlogo my-2 "
           width={250}
         />
         <p className="text-white py-3 mt-3">
@@ -37,9 +37,9 @@ const Footer = () => {
           </div>
           {/*center column  */}
           
-          <div className='col-lg-4 flex-box flex-column justify-between text-center' >  
-          <h5 className="text-white  ">DOWNLOAD APP ON</h5>
-        <div className='flex items-center justify-center '>
+          <div className='col-lg-4  text-center' >  
+          <h5 className="text-white my-3">DOWNLOAD APP ON</h5>
+        <div className='flex flex-row items-center justify-center '>
            {/* Playstore */}
          <a href="https://play.google.com/store/games?hl=hi&pli=1" target="blank" rel="noopener noreferrer" className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110   '
          style={{objectFit:'contain'}} >
