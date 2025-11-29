@@ -78,15 +78,18 @@ const MenuPage = () => {
   }
 
   return (
+    
     <div className="container ">
+      
+      
       {/* 🔍 Search bar */}
-      <div className='relative '>
-      <FaSearch className="absolute right-10 top-1/2 -translate-y-1/2 text-gray-500"/>
+      <div className='relative  '>
+      <FaSearch className=" absolute right-10 top-1/2 -translate-y-1/2 text-red-950"/>
       <input
         type="search"
-        className="glassSelect mb-3 my-3"
+        className="glassSelect my-3 mb-3"
         value={searchTerm}
-        placeholder="Search for products..."
+        placeholder="Search for burgers..."
         onChange={(e) => setSearchTerm(e.target.value)}
       /></div>
 
@@ -124,6 +127,7 @@ const MenuPage = () => {
           <option value="lowToHigh">Price: Low to High</option>
           <option value="highToLow">Price: High to Low</option>
         </select>
+      
       </div>
 
       {/* Flash news */}
@@ -202,8 +206,12 @@ const MenuPage = () => {
             </div>
           ))
         )}
-      </div>
-    </div>
+             </div>      
+          </div>
+        
+      
+      
+    
   );
 };
 
