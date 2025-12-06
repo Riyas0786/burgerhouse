@@ -155,12 +155,12 @@ const MenuPage = () => {
             <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
               {/* Product card */}
               <motion.div
-                className="productcard  p-4 mx-2 h-100 flex flex-column  justify-center"
+                className="productcard drop-shadow-xl  p-4 mx-2 h-100 flex flex-column  justify-center"
                 style={{ textAlign: 'center', position: 'relative' }}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, delay: 0.04 }}
-                whileHover={{ scale: 1.07, boxShadow: "0px 3px 6px rgba(0,0,0,0.2)" }}
+                whileHover={{ scale: 1.07, }}
               >
                 {/* Veg/Non-Veg icons */}
                 <div style={{ position: "absolute", top: "7px", right: "7px" }}>

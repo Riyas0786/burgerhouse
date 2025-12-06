@@ -80,12 +80,12 @@ const Career = () => {
       <div
         className="careercard shadow mx-auto my-5 p-4 w-100"
         style={{ maxWidth: "500px", borderRadius: "20px" }}>
-        <h4 className="text-center bg-danger text-white p-2 rounded">
+        <h4 className="text-center bg-amber-300 text-black p-2 mb-3 rounded">
           FRANCHISE ENQUIRY
         </h4>
         <form onSubmit={handlesubmit}>
           <label htmlFor="name">
-            <h6 className="bg-light p-2 rounded">Name</h6>
+            <h6 className="bg-amber-300 p-2 rounded">Name</h6>
           </label>
           <input
             type="text"
@@ -96,7 +96,7 @@ const Career = () => {
           />
 
           <label htmlFor="mobile">
-            <h6 className="bg-light p-2 rounded">Mobile Number</h6>
+            <h6 className="bg-amber-300 p-2 rounded">Mobile Number</h6>
           </label>
           <input
             type="text"
@@ -107,7 +107,7 @@ const Career = () => {
           />
 
           <label htmlFor="email">
-            <h6 className="bg-light p-2 rounded">Email</h6>
+            <h6 className="bg-amber-300 p-2 rounded">Email</h6>
           </label>
           <input
             type="email"
@@ -118,7 +118,7 @@ const Career = () => {
           />
 
           <label htmlFor="location">
-            <h6 className="bg-light p-2 rounded">Location</h6>
+            <h6 className="bg-amber-300 p-2 rounded">Location</h6>
           </label>
           <input
             type="text"
@@ -129,7 +129,7 @@ const Career = () => {
           />
 
           <label htmlFor="description">
-            <h6 className="bg-light p-2 rounded">Description</h6>
+            <h6 className="bg-amber-300 p-2 rounded">Description</h6>
           </label>
           <textarea
             placeholder="Write here..."
@@ -139,7 +139,7 @@ const Career = () => {
             onChange={(e) => setDescription(e.target.value)}
           />
 
-          <button type="submit" className="btn btn-danger w-100">
+          <button type="submit" className="btn-amber items-center flex justify-center mx-auto w-50 h-10">
             SUBMIT
           </button>
         </form>

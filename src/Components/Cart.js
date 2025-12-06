@@ -134,18 +134,18 @@ const Cart = () => {
                 ))}
               </div>
 
-              <div className="text-center my-4 p-3  rounded shadow-sm" style={{backgroundColor:'#fdfd9667',border:'1px solid rgba(255, 179, 0, 0.299)'}}>
+              <div className="text-center my-4 p-3  rounded shadow-sm flex flex-column mx-auto bg-yellow-200 w-50" style={{border:'1px solid rgba(255, 179, 0, 0.299)'}}>
                 <h5>Total Items: {totalQty}</h5>
-                <h3>
+                <h4>
                   TOTAL PRICE ₹:{" "}
                   <span className="text-danger fw-bold">{totalPrice}</span>
-                </h3>
+                </h4>
               </div>
 
               <div className="text-center pb-3">
                 <button
                   type="button"
-                  className="bg-red-600 w-40 h-10  rounded hover:bg-red-700 ... text-white"
+                  className="btn-amber"
                   onClick={handleOrder}
                   disabled={cartItem.length === 0}
                 >

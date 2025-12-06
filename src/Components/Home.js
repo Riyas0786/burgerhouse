@@ -287,7 +287,7 @@ const navigate = useNavigate();
                 onChange={(e) => setPeople(e.target.value)}
               />
               <button
-                 className="btn-amber w-100 h-10"
+                 className="btn-amber w-100 h-10 items-center flex justify-center"
                  onClick={tablebtn}
               >
                 Book Table
