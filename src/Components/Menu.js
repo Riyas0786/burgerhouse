@@ -42,7 +42,7 @@ const products = [
   { id: 8, name: 'CHICKEN WINGS', category: 'Food',group:'nonveg', subtitle: 'Spicy crispy wings', price: 190, image: Burger_8, image2: nonveg },
   { id: 9, name: 'BROASTED BURGER', category: 'Food',group:'nonveg', subtitle: 'Crispy broasted burger', price: 160, image: broasted, image2: nonveg },
   { id: 10, name: 'CHICKEN BROASTED FRENCH FRIES',group:'nonveg', category: 'Food', subtitle: 'Crispy broasted chicken and french fries', price: 240, image: Burger10, image2: nonveg },
-  { id: 11, name: 'COMBO BURGER',group:'nonveg', category: 'Food', subtitle: 'Crispy broasted chicken with pepsi and french fries', price: 250, image: Burger11, image2: nonveg },
+  { id: 11, name: 'COMBO BURGER',group:'nonveg', category: 'Food', subtitle: 'Crispy and delicious combo burger', price: 250, image: Burger11, image2: nonveg },
   { id: 12, name: 'BURGER WITH FRENCH FRIES',group:'nonveg', category: 'Food', subtitle: 'Crispy broasted chicken and french fries', price: 210, image: Burger12, image2: nonveg },
   { id: 13, name: 'CHICKEN GRILL BURGER',group:'nonveg', category: 'Food', subtitle: 'Crispy broasted chicken and french fries', price: 199, image: Burger13, image2: nonveg },
   { id: 14, name: 'BACON BURGER',group:'nonveg', category: 'Food', subtitle: 'Crispy broasted chicken and french fries', price: 149, image: Burger14, image2: nonveg },
@@ -155,7 +155,7 @@ const MenuPage = () => {
             <div className="col-12 col-sm-6 col-md-4 my-3" key={product.id}>
               {/* Product card */}
               <motion.div
-                className="rounded-4 shadow  p-4 mx-2 h-100 flex flex-column  justify-center"
+                className="productcard  p-4 mx-2 h-100 flex flex-column  justify-center"
                 style={{ textAlign: 'center', position: 'relative' }}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

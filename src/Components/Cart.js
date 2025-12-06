@@ -6,6 +6,8 @@ import burgervid from "../Assets/CONTACT/burgervid.mp4";
 // Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { IoAdd, IoClose, IoRemove } from "react-icons/io5";
+
 
 
 const VideoToast = ({ src }) => (
@@ -81,16 +83,16 @@ const Cart = () => {
                 {cartItem.map((item) => (
                   <div key={item.id} className="col-12 col-sm-6 col-md-4 py-3">
                     {/* Cartpage card */}
-                    <div className="rounded shadow text-center bg-light p-4 h-100 position-relative"
+                    <div className="productcard text-center  p-4 h-100 position-relative"
                       style={{ minHeight: "350px" }}
                     >
                       
                           <div style={{ position: "absolute", top: "8px", right: "8px" }}>
                           <button
-                            className="btn btn-sm btn-outline-danger"
+                            className="p-2 rounded-full hover:bg-amber-400 transition duration-200"
                             onClick={() => removeItem(item.id)}
                           >
-                            <i className="bi bi-x-lg"></i>
+                            <IoClose size={24} className="hover:scale-110 transition" />
                           </button>
                           </div>
                       {/* Veg/Non-Veg icons */}
@@ -110,20 +112,20 @@ const Cart = () => {
                         <h5 className="card-title bg-amber-400">{item.name}</h5>
                         <h5 className="text-danger fw-bold">₹{item.price}</h5>
                         
-                        <div className="d-block justify-content-center align-items-center gap-2 mt-3">
+                        <div className="flex justify-center align-items-center gap-4 mt-3">
                           {/* decrement */}
-                          <button className="btn btn-outline-warning btn-"
+                          <button className="p-2 rounded-full hover:bg-amber-400 transition duration-200"
                             onClick={() => item.qty > 1 && decreaseQty(item.id)}
                           >
-                            -
+                            <IoRemove size={24} className="hover:scale-110 transition text-black" />
                           </button>
                           {/* Increment */}
-                          <span className="fw-bold">{item.qty || 1}</span>
+                          <span className="fw-bold bg-amber-300 fs-4 w-10  ">{item.qty || 1}</span>
                           <button
-                            className="btn btn-outline-warning"
+                            className="p-2 rounded-full hover:bg-amber-400 transition duration-200"
                             onClick={() => increaseQty(item.id)}
                           >
-                            +
+                            <IoAdd size={24} className="hover:scale-110 transition text-black" />
                           </button>
                         </div>
                       </div>
@@ -132,7 +134,7 @@ const Cart = () => {
                 ))}
               </div>
 
-              <div className="text-center my-4 p-3 bg-light rounded shadow-sm">
+              <div className="text-center my-4 p-3  rounded shadow-sm" style={{backgroundColor:'#fdfd9667',border:'1px solid rgba(255, 179, 0, 0.299)'}}>
                 <h5>Total Items: {totalQty}</h5>
                 <h3>
                   TOTAL PRICE ₹:{" "}

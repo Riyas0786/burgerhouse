@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
         item.id === id ? { ...item, qty: item.qty + 1 } : item
       )
     );
-  };
+};
 
   const decreaseQty = (id) => {
     setCartItem((prev) =>

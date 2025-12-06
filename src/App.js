@@ -39,7 +39,7 @@ function AppContent() {
     // simulate API or page load
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1000);
   }, []);
 
   if (loading) {
@@ -48,9 +48,6 @@ function AppContent() {
 
   return (
     <>
-
-      
-        
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -64,9 +61,6 @@ function AppContent() {
           <Route path="/login" element={<Login />} />
         </Routes>
       
-      
-
-
       {!shouldHideFooter && <Footer />}
       
     </>

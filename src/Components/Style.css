@@ -87,7 +87,8 @@
 }
 .flex-card:hover {
   transform: translateY(-6px);
-  box-shadow: 5px 5px 5px 5px rgba(255, 200, 0, 0.247);
+  box-shadow: 5px 5px 5px 5px #fdfd9667;
+    border: 1px solid rgba(255, 179, 0, 0.299);
 }
 .image{
       transition: transform 0.3s ease-in-out;
@@ -103,12 +104,6 @@ transform: translateX(6px);
     font-size: 60px;
     color: white;
    }
-   /* [.icons-2{
-    display: flex;
-    justify-content: between;
-    align-items: center;
-    margin-left: 40px;
-}] */
 
 .form-box {
   max-width: 100%;
@@ -123,7 +118,12 @@ transform: translateX(6px);
   gap: 1rem; 
 
 }
-
+.productcard{
+      width: 350px;
+      border: 1px solid rgba(255, 179, 0, 0.299);
+      border-radius: 14px;
+      background-color:#fdfd963c;
+}
 
 
 @media (max-width: 768px) {
