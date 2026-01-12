@@ -2,107 +2,179 @@ import React, { useState } from "react";
 import BurgerImg from "../Assets/Account/burgerimg.png";
 import logo from "../Assets/Home/Logo.png";
 import { toast } from "react-toastify";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaEnvelope, FaLock } from "react-icons/fa";
-
+import {
+  RecaptchaVerifier,
+  signInWithPhoneNumber
+} from "firebase/auth";
+import { auth } from "../firebase";
 
 const Login = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = (e) => {
+  const [otp, setOtp] = useState("");
+  const [confirmation, setConfirmation] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const phoneRegex = /^[0-9]{10}$/;
+  const emailRegex = /\S+@\S+\.\S+/;
+
+  // 🔐 Setup reCAPTCHA
+  const setupRecaptcha = () => {
+    if (window.recaptchaVerifier) return;
+
+    window.recaptchaVerifier = new RecaptchaVerifier(
+      auth,
+      "recaptcha-container",
+      {
+        size: "invisible",
+        callback: () => {
+          console.log("reCAPTCHA verified");
+        },
+      }
+    );
+  };
+
+  // 📩 LOGIN
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (!email || !password) {
-      toast.error("⚠️ Please fill in all fields.",{className:'bg-danger text-white'});
+    if (!email) {
+      toast.error("Enter email or phone number");
       return;
     }
 
-    // simple email/phone check
-    const emailRegex = /\S+@\S+\.\S+/;
-    const phoneRegex = /^[0-9]{10}$/;
+    // 📱 PHONE LOGIN
+    if (phoneRegex.test(email)) {
+      try {
+        setLoading(true);
+        setupRecaptcha();
 
-    if (!emailRegex.test(email) && !phoneRegex.test(email)) {
-      toast.error("⚠️ Enter a valid email or 10-digit phone number.",{className:'bg-danger text-white'});
+        const appVerifier = window.recaptchaVerifier;
+
+        const confirmationResult = await signInWithPhoneNumber(
+          auth,
+          "+91" + email,
+          appVerifier
+        );
+
+        setConfirmation(confirmationResult);
+        toast.success("OTP sent successfully");
+      } catch (error) {
+        console.error(error);
+        toast.error(error.message);
+      } finally {
+        setLoading(false);
+      }
       return;
     }
 
-    if (password.length < 6) {
-      toast.error("⚠️ Password must be at least 6 characters.",{className:'bg-danger text-white'});
+    // 📧 EMAIL LOGIN (DEMO)
+    if (!emailRegex.test(email)) {
+      toast.error("Enter valid email");
       return;
     }
 
-    toast.success("✅ Welcome back to Burger House!",{className:'bg-success text-white'});
-     setTimeout(() => navigate("/menu"), 2000);
-    setEmail("");
-    setPassword("");
+    if (!password) {
+      toast.error("Enter password");
+      return;
+    }
+
+    toast.success("Login successful");
+    setTimeout(() => navigate("/menu"), 1500);
+  };
+
+  // ✅ VERIFY OTP
+  const verifyOtp = async () => {
+    if (!otp) {
+      toast.error("Enter OTP");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      await confirmation.confirm(otp);
+      toast.success("Login successful");
+      navigate("/menu");
+    } catch {
+      toast.error("Invalid OTP");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100 ">
-      <div className="d-flex flex-wrap  rounded-5 overflow-hidden bg-white flex-card" style={{ maxWidth: "800px" }}>
-        
-        {/* Left Side - Form */}
+    <div className="d-flex justify-content-center align-items-center min-vh-100">
+      <div className="d-flex flex-wrap rounded-5 overflow-hidden bg-white" style={{ maxWidth: "800px" }}>
+        {/* LEFT */}
         <div className="p-4 flex-fill">
           <img src={logo} alt="logo" width={180} className="mb-3" />
           <h3 className="text-warning fw-bold">SIGN IN</h3>
 
-          <form onSubmit={handleLogin} className="d-flex  flex-column gap-3 ">
-             <div className="relative" >
-           <FaEnvelope className="absolute right-3 top-3  text-gray-800  "/>
-            <input type="text" placeholder="Email or PhoneNumber"
-              className="form-control"value={email}
-              onChange={(e) => setEmail(e.target.value)}
-             /></div>
-             <div className="relative">
-           <FaLock className="absolute right-3 top-3 text-gray-800 "/>
-            <input
-              type="password"  placeholder="Password"
-              className="form-control"value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            /></div>
-          
-            <button type="submit" className="bg-amber-400 rounded h-10 fw-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-400 ...">
-              SIGN IN
-            </button>
+          <form onSubmit={handleLogin} className="d-flex flex-column gap-3">
+            <div className="position-relative">
+              <FaEnvelope className="position-absolute top-50 end-0 translate-middle-y me-3" />
+              <input
+                type="text"
+                placeholder="Email or Phone Number"
+                className="form-control"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
+            {!confirmation && !phoneRegex.test(email) && (
+              <div className="position-relative">
+                <FaLock className="position-absolute top-50 end-0 translate-middle-y me-3" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="form-control"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            )}
+
+            {confirmation && (
+              <input
+                type="text"
+                placeholder="Enter OTP"
+                className="form-control mb-3"
+                value={otp}
+                onChange={(e) => setOtp(e.target.value)}
+              />
+            )}
+
+            {!confirmation && (
+              <button type="submit" className="bg-warning rounded fw-bold" disabled={loading}>
+                {loading ? "SENDING OTP..." : "SIGN IN"}
+              </button>
+            )}
+
+            {confirmation && (
+              <button type="button" onClick={verifyOtp} className="bg-success text-white rounded fw-bold" disabled={loading}>
+                {loading ? "VERIFYING..." : "VERIFY OTP"}
+              </button>
+            )}
           </form>
 
           <p className="mt-3">
-            Don’t have an account?{" "}
-            <a href="/account" className="fw-bold text-danger">
-              SIGN UP
-            </a>
+            Don’t have an account? <a href="/account" className="fw-bold text-danger">SIGN UP</a>
           </p>
-
-         <p className="fw-semibold">Or Continue with</p>
-          <div className="d-flex gap-2 ">
-            <a href="https://accounts.google.co.in/" target="blank" rel="noopener noreferrer"
-              className="bg-blue-600 w-20 rounded h-10 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ... 
-               bi bi-google text-white items-center justify-center d-flex " >
-              
-            </a>
-            <a href="https://account.apple.com/" target="blank" rel="noopener noreferrer" className="bg-gray-950 w-20 rounded h-10 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ...
-            bi bi-apple text-white items-center justify-center d-flex " >
-            </a>
-            <a href="https://login.microsoftonline.com/" target="blank" rel="noopener noreferrer" className="bg-green-700 w-20 rounded h-10 text-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110  ...
-            bi bi-microsoft text-white items-center justify-center flex list-none" >
-              
-            </a>
-          </div>
-
-          <h6 className="text-muted small text-center mt-3">
-            © Burger House. All rights reserved.
-          </h6>
         </div>
-        {/* Right Side - Image */}
+
+        {/* RIGHT */}
         <div className="d-none d-md-block">
-          <img
-            src={BurgerImg}
-            alt="Burger House"
-            style={{ width: "350px", height: "100%", objectFit: "cover" }}
-          />
+          <img src={BurgerImg} alt="Burger" style={{ width: "350px", height: "100%", objectFit: "cover" }} />
         </div>
       </div>
+
+      {/* 🔐 REQUIRED */}
+      <div id="recaptcha-container"></div>
     </div>
   );
 };

@@ -27,6 +27,7 @@ import About from './Components/About';
 
 
 
+
 function AppContent() {
   const location = useLocation();
 
@@ -60,6 +61,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
+        
         </Routes>
       
       {!shouldHideFooter && <Footer />}
