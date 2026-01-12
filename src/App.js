@@ -26,6 +26,7 @@ import About from './Components/About';
 
 
 
+
 function AppContent() {
   const location = useLocation();
 
@@ -72,7 +73,8 @@ function App() {
   return (
               <>
       <AppContent />
-       <ToastContainer position="top-center" autoClose={2000} 
+       <ToastContainer position="top-center" autoClos
+       e={2000} 
        hideProgressBar={true}/>
       </>
   );

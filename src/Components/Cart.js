@@ -38,20 +38,54 @@ const Cart = () => {
     (acc, product) => acc + product.price * (product.qty || 1),
     0
   );
+const handleOrder = () => {
+  if (cartItem.length === 0) return;   // important check
 
-  const handleOrder = () => {
-    if (cartItem.length === 0) 
+  const options = {
+    key: "rzp_live_S3FQxAdD8F1tWv",   // your Razorpay key
+    amount: totalPrice * 100,
+    currency: "INR",
+    name: "Burger House",
+    description: "Order Payment",
 
-    toast.success(<VideoToast src={burgervid}  />, {
-      position: "top-center my-5 rounded",
-      autoClose: 1500,
-    });
+    handler: function (response) {
+      toast.success(<VideoToast src={burgervid} />, {
+        position: "top-center",
+        autoClose: 1500,
+      });
 
-    setTimeout(() => {
-      setCartItem([]); // clear cart
-       navigate("/menu"); // redirect instead of reload
-    }, 2000);
+      setTimeout(() => {
+        setCartItem([]);  // clear cart
+        navigate("/menu"); // redirect
+      }, 2000);
+    },
+
+   modal: {
+      ondismiss: function () {
+        toast.error("Payment Cancelled ❌",{
+        position:"top-center",
+      autoClose:1500,},);
+      
+        
+      }
+    },
+     theme: {
+      color: "#ffb300"
+    }
   };
+
+
+  const razor = new window.Razorpay(options);
+  razor.open();  
+
+  console.log("totalprice:",totalPrice);
+  if (totalPrice <= 0) {
+  toast.error("Invalid payment amount");
+  return;
+}
+
+};
+
 
   return (
     <>
@@ -134,7 +168,7 @@ const Cart = () => {
                 ))}
               </div>
 
-              <div className="text-center my-4 p-3  rounded shadow-sm flex flex-column mx-auto bg-yellow-200 w-50" style={{border:'1px solid rgba(255, 179, 0, 0.299)'}}>
+              <div className="text-center my-4 p-2 mx-auto rounded shadow "style={{maxWidth:"350px",border:'2px solid  rgba(255, 179, 0, 0.75)'}} >
                 <h5>Total Items: {totalQty}</h5>
                 <h4>
                   TOTAL PRICE ₹:{" "}

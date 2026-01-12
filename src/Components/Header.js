@@ -58,6 +58,7 @@ const Header = () => {
               <NavLink className="link bi bi-info-square-fill navbtn" to="/about">
                 About
               </NavLink>
+
           </ul>
                 {/* Cart + Account Icons */}
           <div className="d-flex">
