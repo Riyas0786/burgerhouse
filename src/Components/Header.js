@@ -64,7 +64,7 @@ const Header = () => {
           <div className="d-flex">
             <ul className="iconlinks d-flex list-unstyled mb-0  " style={{marginLeft:'100px'}}>
               <li className="position-relative">
-                <NavLink className="navicon me-3   " to="/account">
+                <NavLink className="navicon me-3   " to="/login">
                   <i className="bi bi-person-fill fs-3"></i>
                 </NavLink>
               </li>

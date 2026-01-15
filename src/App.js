@@ -13,7 +13,6 @@ import Home from './Components/Home';
 import Menu from './Components/Menu';
 import Branch from './Components/Branch';
 import Career from './Components/Career'; 
-import Account from './Components/Account';
 import Contact from './Components/Contact';
 import Cart from './Components/Cart';
 import Login from './Components/login';
@@ -57,11 +56,9 @@ function AppContent() {
           <Route path="/branch" element={<Branch />} />
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/account" element={<Account />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
-        
         </Routes>
       
       {!shouldHideFooter && <Footer />}

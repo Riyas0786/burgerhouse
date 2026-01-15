@@ -3,24 +3,22 @@ import BurgerImg from "../Assets/Account/burgerimg.png";
 import logo from "../Assets/Home/Logo.png";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { FaEnvelope, FaLock } from "react-icons/fa";
-import {
-  RecaptchaVerifier,
-  signInWithPhoneNumber
-} from "firebase/auth";
-import { auth } from "../firebase";
+import {   FaPhone } from "react-icons/fa";
+import {RecaptchaVerifier,signInWithPhoneNumber} from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../firebase";
+
+
 
 const Login = () => {
   const navigate = useNavigate();
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [phone,setphone]=useState("");
   const [otp, setOtp] = useState("");
   const [confirmation, setConfirmation] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  
   const phoneRegex = /^[0-9]{10}$/;
-  const emailRegex = /\S+@\S+\.\S+/;
+
 
   // 🔐 Setup reCAPTCHA
   const setupRecaptcha = () => {
@@ -42,13 +40,13 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (!email) {
-      toast.error("Enter email or phone number");
+    if (!phone) {
+      toast.error(" phone number");
       return;
     }
 
     // 📱 PHONE LOGIN
-    if (phoneRegex.test(email)) {
+    if (phoneRegex.test(phone)) {
       try {
         setLoading(true);
         setupRecaptcha();
@@ -57,7 +55,7 @@ const Login = () => {
 
         const confirmationResult = await signInWithPhoneNumber(
           auth,
-          "+91" + email,
+          "+91" + phone,
           appVerifier
         );
 
@@ -72,16 +70,6 @@ const Login = () => {
       return;
     }
 
-    // 📧 EMAIL LOGIN (DEMO)
-    if (!emailRegex.test(email)) {
-      toast.error("Enter valid email");
-      return;
-    }
-
-    if (!password) {
-      toast.error("Enter password");
-      return;
-    }
 
     toast.success("Login successful");
     setTimeout(() => navigate("/menu"), 1500);
@@ -105,10 +93,23 @@ const Login = () => {
       setLoading(false);
     }
   };
+   const handleGoogleLogin = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+
+    const user = result.user;
+
+    toast.success(`Welcome ${user.displayName}`);
+    navigate("/menu");
+
+  } catch (error) {
+    toast.error(error.message);
+  }
+};
 
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100">
-      <div className="d-flex flex-wrap rounded-5 overflow-hidden bg-white" style={{ maxWidth: "800px" }}>
+      <div className="d-flex flex-wrap rounded-5 shadow overflow-hidden bg-white" style={{ maxWidth: "800px" }}>
         {/* LEFT */}
         <div className="p-4 flex-fill">
           <img src={logo} alt="logo" width={180} className="mb-3" />
@@ -116,28 +117,16 @@ const Login = () => {
 
           <form onSubmit={handleLogin} className="d-flex flex-column gap-3">
             <div className="position-relative">
-              <FaEnvelope className="position-absolute top-50 end-0 translate-middle-y me-3" />
+              <FaPhone className="position-absolute top-50 end-0 translate-middle-y me-3" />
               <input
                 type="text"
-                placeholder="Email or Phone Number"
+                placeholder=" Phone Number"
                 className="form-control"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={phone}
+                onChange={(e) => setphone(e.target.value)}
               />
             </div>
 
-            {!confirmation && !phoneRegex.test(email) && (
-              <div className="position-relative">
-                <FaLock className="position-absolute top-50 end-0 translate-middle-y me-3" />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="form-control"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
-            )}
 
             {confirmation && (
               <input
@@ -150,27 +139,34 @@ const Login = () => {
             )}
 
             {!confirmation && (
-              <button type="submit" className="bg-warning rounded fw-bold" disabled={loading}>
-                {loading ? "SENDING OTP..." : "SIGN IN"}
+              <button type="submit" className="bg-warning rounded fw-bold btn btn-md   " disabled={loading}>
+                {loading ? "SENDING OTP..." : "GET OTP"}
               </button>
             )}
 
             {confirmation && (
-              <button type="button" onClick={verifyOtp} className="bg-success text-white rounded fw-bold" disabled={loading}>
+              <button type="button" onClick={verifyOtp} className="bg-success text-white rounded fw-bold btn btn-md" disabled={loading}>
                 {loading ? "VERIFYING..." : "VERIFY OTP"}
               </button>
             )}
           </form>
+          <h5 className="mt-2"> Sign With Google</h5>
+     <button
+  type="button"
+  onClick={handleGoogleLogin}
+  className="bg-primary w-20 rounded h-10 text-white d-flex align-items-center justify-content-center mx-auto"
+>
+  <i className="bi bi-google"></i>
+</button>
 
-          <p className="mt-3">
-            Don’t have an account? <a href="/account" className="fw-bold text-danger">SIGN UP</a>
-          </p>
         </div>
 
         {/* RIGHT */}
         <div className="d-none d-md-block">
           <img src={BurgerImg} alt="Burger" style={{ width: "350px", height: "100%", objectFit: "cover" }} />
         </div>
+
+        
       </div>
 
       {/* 🔐 REQUIRED */}
